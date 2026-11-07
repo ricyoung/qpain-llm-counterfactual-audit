@@ -48,3 +48,12 @@ def test_monte_carlo_p_agrees_with_the_exact_p():
 def test_small_case_sets_stay_exact():
     values = [0.3, 0.1, -0.2, 0.4, 0.5, 0.2]
     assert ap.infer(cases(values), 1.0)['p_case'] == round(exact_sign_flip_p(values), 6)
+
+
+def test_infer_stores_the_standard_error_and_the_equivalence_bound():
+    values = [0.9, -0.4, 0.7, 0.3, -0.2, 0.8, 0.5, -0.6, 0.4, 0.1, 0.6, -0.3, 0.2, 0.9, -0.1, 0.5, 0.3, -0.5]
+    r = ap.infer(cases(values), 1.0)
+    assert r['se'] == round(float(np.std(values, ddof=1) / np.sqrt(len(values))), 6)
+    # an interval fits inside a margin m exactly when its larger absolute end is below m
+    assert r['bound90'] == round(max(abs(r['ci90'][0]), abs(r['ci90'][1])), 6) or abs(r['bound90'] - max(abs(r['ci90'][0]), abs(r['ci90'][1]))) < 1e-4
+    assert r['equivalent'] == (r['bound90'] < 1.0)

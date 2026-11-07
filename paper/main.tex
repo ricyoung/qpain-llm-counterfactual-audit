@@ -125,20 +125,27 @@
 % ============================================================
 \section*{Ethics Statement}
 This study did not involve human participants, patient records or identifiable
-private information. All clinical vignettes are synthetic and were written by
-the authors. The work therefore does not constitute human-subjects research under
-45 CFR 46.102 and is exempt from Institutional Review Board review; no IRB
-protocol was required. All model inference ran on institutional hardware, and no
-data were transmitted to external services.
+private information. All clinical vignettes are synthetic: the six authored cases
+were drafted with a language model (Claude, Anthropic) and edited by the first
+author without clinician review, and the Q-Pain cases were written by that
+dataset's clinical expert and are reused under their CC BY-SA 4.0 licence. The
+work therefore does not constitute human-subjects research under 45 CFR 46.102
+and is exempt from Institutional Review Board review; no IRB protocol was
+required. Study~1 inference ran entirely on local hardware. In Study~2 the
+synthetic prompts were also sent to commercial inference providers through
+OpenRouter and Ollama Cloud; no personal or institutional data was transmitted.
 
 % ============================================================
 % DATA AND CODE AVAILABILITY
 % ============================================================
 \section*{Data and Code Availability}
-The vignettes, name table, prompts, request and analysis code, all 3,840 raw
-model responses and the generated tables and figures are available in the
-project repository (URL to be added on release). A 48-response Spanish smoke
-test of the cross-lingual harness is included but was not analysed.
+The vignettes, name table, prompts, panel definition, spend ledger, request,
+verification and analysis code, all \nResponses{} raw model responses analysed
+across Study~1 and Study~2, and the generated tables and figures are available
+in the project repository,
+\url{https://github.com/ricyoung/qpain-llm-counterfactual-audit}; the Q-Pain
+material is redistributed under its CC BY-SA 4.0 licence. A 48-response Spanish
+smoke test of the cross-lingual harness is included but was not analysed.
 
 % ============================================================
 % COMPETING INTERESTS

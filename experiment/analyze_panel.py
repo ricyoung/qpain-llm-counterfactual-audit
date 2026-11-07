@@ -166,6 +166,11 @@ def infer(per_case: dict[str, list[float]], margin: float) -> dict | None:
             'ci95': [round(float(lo95), 4), round(float(hi95), 4)],
             'ci90': [round(float(lo90), 4), round(float(hi90), 4)],
             'equivalent': bool(-margin < lo90 and hi90 < margin),
+            # the standard error of the mean of the case means (the minimum detectable difference at
+            # alpha .05 and power .80 is 2.8 x this), and the margin this comparison just fits inside:
+            # it is equivalent within any margin m exactly when bound90 < m
+            'se': round(float(case_means.std(ddof=1) / np.sqrt(len(case_means))), 6),
+            'bound90': round(float(max(abs(lo90), abs(hi90))), 6),
             'p_case': round(sign_flip_p(case_means, rng, B_FLIP), 6),
             'p_pair': round(sign_flip_p(pairs, rng), 6),
             'n_cases': len(case_means), 'n_pairs': len(pairs)}

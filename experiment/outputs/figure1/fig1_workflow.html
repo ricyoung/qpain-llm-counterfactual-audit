@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Two-study audit workflow</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Liberation Sans', 'Helvetica Neue', Arial, sans-serif; background: #ffffff; color: #0b0b0b; padding: 2rem; }
+    .frame { max-width: 720px; margin: 0 auto; }
+    .diagram-container { width: 100%; overflow-x: auto; }
+    svg { width: 100%; min-width: 624px; display: block; }
+    @media print { .diagram-container { overflow-x: visible; } svg { min-width: 0; } }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <div class="diagram-container">
+<svg viewBox="0 0 624 280" width="624" height="280" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="workflow-title workflow-desc" font-family="'Liberation Sans', 'Helvetica Neue', Arial, sans-serif">
+  <title id="workflow-title">Two-study audit workflow</title>
+  <desc id="workflow-desc">Six steps in two rows: cases, identity cues and models are varied; the responses are captured, compared in pairs against a White-man reference on the same case and seed, and judged against noise and equivalence margins.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#898781"/></marker>
+    <marker id="arrow-accent" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#2a78d6"/></marker>
+  </defs>
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <text x="24" y="18" font-size="8.5" font-weight="600" letter-spacing="0.14em" fill="#6b6a66">DESIGN: WHAT WAS VARIED, WHAT WAS HELD FIXED</text>
+  <text x="24" y="142" font-size="8.5" font-weight="600" letter-spacing="0.14em" fill="#6b6a66">ANALYSIS: HOW A DIFFERENCE WAS JUDGED</text>
+  <g>
+    <line x1="192" y1="68" x2="227" y2="68" stroke="#898781" stroke-width="1.2" marker-end="url(#arrow)"/>
+    <line x1="396" y1="68" x2="431" y2="68" stroke="#898781" stroke-width="1.2" marker-end="url(#arrow)"/>
+    <line x1="516" y1="108" x2="516" y2="151" stroke="#898781" stroke-width="1.2" marker-end="url(#arrow)"/>
+    <line x1="432" y1="192" x2="397" y2="192" stroke="#2a78d6" stroke-width="1.4" marker-end="url(#arrow-accent)"/>
+    <line x1="228" y1="192" x2="193" y2="192" stroke="#2a78d6" stroke-width="1.4" marker-end="url(#arrow-accent)"/>
+  </g>
+  <g>
+    <rect x="24" y="28" width="168" height="80" rx="6" fill="#ffffff"/>
+    <rect x="24" y="28" width="168" height="80" rx="6" fill="#f6f6f4" stroke="#c3c2b7" stroke-width="1"/>
+    <rect x="32" y="36" width="14" height="12" rx="2" fill="none" stroke="#52514e" stroke-width="0.8" stroke-opacity="0.6"/>
+    <text x="39" y="45.2" text-anchor="middle" font-size="8" font-weight="600" fill="#52514e">1</text>
+    <text x="54" y="46" font-size="11" font-weight="600" fill="#0b0b0b">Cases</text>
+    <text x="54" y="68" font-size="9.5" fill="#52514e">6 authored vignettes</text>
+    <text x="54" y="81" font-size="9.5" fill="#52514e">50 Q-Pain cases</text>
+    <text x="54" y="94" font-size="9.5" fill="#52514e">pain 0–10 · opioid · dose</text>
+    <rect x="228" y="28" width="168" height="80" rx="6" fill="#ffffff"/>
+    <rect x="228" y="28" width="168" height="80" rx="6" fill="#f6f6f4" stroke="#c3c2b7" stroke-width="1"/>
+    <rect x="236" y="36" width="14" height="12" rx="2" fill="none" stroke="#52514e" stroke-width="0.8" stroke-opacity="0.6"/>
+    <text x="243" y="45.2" text-anchor="middle" font-size="8" font-weight="600" fill="#52514e">2</text>
+    <text x="258" y="46" font-size="11" font-weight="600" fill="#0b0b0b">Identity cues</text>
+    <text x="258" y="68" font-size="9.5" fill="#52514e">4 races × 2 sexes = 8</text>
+    <text x="258" y="81" font-size="9.5" fill="#52514e">stated label, or</text>
+    <text x="258" y="94" font-size="9.5" fill="#52514e">2 names per group</text>
+    <rect x="432" y="28" width="168" height="80" rx="6" fill="#ffffff"/>
+    <rect x="432" y="28" width="168" height="80" rx="6" fill="#f6f6f4" stroke="#c3c2b7" stroke-width="1"/>
+    <rect x="440" y="36" width="14" height="12" rx="2" fill="none" stroke="#52514e" stroke-width="0.8" stroke-opacity="0.6"/>
+    <text x="447" y="45.2" text-anchor="middle" font-size="8" font-weight="600" fill="#52514e">3</text>
+    <text x="462" y="46" font-size="11" font-weight="600" fill="#0b0b0b">Models</text>
+    <text x="462" y="68" font-size="9.5" fill="#52514e">Study 1: 4 local models</text>
+    <text x="462" y="81" font-size="9.5" fill="#52514e">Study 2: 17 models,</text>
+    <text x="462" y="94" font-size="9.5" fill="#52514e">24 settings, local + API</text>
+    <rect x="432" y="152" width="168" height="80" rx="6" fill="#ffffff"/>
+    <rect x="432" y="152" width="168" height="80" rx="6" fill="#f6f6f4" stroke="#c3c2b7" stroke-width="1"/>
+    <rect x="440" y="160" width="14" height="12" rx="2" fill="none" stroke="#52514e" stroke-width="0.8" stroke-opacity="0.6"/>
+    <text x="447" y="169.2" text-anchor="middle" font-size="8" font-weight="600" fill="#52514e">4</text>
+    <text x="462" y="170" font-size="11" font-weight="600" fill="#0b0b0b">Capture</text>
+    <text x="462" y="192" font-size="9.5" fill="#52514e">request + response saved</text>
+    <text x="462" y="205" font-size="9.5" fill="#52514e">before parsing; failures</text>
+    <text x="462" y="218" font-size="9.5" fill="#52514e">kept, never dropped</text>
+    <rect x="228" y="152" width="168" height="80" rx="6" fill="#ffffff"/>
+    <rect x="228" y="152" width="168" height="80" rx="6" fill="#eaf2fc" stroke="#2a78d6" stroke-width="1.5"/>
+    <rect x="236" y="160" width="14" height="12" rx="2" fill="none" stroke="#2a78d6" stroke-width="0.8" stroke-opacity="0.6"/>
+    <text x="243" y="169.2" text-anchor="middle" font-size="8" font-weight="600" fill="#2a78d6">5</text>
+    <text x="258" y="170" font-size="11" font-weight="600" fill="#0b0b0b">Paired comparison</text>
+    <text x="258" y="192" font-size="9.5" fill="#52514e">identity − White man</text>
+    <text x="258" y="205" font-size="9.5" fill="#52514e">same case, seed, name</text>
+    <text x="258" y="218" font-size="9.5" fill="#52514e">the case is the unit</text>
+    <rect x="24" y="152" width="168" height="80" rx="6" fill="#ffffff"/>
+    <rect x="24" y="152" width="168" height="80" rx="6" fill="#f6f6f4" stroke="#c3c2b7" stroke-width="1"/>
+    <rect x="32" y="160" width="14" height="12" rx="2" fill="none" stroke="#52514e" stroke-width="0.8" stroke-opacity="0.6"/>
+    <text x="39" y="169.2" text-anchor="middle" font-size="8" font-weight="600" fill="#52514e">6</text>
+    <text x="54" y="170" font-size="11" font-weight="600" fill="#0b0b0b">Noise and equivalence</text>
+    <text x="54" y="192" font-size="9.5" fill="#52514e">re-ask: the noise floor</text>
+    <text x="54" y="205" font-size="9.5" fill="#52514e">equivalence margins</text>
+    <text x="54" y="218" font-size="9.5" fill="#52514e">Holm and FDR</text>
+  </g>
+  <text x="24" y="268" font-size="9" fill="#6b6a66">Every count, table and figure in the paper is regenerated from the saved exchanges by script.</text>
+</svg>
+    </div>
+  </div>
+</body>
+</html>

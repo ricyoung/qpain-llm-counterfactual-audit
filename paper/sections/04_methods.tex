@@ -28,9 +28,9 @@ neither study has a training, validation or test partition.
 \begin{figure}[t]
 \centering
 \includegraphics[width=\textwidth]{fig1_workflow.pdf}
-\caption{Study workflow. Design (top row): authored and Q-Pain cases were
+\caption{Study workflow, in six numbered steps. Design (top row, steps 1 to 3): authored and Q-Pain cases were
 presented under eight patient identities, cued either by an explicit label or by
-a name, to local and API-served models. Analysis (bottom row, right to left):
+a name, to local and API-served models. Analysis (bottom row, steps 4 to 6, right to left):
 every exchange was saved before parsing and scored; each non-reference identity
 was compared with the White male reference on the same case and seed; and each
 estimate was set against the models' own re-sampling noise floor, a case-level
@@ -315,7 +315,10 @@ differences were bootstrapped over vignettes, and equivalence was assessed with
 two one-sided tests (TOST), declaring a difference equivalent to zero when its
 90\% cluster-bootstrap interval lay within $\pm1$ severity point (half the
 approximately two-point clinically important change on the 0--10 scale
-\cite{farrar2001clinical}) or $\pm0.10$ in strong-opioid proportion.
+\cite{farrar2001clinical}) or $\pm0.10$ in strong-opioid proportion. That two-point change was measured within
+patients with chronic pain, so the margin is generous for a between-group question
+about assessment bias; Study~2 therefore also reports tighter margins. With only six
+clusters the percentile bootstrap intervals of this analysis are approximate.
 
 \paragraph{Study 2.} The case was the unit of analysis throughout. For each
 configuration, case set, cue, outcome and identity, the paired differences were
@@ -331,10 +334,18 @@ reported alongside for continuity. Holm correction was applied over the seven id
 configuration, case set, cue and outcome, and the Benjamini--Hochberg false
 discovery rate \cite{benjamini1995controlling} over all \nTests{} identity
 comparisons in the study. Equivalence used the Study~1 margins, with $\pm0.10$
-also for the proportions offered an opioid and offered a high dose. Two pooled
+also for the proportions offered an opioid and offered a high dose. To show how
+the conclusion depends on the margin, severity equivalence was also assessed
+within $\pm0.5$ and $\pm0.25$ points and the proportions within $\pm0.05$, and the
+smallest margin within which every difference was equivalent was recorded (a
+difference is equivalent within a margin exactly when the larger absolute end of
+its 90\% interval is smaller than the margin). Two pooled
 contrasts summarised each configuration: each minority group minus White
 within sex, averaged over sex, and women minus men within race, averaged over
 race. The noise floor and identity flip rates were computed as in Study~1, and
+are reported for every configuration with the minimum detectable difference
+($2.80$ times the standard error of the mean of the case means, so that the case,
+not the pair, is the unit) in Appendix Tables~\ref{tab:noiseqpain} and~\ref{tab:noiseauthored};
 the share of severity variance explained by the case ($\eta^2$) indexed whether
 a model's ratings responded to the clinical content at all. \emph{Reasoning
 and precision contrasts} compared two configurations of the same weights: for

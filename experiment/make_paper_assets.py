@@ -3,7 +3,7 @@
 Outputs (all regenerated on each run):
   outputs/paper_stats.json      every number quoted in the paper
   ../paper/tables/*.tex         booktabs tables, \\input by main.tex
-  ../paper/figures/*.pdf        Figure 1 (paired differences), Figure 2 (noise floor)
+  ../paper/figures/*.pdf        Figure 2 (paired differences), Figure 3 (noise floor), via figures.py
 
     python3.10 make_paper_assets.py
 """
@@ -282,94 +282,6 @@ def table_names(stats: dict) -> str:
     return '\n'.join(lines)
 
 
-# ---------------------------------------------------------------- figures
-
-def style(ax):
-    for side in ('top', 'right'):
-        ax.spines[side].set_visible(False)
-    for side in ('left', 'bottom'):
-        ax.spines[side].set_color(AXIS)
-        ax.spines[side].set_linewidth(0.8)
-    ax.tick_params(colors=INK2, labelsize=8, length=3, width=0.8)
-    ax.grid(axis='x', color=GRID, linewidth=0.8)
-    ax.set_axisbelow(True)
-
-
-def figure_differences(stats: dict, path: Path) -> None:
-    import matplotlib
-    matplotlib.use('Agg')
-    import matplotlib.pyplot as plt
-    plt.rcParams.update({'font.family': 'Liberation Sans', 'font.size': 8, 'text.color': INK,
-                         'axes.labelcolor': INK2, 'pdf.fonttype': 42})
-    fig, axes = plt.subplots(len(MODELS), 2, figsize=(6.5, 7.6))
-    series = [('_v2', 'Explicit labels', BLUE, 'o'), ('_named', 'Name cues', ORANGE, 'D')]
-    labels = [ARM_LABEL[a] for a in COMPARISON_ARMS]
-    y = np.arange(len(labels))[::-1]
-    for row, (tag, *_) in enumerate(MODELS):
-        for col, (field, title, limit) in enumerate([('severity', 'Pain severity (0--10 points)', 0.35),
-                                                     ('strong_opioid', 'Strong opioid (proportion)', 0.25)]):
-            ax = axes[row, col]
-            style(ax)
-            ax.axvline(0, color=AXIS, linewidth=0.8, zorder=1)
-            for k, (kind, name, colour, marker) in enumerate(series):
-                offset = 0.18 if k == 0 else -0.18
-                arms = stats['conditions'][kind]['models'][tag]['arms']
-                d = np.array([arms[l][field]['diff'] for l in labels])
-                lo = np.array([arms[l][field]['ci95'][0] for l in labels])
-                hi = np.array([arms[l][field]['ci95'][1] for l in labels])
-                ax.hlines(y + offset, lo, hi, color=colour, linewidth=1.5, zorder=2)
-                ax.plot(d, y + offset, linestyle='none', marker=marker, markersize=5.5, color=colour,
-                        markeredgecolor='white', markeredgewidth=0.8, zorder=3, label=name if (row, col) == (0, 0) else None)
-            ax.set_xlim(-limit, limit)
-            ax.set_yticks(y)
-            ax.set_yticklabels(labels)
-            ax.tick_params(axis='y', labelleft=(col == 0))
-            ax.set_ylim(-0.7, len(labels) - 0.3)
-            if row == 0:
-                ax.set_title(title.replace('--', '–'), fontsize=8.5, color=INK, loc='left', pad=6)
-            if col == 0:
-                ax.set_ylabel(SHORT[tag], fontsize=8, color=INK2, labelpad=8)
-    fig.supxlabel('Paired difference, identity minus White man reference (mean and bootstrap 95% CI)',
-                  fontsize=8, color=INK2)
-    handles, names = axes[0, 0].get_legend_handles_labels()
-    fig.legend(handles, names, loc='upper center', ncol=2, frameon=False, fontsize=8, bbox_to_anchor=(0.5, 1.0))
-    fig.tight_layout(rect=(0, 0, 1, 0.965))
-    fig.savefig(path)
-    plt.close(fig)
-
-
-def figure_noise(stats: dict, path: Path) -> None:
-    import matplotlib
-    matplotlib.use('Agg')
-    import matplotlib.pyplot as plt
-    plt.rcParams.update({'font.family': 'Liberation Sans', 'font.size': 8, 'text.color': INK,
-                         'axes.labelcolor': INK2, 'pdf.fonttype': 42})
-    fig, axes = plt.subplots(1, 2, figsize=(6.5, 3.0), sharey=True)
-    rows = [(tag, kind) for tag, *_ in MODELS for kind, _ in CONDITIONS[1:]]
-    y = np.arange(len(rows))[::-1].astype(float)
-    labels = [f"{SHORT[tag]}, {'explicit' if kind == '_v2' else 'names'}" for tag, kind in rows]
-    for ax, (measure, title) in zip(axes, [('opioid', 'Strong-opioid decision changed'), ('severity', 'Severity rating changed')]):
-        style(ax)
-        floor = np.array([stats['conditions'][kind]['models'][tag]['flips'][f'{measure}_floor'] for tag, kind in rows])
-        ident = np.array([stats['conditions'][kind]['models'][tag]['flips'][f'{measure}_counterfactual'] for tag, kind in rows])
-        ax.hlines(y, np.minimum(floor, ident), np.maximum(floor, ident), color=GRID, linewidth=2, zorder=1)
-        ax.plot(floor, y, linestyle='none', marker='o', markersize=6, color=MUTED, markeredgecolor='white',
-                markeredgewidth=0.8, zorder=3, label='same prompt, two seeds (noise floor)')
-        ax.plot(ident, y, linestyle='none', marker='o', markersize=6, color=BLUE, markeredgecolor='white',
-                markeredgewidth=0.8, zorder=4, label='reference vs other identity, same seed')
-        ax.set_yticks(y)
-        ax.set_yticklabels(labels)
-        ax.set_xlim(0, max(0.2, float(max(floor.max(), ident.max())) * 1.15))
-        ax.set_ylim(-0.7, len(rows) - 0.3)
-        ax.set_title(title, fontsize=8.5, color=INK, loc='left', pad=6)
-        ax.set_xlabel('share of pairs whose answer differs', fontsize=8)
-    handles, names = axes[0].get_legend_handles_labels()
-    fig.legend(handles, names, loc='upper center', ncol=2, frameon=False, fontsize=8, bbox_to_anchor=(0.5, 1.0))
-    fig.tight_layout(rect=(0, 0, 1, 0.9))
-    fig.savefig(path)
-    plt.close(fig)
-
-
 def main() -> None:
     stats = compute()
     TABLES.mkdir(parents=True, exist_ok=True)
@@ -380,8 +292,9 @@ def main() -> None:
     (TABLES / 'differences.tex').write_text(table_differences(stats) + '\n')
     (TABLES / 'noise.tex').write_text(table_noise(stats) + '\n')
     (TABLES / 'names.tex').write_text(table_names(stats) + '\n')
-    figure_differences(stats, FIGURES / 'fig2_differences.pdf')
-    figure_noise(stats, FIGURES / 'fig3_noise.pdf')
+    import figures                     # Figures 2 and 3 are drawn in figures.py from outputs/paper_stats.json
+    figures.fig2()
+    figures.fig3()
     print(json.dumps(stats['totals']))
     for kind, label in CONDITIONS:
         for tag, *_ in MODELS:

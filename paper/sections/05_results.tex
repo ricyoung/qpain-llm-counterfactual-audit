@@ -14,7 +14,7 @@ name-level means (Appendix~\ref{app:names}) and the noise floor
 (Figure~\ref{fig:noise}, Table~\ref{tab:noise}). Section~\ref{sec:results-study2}
 reports Study~2, the panel of \nConfigs{} configurations on the authored and
 Q-Pain cases: validity and baselines, agreement with the Q-Pain reference
-answers, the identity differences (Figure~\ref{fig:panel}, Table~\ref{tab:panelqpain})
+answers, the identity differences (Figures~\ref{fig:panel} and~\ref{fig:paneloffer}, Table~\ref{tab:panelqpain})
 and the reasoning and precision contrasts (Tables~\ref{tab:thinking}
 and~\ref{tab:precision}).
 
@@ -69,7 +69,9 @@ recommending a strong opioid. Markers show the mean paired difference and bars
 the percentile bootstrap 95\% CI; blue circles are the explicit-label condition
 (30 pairs per identity), orange diamonds the name-cue condition (60 pairs).
 A difference to the right of zero means the identity received a higher severity
-rating, or strong opioids more often, than the reference.}
+rating, or strong opioids more often, than the reference. The shaded band is the
+$\pm0.10$ equivalence margin for the strong-opioid proportion; the $\pm1$-point
+severity margin lies far outside the plotted range.}
 \label{fig:differences}
 \end{figure}
 
@@ -136,9 +138,10 @@ identities at all.
 \centering
 \includegraphics[width=\textwidth]{fig3_noise.pdf}
 \caption{Noise floor against counterfactual change. Grey: proportion of pairs
-of responses to the identical prompt on two seeds whose answer differed. Blue:
-proportion of same-seed pairs, White male reference versus another identity,
-whose answer differed. Left: strong-opioid decision. Right: severity rating.}
+of responses to the identical prompt on two seeds whose answer differed. Blue
+circles (explicit labels) and orange diamonds (name cues): proportion of same-seed
+pairs, White male reference versus another identity, whose answer differed. Left:
+strong-opioid decision. Right: severity rating.}
 \label{fig:noise}
 \end{figure}
 
@@ -188,8 +191,9 @@ the reference dose in 91--93\% of its offers but offered an opioid in only 74\%
 of responses.
 
 \subsubsection{Identity differences}
-Figures~\ref{fig:panel} and~\ref{fig:panelnames} show the pooled race and sex
-contrasts on the Q-Pain cases for every configuration, and
+Figures~\ref{fig:panel} (pain severity) and~\ref{fig:paneloffer} (opioid offered) show the
+pooled race and sex contrasts on the Q-Pain cases for every configuration, with both
+cue types in each, and
 Table~\ref{tab:panelqpain} (Q-Pain) and Appendix
 Table~\ref{tab:panelauthored} (authored cases) the largest identity difference
 in each. Of the \nTests{} identity comparisons in the study, \nTestsBelow{} had a
@@ -222,6 +226,32 @@ White severity contrast under explicit labels was positive in
 cues in \nBlackSevPosNames{} of \nPooledNames{} (median \medBlackSevNames{},
 largest \maxBlackSevNames{}). The women minus men contrasts showed no consistent
 sign for severity under either cue type.
+
+The one-point margin is generous, so equivalence was also assessed at tighter
+margins. Of the \nQpainDiffs{} Q-Pain severity differences, \nSevEqHalf{} were
+equivalent within $\pm0.5$ points and \nSevEqQuarter{} within $\pm0.25$, and every
+one was equivalent within $\pm$\minMarginSevQpain{}; on the six authored cases the
+corresponding smallest margin was \minMarginSevAuthored{}, as six cases allow. The
+opioid results were weaker: within $\pm0.05$, \nOfferEqTight{} of the
+\nQpainDiffs{} offer differences and \nHighEqTight{} of the high-dose differences
+were equivalent, and the smallest margins that covered every difference were
+\minMarginOffer{} and \minMarginHigh{}. Equivalence on the offer outcome is also less
+informative where the reference arm leaves no room to move: \nCeilOffer{} of the
+\nConfigsQpain{} configurations (\ceilOfferNames{}) offered an opioid in at least
+95\% of reference responses, \nCeilHigh{} recommended the high dose in at least 90\%
+(\ceilHighNames{}) and \nFloorHigh{} in at most 10\% (\floorHighNames{}). The offer
+differences not shown equivalent within $\pm0.10$ therefore fell mostly away from
+the ceiling: \nOfferNonEquivOpen{} of \nOfferDiffsOpen{}, against
+\nOfferNonEquivCeil{} of \nOfferDiffsCeil{} at it.
+
+As in Study~1, a change of identity moved an answer about as often as asking the
+identical prompt again on another seed, with a slight excess. Across the
+\nFlipRows{} configuration, cue and outcome rows of Appendix
+Table~\ref{tab:noiseqpain}, the rate at which a different identity changed the
+answer exceeded the same-prompt floor, on a different seed, by a median of
+\medFlipGap{} (largest \maxFlipGap{}), and by more than $0.03$ in \nFlipGapAbove{}
+rows. The two unseeded models, Claude Haiku 4.5 and Beam, are included; for them
+the ``same seed'' pairs share only a replicate index.
 
 \subsubsection{Reasoning and precision}
 Turning reasoning on, or raising its effort, changed the baseline more than it
@@ -266,21 +296,28 @@ identity difference changed between the two (smallest Holm $p = 0.87$).
 
 \begin{figure}[p]
 \centering
-\includegraphics[width=\textwidth]{fig4_panel_explicit.pdf}
-\caption{Study 2, explicit labels: pooled identity contrasts on the 50 Q-Pain
-cases for every configuration. Each race contrast is the group minus White within
-sex, averaged over sex; the sex contrast is women minus men within race, averaged
-over race. Markers show the mean of the case means and bars the case-bootstrap
-95\% CI. Left: pain severity (0--10 points). Right: proportion offered an opioid.}
+\includegraphics[width=\textwidth]{fig4_panel_severity.pdf}
+\caption{Study 2, pain severity: pooled identity contrasts on the 50 Q-Pain cases
+for every configuration, with explicit labels (blue circles) and name cues (orange
+diamonds) side by side. Each of the first three columns is a minority group minus
+White within sex, averaged over sex; the last is woman minus man within race,
+averaged over race. Markers show the mean of the case means and bars the
+case-bootstrap 95\% CI. A dagger marks a configuration in which a within-model
+identity difference in severity survived Holm correction, all of them under
+explicit labels. The $\pm1$-point equivalence margin lies far outside the plotted
+range.}
 \label{fig:panel}
 \end{figure}
 
 \begin{figure}[p]
 \centering
-\includegraphics[width=\textwidth]{fig4_panel_names.pdf}
-\caption{Study 2, name cues: pooled identity contrasts on the 50 Q-Pain cases,
-constructed as in Figure~\ref{fig:panel}.}
-\label{fig:panelnames}
+\includegraphics[width=\textwidth]{fig5_panel_offer.pdf}
+\caption{Study 2, opioid offered: pooled identity contrasts in the proportion of
+responses offering an opioid on the 50 Q-Pain cases, constructed as in
+Figure~\ref{fig:panel}. The shaded band is the $\pm0.10$ equivalence margin. The
+dagger marks the one configuration in which a within-model difference in the opioid
+offer survived Holm correction.}
+\label{fig:paneloffer}
 \end{figure}
 
 \begin{table}[p]
@@ -310,7 +347,8 @@ Holm-adjusted $p$-value for a change in any identity difference.}
 \centering\footnotesize
 \caption{Precision contrast: Gemma 3 12B at 16-bit precision (API) minus the
 same weights at 4-bit (local Ollama), constructed as in Table~\ref{tab:thinking}.
-The two copies also differ in serving software.}
+The two copies also differ in serving software, provider and prompt template, so
+this is a contrast between serving stacks, not an effect of precision alone.}
 \label{tab:precision}
 \setlength{\tabcolsep}{4pt}
 \resizebox{\textwidth}{!}{\input{tables/panel_precision}}
@@ -336,8 +374,11 @@ on the 50 Q-Pain cases most opioid differences were equivalent within ten
 percentage points. The differences that survived correction within a model all
 favoured Black patients, and the Black minus White severity contrast was
 positive in most configurations, by a median of a few hundredths of a point.
-Differences between models, between reasoning settings and between two copies of
-the same weights were far larger than any difference between identities: the
-reference high-dose rate ranged from \rangeHighBase{}, reasoning moved baseline
-severity by up to half a point, and serving precision moved the high-dose rate
-by a quarter.
+Differences between models, between reasoning settings and between two serving
+stacks for the same weights were descriptively far larger than any difference
+between identities, although these quantities are not on a common scale and the
+comparisons differ in more than one respect: the reference high-dose rate ranged
+from \rangeHighBase{}, reasoning moved baseline severity by up to half a point,
+and moving the same Gemma~3 weights from a 4-bit local copy to a 16-bit API copy,
+which also changed the serving software, provider and prompt template, moved the
+high-dose rate by a quarter.

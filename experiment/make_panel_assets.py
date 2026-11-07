@@ -169,61 +169,46 @@ def table_contrasts(stats: dict, section: str) -> str:
     return '\n'.join(lines)
 
 
-# ---------------------------------------------------------------- figure
+def _unseeded() -> set:
+    """Models whose API ignored the seed: their 'same seed' pairs share only a replicate index."""
+    return ({e['id'] for e in PANEL['openrouter'] if e.get('seed') is False}
+            | {e['name'] for e in PANEL.get('ollama_cloud', []) if e.get('seed') is False})
 
-def figure_panel(stats: dict, cue: str, path: Path) -> bool:
-    import matplotlib
-    matplotlib.use('Agg')
-    import matplotlib.pyplot as plt
-    plt.rcParams.update({'font.family': 'Liberation Sans', 'font.size': 8, 'text.color': INK,
-                         'axes.labelcolor': INK2, 'pdf.fonttype': 42})
-    labels = [l for l in order(stats) if cue in stats['configurations'][l]['sets'].get('qpain', {})]
-    if not labels:
-        return False
-    fig, axes = plt.subplots(1, 2, figsize=(6.5, 0.3 * len(labels) + 1.1), sharey=True)
-    y = np.arange(len(labels))[::-1].astype(float)
-    offsets = np.linspace(0.27, -0.27, len(CONTRASTS))
-    for ax, (field, title, limit) in zip(axes, [('severity', 'Pain severity (0–10 points)', 0.5),
-                                                 ('offer', 'Opioid offered (proportion)', 0.20)]):
-        for side in ('top', 'right'):
-            ax.spines[side].set_visible(False)
-        for side in ('left', 'bottom'):
-            ax.spines[side].set_color(AXIS)
-        ax.tick_params(colors=INK2, labelsize=7.5, length=3, width=0.8)
-        ax.grid(axis='x', color=GRID, linewidth=0.8)
-        ax.set_axisbelow(True)
-        ax.axvline(0, color=AXIS, linewidth=0.8, zorder=1)
-        widest = max((abs(v) for l in labels
-                      for k, (kind, key, _) in enumerate(CONTRASTS)
-                      for r in [stats['configurations'][l]['sets']['qpain'][cue][kind][field].get(key)
-                                if kind == 'race' else stats['configurations'][l]['sets']['qpain'][cue][kind][field]]
-                      if r for v in r['ci95']), default=0.0)
-        limit = max(limit, np.ceil(widest * 1.05 / 0.05) * 0.05)   # never clip an interval
-        for row, label in zip(y, labels):
-            cell = stats['configurations'][label]['sets']['qpain'][cue]
-            for k, (kind, key, name) in enumerate(CONTRASTS):
-                r = cell[kind][field][key] if kind == 'race' else cell[kind][field]
-                if not r:
-                    continue
-                lo, hi = np.clip(r['ci95'], -limit, limit)
-                ax.hlines(row + offsets[k], lo, hi, color=COLOURS[k], linewidth=1.2, zorder=2)
-                ax.plot(np.clip(r['estimate'], -limit, limit), row + offsets[k], linestyle='none', marker=MARKERS[k],
-                        markersize=4.2, color=COLOURS[k], markeredgecolor='white', markeredgewidth=0.6, zorder=3,
-                        label=name if row == y[0] else None)
-        ax.set_xlim(-limit, limit)
-        ax.set_ylim(-0.6, len(labels) - 0.4)
-        ax.set_yticks(y)
-        ax.set_yticklabels([display(stats, l) for l in labels])
-        ax.set_title(title, fontsize=8.5, color=INK, loc='left', pad=6)
-    fig.supxlabel('Paired difference on the same Q-Pain case and seed (mean and case-bootstrap 95% CI)',
-                  fontsize=8, color=INK2)
-    handles, names = axes[0].get_legend_handles_labels()
-    fig.legend(handles, names, loc='upper center', ncol=4, frameon=False, fontsize=7.5, markerscale=1.6,
-               bbox_to_anchor=(0.55, 1.0))
-    fig.tight_layout(rect=(0, 0, 1, 1 - 0.35 / (0.3 * len(labels) + 1.1)))
-    fig.savefig(path)
-    plt.close(fig)
-    return True
+
+def table_noise(stats: dict, vset: str) -> str:
+    """Per configuration and cue: the same-prompt re-sampling floor, the identity flip rate on the same
+    seed, and the minimum detectable paired difference (alpha .05, power .80: 2.8 x the standard error)."""
+    fields = ('severity', 'strong_opioid') if vset == 'authored' else ('severity', 'offer', 'high_dose')
+    unseeded = _unseeded()
+    head = ' & '.join(f'\\multicolumn{{4}}{{c}}{{{FIELD_LABEL[f].capitalize()}}}' for f in fields)
+    sub = ' & '.join('floor & diff.\\ seed & same seed & MDE' for _ in fields)
+    rule = ' '.join(f'\\cmidrule(lr){{{3 + 4 * k}-{6 + 4 * k}}}' for k in range(len(fields)))
+    lines = [r'\begin{tabular}{ll' + 'rrrr' * len(fields) + '}', r'\toprule',
+             f'Configuration & Cue & {head} \\\\', rule, f' & & {sub} \\\\', r'\midrule']
+    for label in order(stats):
+        cues = stats['configurations'][label]['sets'].get(vset)
+        if not cues:
+            continue
+        name = tex(display(stats, label)) + (' (unseeded)' if stats['configurations'][label]['model'] in unseeded else '')
+        first = True
+        for cue in ('explicit', 'names'):
+            cell = cues.get(cue)
+            if not cell:
+                continue
+            parts = []
+            for f in fields:
+                flip = cell['flips'][f]
+                ses = [r['se'] for r in cell['identity'].get(f, {}).values() if r.get('se') is not None]
+                mde = 2.8 * float(np.mean(ses)) if ses else None
+                digits = 2 if f == 'severity' else 3
+                parts += [f"{flip[k]:.3f}" if flip[k] is not None else '--'
+                          for k in ('floor', 'identity_cross_seed', 'identity_same_seed')]
+                parts.append(f'{mde:.{digits}f}' if mde is not None else '--')
+            lines.append(f"{name if first else ''} & {cue} & {' & '.join(parts)} \\\\")
+            first = False
+    lines += [r'\bottomrule', r'\end{tabular}']
+    return '\n'.join(lines)
+
 
 
 def numbers(stats: dict) -> str:
@@ -285,6 +270,33 @@ def finding_numbers(stats: dict) -> dict:
                                           for l, cues in qp.items()}, 2)
     out['rangeFullMatch'] = _range(stats, {l: np.mean([c['reference_agreement']['full_match'] for c in cues.values()])
                                            for l, cues in qp.items()}, 2)
+    # ---- Study 2 noise floor and flip rates (Q-Pain cases)
+    gaps = [cell['flips'][f]['identity_cross_seed'] - cell['flips'][f]['floor']
+            for cues in qp.values() for cell in cues.values() for f in cell['flips']
+            if cell['flips'][f]['floor'] is not None and cell['flips'][f]['identity_cross_seed'] is not None]
+    out.update({'nFlipRows': len(gaps), 'maxFlipGap': f"{max(gaps):+.3f}", 'medFlipGap': f"{np.median(gaps):+.3f}",
+                'nFlipGapAbove': sum(g > 0.03 for g in gaps)})
+    # ---- equivalence at tighter margins: a difference is equivalent within m exactly when bound90 < m
+    bound = lambda field, rows_=qrows: [r['bound90'] for _, _, _, f, r in rows_ if f == field]
+    out.update({'nSevEqHalf': sum(b < 0.5 for b in bound('severity')), 'nSevEqQuarter': sum(b < 0.25 for b in bound('severity')),
+                'minMarginSevQpain': f"{max(bound('severity')):.3f}",
+                'nOfferEqTight': sum(b < 0.05 for b in bound('offer')), 'minMarginOffer': f"{max(bound('offer')):.3f}",
+                'nHighEqTight': sum(b < 0.05 for b in bound('high_dose')), 'minMarginHigh': f"{max(bound('high_dose')):.3f}",
+                'minMarginSevAuthored': f"{max(r['bound90'] for _, v, _, f, r in rows if v == 'authored' and f == 'severity'):.3f}"})
+    # ---- ceiling and floor: configurations whose reference arm leaves the opioid outcomes no room to move
+    base = {l: c['baseline'] for l, c in explicit.items()}
+    names = lambda labels: '; '.join(tex(display(stats, l)) for l in labels)
+    ceil_offer = [l for l, b in base.items() if b['offer'] >= 0.95]
+    floor_high = [l for l, b in base.items() if b['high_dose'] <= 0.10]
+    ceil_high = [l for l, b in base.items() if b['high_dose'] >= 0.90]
+    offer_rows = [(l, r) for l, _, _, f, r in qrows if f == 'offer']
+    out.update({'nCeilOffer': len(ceil_offer), 'ceilOfferNames': names(ceil_offer),
+                'nFloorHigh': len(floor_high), 'floorHighNames': names(floor_high),
+                'nCeilHigh': len(ceil_high), 'ceilHighNames': names(ceil_high),
+                'nOfferNonEquivOpen': sum(not r['equivalent'] for l, r in offer_rows if l not in ceil_offer),
+                'nOfferDiffsOpen': sum(l not in ceil_offer for l, _ in offer_rows),
+                'nOfferNonEquivCeil': sum(not r['equivalent'] for l, r in offer_rows if l in ceil_offer),
+                'nOfferDiffsCeil': sum(l in ceil_offer for l, _ in offer_rows)})
     return out
 
 
@@ -294,14 +306,14 @@ def main() -> None:
     FIGURES.mkdir(parents=True, exist_ok=True)
     written = {'panel_models.tex': table_models(stats), 'panel_authored.tex': table_set(stats, 'authored'),
                'panel_qpain.tex': table_set(stats, 'qpain'), 'panel_thinking.tex': table_contrasts(stats, 'thinking'),
-               'panel_precision.tex': table_contrasts(stats, 'precision'), 'panel_numbers.tex': numbers(stats)}
+               'panel_precision.tex': table_contrasts(stats, 'precision'), 'panel_numbers.tex': numbers(stats),
+               'panel_noise_qpain.tex': table_noise(stats, 'qpain'), 'panel_noise_authored.tex': table_noise(stats, 'authored')}
     for name, body in written.items():
         (TABLES / name).write_text(body + '\n')
         print(TABLES / name)
-    for cue in ('explicit', 'names'):
-        path = FIGURES / f'fig4_panel_{cue}.pdf'
-        if figure_panel(stats, cue, path):
-            print(path)
+    import figures                         # Figures 4 and 5 are drawn in figures.py from outputs/panel_stats.json
+    figures.fig4()
+    figures.fig5()
 
 
 if __name__ == '__main__':

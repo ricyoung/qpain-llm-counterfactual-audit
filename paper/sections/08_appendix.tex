@@ -54,3 +54,30 @@ is $2/64$, so no difference can survive Holm correction over seven identities.}
 \setlength{\tabcolsep}{3pt}
 \resizebox{\textwidth}{!}{\input{tables/panel_authored}}
 \end{table}
+
+\section{Study 2 noise floors, flip rates and minimum detectable differences}
+\label{app:panelnoise}
+\begin{table}[p]
+\centering\scriptsize
+\caption{Study 2, Q-Pain cases: for every configuration and cue, the same-prompt
+re-sampling floor (the share of response pairs to the identical prompt on two seeds
+whose answer differs; for severity, whose integer rating differs); the share of
+reference-versus-identity pairs whose answer differs, drawn from different seeds
+(``diff.\ seed'', the like-for-like comparison with the floor) and from the same
+seed (``same seed'', as analysed); and the minimum detectable difference (MDE,
+$2.80$ times the standard error of the mean of the case means, averaged over the
+seven identities; points for severity, proportion otherwise). Claude Haiku 4.5 and
+Beam ignored the seed, so their ``same seed'' pairs share only a replicate index.}
+\label{tab:noiseqpain}
+\setlength{\tabcolsep}{2.5pt}
+\resizebox{\textwidth}{!}{\input{tables/panel_noise_qpain}}
+\end{table}
+
+\begin{table}[p]
+\centering\scriptsize
+\caption{Study 2, authored cases: the quantities of Table~\ref{tab:noiseqpain} for the six
+authored cases, where the case-level minimum detectable difference is large.}
+\label{tab:noiseauthored}
+\setlength{\tabcolsep}{2.5pt}
+\resizebox{\textwidth}{!}{\input{tables/panel_noise_authored}}
+\end{table}

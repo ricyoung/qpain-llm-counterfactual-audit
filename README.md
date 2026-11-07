@@ -3,7 +3,7 @@
 Code, data and paper for *Do Open-Weight Language Models Reproduce Racial and Sex Disparities in Pain
 Assessment? A Counterfactual Audit with Explicit and Name-Based Cues* (Richard J. Young, Alice M.
 Matthews). Paper: `paper/main.pdf`; arXiv source: `paper/arxiv/`. Analysis: `experiment/`
-(`analyze_panel.py`, `make_panel_assets.py`; tests in `experiment/test_analyze_panel.py`).
+(`analyze_panel.py`, `make_panel_assets.py`, `figures.py`; tests in `experiment/test_analyze_panel.py`).
 
 **About this copy.** Every request and response is saved under `experiment/outputs/raw*/`. In this
 public copy the address of the local inference host is replaced by `study-host` in the captured
