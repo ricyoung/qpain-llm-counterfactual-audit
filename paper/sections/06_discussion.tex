@@ -1,0 +1,193 @@
+% ============================================================
+% DISCUSSION (P1 summary + takeaway; findings in figure order; novelty;
+%             hypotheses restated; confounders; integration; limitations)
+% ============================================================
+\section{Discussion}
+\label{sec:discussion}
+
+% --- Paragraph 1: purpose, main finding, take-home ---
+This study asked whether language models reproduce the racial and sex
+disparities documented in human pain care when a patient's race and sex are
+stated (H1) or implied by a name (H2). In Study~1, across four open-weight
+models, six cases, eight identities and 2,880 scored responses, neither cue type
+produced a difference that survived correction, and a change of identity moved
+the opioid decision about as often as asking the same question twice. Study~2
+extended the audit to \nConfigs{} configurations of \nModels{} proprietary and
+open-weight models and to 50 clinician-written cases, and the answer held: no
+difference survived the study-wide false discovery rate, every severity
+difference was equivalent to zero within one point, and the few differences that
+survived correction within a model favoured Black patients rather than
+disadvantaging them. The take-home finding is that, in this constrained task,
+current models assess pain and choose analgesia without a detectable disadvantage
+to minority or female patients, while they differ among themselves, and across
+their own reasoning and serving settings, by far more than they differ between
+patients.
+
+% --- Paragraph 2: explicit labels (Figure 2, left) ---
+Under explicit labels (Figure~\ref{fig:differences}, left) the results support
+H1. Every Holm-adjusted $p$-value was 1, the largest severity difference was a
+tenth of a point, and the strong-opioid flip rate between identities was at or
+below the same-prompt floor for every model. This replicates, on open-weight
+models, the null that Young et al.\ reported for GPT-4 and Gemini
+\cite{young2025racial}, and it does so with paired seeds and an explicit
+sensitivity bound, which that study lacked. For severity the conclusion is stronger than non-significance: with the case as the unit, every difference was equivalent to zero within one point, half the smallest clinically important change \cite{farrar2001clinical}. For the opioid decision it is weaker: six cases leave intervals that cannot exclude differences of 20 percentage points, so the opioid null is an absence of evidence rather than evidence of absence. It is also consistent with the outcome-grounded triage audit of Jarrett
+et al., in which race, language and insurance produced no harmful shift while
+stigma-related attributes did \cite{jarrett2026outcome}.
+
+% --- Paragraph 3: name cues (Figure 2, right; Appendix table); novelty; hypotheses restated ---
+Under name cues (Figure~\ref{fig:differences}, right) the results do not support
+H2. H2 predicted lower severity and fewer strong opioids for Black and Hispanic
+names than for White male names; no model showed that direction. The novelty of
+this condition lies in its two-name design, and the name-level analysis shows why
+it mattered. gemma3's uniformly positive severity differences would, with one
+name per group, have read as a model that rates every minority patient's pain
+higher than a White man's. With two names, the shift resolved into a single
+reference name, Greg Baker, that gemma3 rated lower than any other name (7.67
+against 7.73--7.83), while the second White male name behaved like the rest and
+a White female name was among the highest. A name carries more than race and sex
+(it carries age cohort, class and regional associations \cite{bhetwal2026name}),
+and a model's response to any one name is an idiosyncrasy until a second name of
+the same group reproduces it. That is the same lesson Tonneau et al.\ drew at
+scale, that cues for the same group are not interchangeable
+\cite{tonneau2026cues}, and that Vohra and Ravikiran drew for audit instruments
+\cite{vohra2026audit}: here the instrument that would have manufactured a
+finding was the choice of a single reference name. Restating the hypotheses in
+the light of the data: H1 was supported within the stated sensitivity, and H2 was
+not supported in direction or magnitude.
+
+% --- Paragraph 3b: Study 2 (Figures 4 and 5; Tables 7-9) ---
+Study~2 addressed the third purpose, whether the answer depends on the cases or
+the models chosen, and in direction it did not. On clinician-written cases, for
+proprietary models from three developers and open-weight models from 3 billion
+parameters to mixture-of-experts models of several hundred billion, with reasoning on and off, the human disparity did not appear. What
+appeared instead, under explicit labels, was a small and consistent shift the
+other way (Figure~\ref{fig:panel}): the Black minus White severity contrast was
+positive in \nBlackSevPosExplicit{} of \nPooledExplicit{} configurations, and
+every difference that survived correction within a model rated a Black patient's
+pain higher, or offered an opioid more often, than the White male reference. The
+shift was weaker under name cues (Figure~\ref{fig:panelnames}), as would be
+expected if models respond to the explicit word rather than to anything a name
+conveys, and it is consistent with alignment training that teaches models to
+respond with care to a stated protected attribute \cite{ouyang2022training}. A
+shift of a few hundredths of a point is clinically negligible, but it shows that
+an explicit label does not leave the output untouched. Two other results carry
+more practical weight than any identity effect. First, the models disagreed with
+one another, and with the Q-Pain reference answer, far more than they
+distinguished between patients: the same cases drew the high dose from llama3.2
+in nearly every response and from gemma3 in almost none, and full agreement with
+the clinical reference ranged from \rangeFullMatch{}. Second, the same weights
+behaved differently under different settings: reasoning moved severity by up to
+half a point, upward in some models and downward in others, and where it changed
+opioid decisions it made opioids or high doses less frequent, and Gemma~3 served at 16-bit precision
+through an API rather than at 4-bit locally recommended the high dose a quarter
+more often while rating severity the same, a contrast that cannot separate
+precision from the serving software. For a deployment, then, the model, its
+reasoning setting and its serving stack determine what a patient is offered more
+than the patient's race or sex does, and an audit of one configuration does not
+certify another.
+
+% --- Paragraph 4: confounders and alternative explanations (Figure 3) ---
+Several alternative explanations were considered and addressed by design or
+measurement. First, the pilot showed that when a vignette states the patient's
+own rating, models copy it (60--100\% of responses), so an audit built on such
+vignettes would find no disparity because no assessment takes place; the main
+conditions therefore described observed behaviour only. Second, sampling
+instability could either manufacture or hide a difference
+\cite{atil2024nondeterminism, song2025good}; pairing every comparison on the
+seed removed most of it, and reporting the same-prompt floor
+(Figure~\ref{fig:noise}) and the matched different-seed comparison showed the residual counterfactual change close to the models' own noise, as Bellibatlu et al.\ recommend
+\cite{bellibatlu2026instability}. gemma3 was the one model whose severity rating
+changed between identities slightly more often than between seeds, in both
+conditions, and in the explicit condition those changes ran in both directions,
+which is the signature of a model that attends to the identity token without a
+consistent valence. Third, because all seven identities are compared with the
+same reference responses, the seven differences move together whenever a
+reference response happens to flip; the uniformly negative opioid differences for
+ministral-3 and llama3.2 under name cues are exactly what that construction
+produces and were not treated as evidence. Fourth, the JSON constraint and the
+single-sentence rationale limit the model's expressed reasoning, which may
+suppress a bias that free text would reveal; the constraint was accepted
+because it makes every response scorable without human judgement.
+
+% --- Paragraph 5: fit with other research; translation ---
+These findings fit a pattern across model generations. Early generative models
+showed intersectional treatment gaps in pain management \cite{loge2021qpain},
+2023 commercial models reproduced race-based misconceptions and stereotyped
+vignettes \cite{omiye2023race, zack2024gpt4}, and the most recent proprietary
+and now open-weight models show no measurable disparity in direct pain
+assessment \cite{young2025racial}. The most economical reading is that
+instruction tuning and alignment \cite{ouyang2022training} have removed the most
+direct expression of this bias, at least when the task is short, the cues are
+clean and the output is constrained. The same open-weight families are not bias
+free elsewhere: they show name bias in fill-in-the-blank tasks
+\cite{bhetwal2026name}, language-triggered bias in recruitment
+\cite{kitahara2026linguistic}, and sensitivity to stigmatising language and
+social attributes in triage \cite{huang2026artificial, jarrett2026outcome}, so
+the null reported here is a statement about a task, not about the models. That
+reading translates into practice in two ways. For deployment, it means that the
+first-order risk of an open-weight model reproducing the human pain disparity is
+not supported for these models in this task, while saying nothing about longer
+notes, dialect \cite{hofmann2024dialect}, insurance status or free-text
+reasoning. For auditing, it means that counterfactual audits of clinical LLMs
+should adopt three practices that this study found decisive: several names per
+group, comparisons paired on the sampling seed, and a reported noise floor and
+minimum detectable effect, without which a difference of a tenth of a point
+cannot be distinguished from a model's ordinary variability.
+
+% --- Limitations paragraph ---
+\subsection{Limitations}
+\paragraph{Cases.} The six authored cases were drafted with a language model and
+edited by the first author without clinician review, and six cases cannot
+represent the range of pain presentations; the sickle cell case carries a
+racial association in United States epidemiology that is independent of the
+manipulation. Q-Pain's 50 cases were designed by one clinical expert, and only a
+random subset was reviewed by other physicians. In all 50 the reference answer
+is to offer the opioid at the low dose, so the set cannot show whether a model
+withholds an opioid when withholding is correct, and a high-dose answer departs
+from the reference rather than marking better care. Q-Pain has been public since
+2021 and may be in the training data of the models audited; because the audit
+fills its identity placeholders, any exposure applies to every identity arm of a
+case alike, but a memorised answer could mute a model's response to the patient.
+In both case sets the clinical case determined most of each model's severity
+rating (86--100\% of variance in Study~1), which leaves little room for an
+identity effect on severity; llama3.2's severity null in particular is
+uninformative, since it returned one rating per case. Each case had a single
+age, so age was not tested.
+
+\paragraph{Identity cues.} Explicit labels and first names are only two of the
+ways identity enters a clinical note; dialect, address, insurance and social
+history were not tested. The authored Hispanic and Asian names were not
+validated for perceived race, and Q-Pain's names, although drawn from
+demographic name data \cite{tzioumis2018demographic}, were not validated for how
+models perceive them. Names also signal age cohort, class and region, so a
+name-level difference need not be racial. In the Q-Pain name condition the
+template's pronouns carried sex alongside the name, so that condition removes
+the explicit race word but not an explicit sex signal. The racial categories are
+those of United States epidemiology, and the audit was English only.
+
+\paragraph{Models and settings.} Every configuration ran at one temperature
+(0.7), with one prompt wording and one physician role, as a single request with
+no system prompt and no record context; deployed systems differ in all of these.
+Each API model was reached through one provider, and another provider of the
+same open weights may serve them at a different precision or with different
+defaults; proprietary models' serving precision is not disclosed, nor is
+Beam's on Ollama Cloud. Claude Haiku 4.5 and Beam could not be seeded, so their
+pairs share a replicate index but not a seed, and Beam's reasoning could not be
+switched off, so it has no reasoning contrast. On
+the authored cases the local models answered in free JSON while the API models
+answered under a schema, and the local reasoning configurations were run on the
+authored cases only. The precision contrast compares a 4-bit copy served by Ollama with a 16-bit copy
+served by DeepInfra, so precision is confounded with the serving software and its
+prompt template. Models served through an API can change without notice;
+the time of every request is recorded with its response.
+
+\paragraph{Outcomes and inference.} The outcomes omit timing, route and
+non-pharmacological management, which Young et al.\ examined
+\cite{young2025racial}. In Study~1, thirty to sixty pairs per comparison from six
+cases bound the detectable effect at roughly 0.1--0.2 severity points and 4--14
+percentage points of strong-opioid use and leave the opioid estimates imprecise;
+in Study~2 six cases cannot support a case-level test that survives correction.
+The 50 Q-Pain cases narrow that limit without removing it, so disparities
+smaller than the reported intervals remain possible. Neither study was
+preregistered: H1 and H2 were stated after the Study~1 data were collected, and
+Study~2 had no directional hypothesis, so the analyses are exploratory.

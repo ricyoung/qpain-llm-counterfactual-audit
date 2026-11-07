@@ -1,0 +1,5 @@
+gemma3:12b: {'called': 96, 'cached': 384, 'errors': 0}
+qwen3:14b: {'called': 576, 'cached': 384, 'errors': 0}
+ministral-3:14b: {'called': 1056, 'cached': 384, 'errors': 0}
+llama3.2:latest: {'called': 1536, 'cached': 384, 'errors': 0}
+{"called": 1536, "cached": 384, "errors": 0}

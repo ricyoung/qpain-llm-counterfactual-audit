@@ -1,0 +1,11 @@
+2026-11-05 22:28:42 start --models qwen3.8:27b --think off
+qwen3.8:27b think=off explicit: 50 called, 1.9 s/call
+qwen3.8:27b think=off explicit: 100 called, 1.9 s/call
+qwen3.8:27b think=off explicit: 150 called, 1.9 s/call
+qwen3.8:27b think=off explicit: 200 called, 2.0 s/call
+qwen3.8:27b think=off: {'called': 240, 'cached': 0, 'errors': 0, 'seconds': 475.667516708374}
+{"called": 240, "cached": 0, "errors": 0, "seconds": 475.667516708374}
+2026-11-05 22:36:38 done  --models qwen3.8:27b --think off
+2026-11-05 22:36:38 start --models qwen3.8:27b --think off --names
+qwen3.8:27b think=off names: 50 called, 2.2 s/call
+qwen3.8:27b think=off names: 100 called, 3.3 s/call

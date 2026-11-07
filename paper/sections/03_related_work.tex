@@ -1,0 +1,171 @@
+% ============================================================
+% RELATED WORK (critical evaluation; gaps; positioning)
+% ============================================================
+\section{Related Work}
+\label{sec:related}
+
+\subsection{Disparities in human pain care}
+A consensus review assembled evidence that racial and ethnic minorities are
+undertreated for pain across pain types (experimental, acute post-operative,
+cancer, chronic non-malignant) and settings, including the emergency department,
+and attributed the pattern to patient, provider and system factors
+\cite{green2003unequal}; a later review traced its causes and consequences
+\cite{anderson2009racial}, and a meta-analysis synthesised twenty years of
+United States studies on analgesic treatment by race and ethnicity, examining
+the moderating effect of pain type, setting and study period
+\cite{meghani2012time}. Emergency-department opioid prescribing rose after the
+quality initiatives of the late 1990s, but non-Hispanic White patients remained
+more likely to receive an opioid than other groups \cite{pletcher2008trends}.
+Hoffman et al.\ supplied a mechanism: false beliefs about biological differences
+between Black and White people, endorsed by half of a sample of White medical
+trainees, predicted lower pain ratings and less accurate treatment
+recommendations for Black patients \cite{hoffman2016racial}. This literature
+defines the disparity an LLM might inherit from clinical and lay text, namely
+lower assessed severity and less potent analgesia for the same presentation, and
+it fixes the direction that H2 predicts.
+
+\subsection{Language-model audits in pain management}
+Q-Pain introduced a dataset and an experimental framework for measuring social
+bias in pain-management question answering and, applying it to GPT-2 and GPT-3,
+found statistically significant treatment differences between intersectional
+race--gender subgroups \cite{loge2021qpain}. Those models predate instruction
+tuning and alignment, so the result establishes that the disparity is learnable
+from text, not that current systems exhibit it. Young et al.\ brought the design
+to GPT-4 and Gemini with 40 MIMIC-IV cases of abdominal, back, headache and
+musculoskeletal pain, amended to every race/ethnicity and sex combination (480
+cases per model), and found that race/ethnicity and sex did not influence
+subjective pain rating, opioid name, order or dosage, although the two models
+differed from each other in severity rating and strong-opioid use
+\cite{young2025racial}; a subsequent letter proposed comparing inference-tuned
+models with pretrained LLMs in this setting \cite{liu2025addressing}. In
+palliative care, where pain management was one of four care dimensions probed,
+GPT-4o produced expert-rated bias in a third of adversarial responses
+\cite{akhras2026palliative}. Three features of the Young et al.\ study motivate
+the present one: it tested proprietary models whose weights and updates are
+outside the auditor's control; it stated race and sex explicitly; and its
+univariate analyses did not pair responses on a sampling seed or report a
+within-condition instability baseline, so the size of a difference that could
+have been detected is unknown. The PAINT resource, with clinician-validated pain
+and demographic annotations in four languages, names the question as open
+\cite{zhang2026paint}.
+
+\subsection{Demographic bias audits of clinical language models}
+Beyond pain, the audits are numerous and largely concordant in finding bias,
+but they differ in what they measure. Omiye et al.\ asked four commercial LLMs
+nine questions probing race-based medical misconceptions, five times each, and
+found that every model produced examples of debunked race-based medicine and
+answered inconsistently across repetitions \cite{omiye2023race}. Zack et al.\
+evaluated GPT-4 across medical education, diagnostic reasoning, clinical plan
+generation and subjective patient assessment and found that it did not model the
+demographic diversity of conditions and generated stereotyped vignettes
+\cite{zack2024gpt4}. Hanna et al.\ fed 100 de-identified encounters of patients
+with HIV to ChatGPT four times, varying only race/ethnicity, and compared the
+generated text by sentiment, subjectivity and reading ease
+\cite{hanna2023assessing}; Yang et al.\ found GPT-3.5 and GPT-4 projecting higher
+costs and longer hospitalisations for White patients \cite{yang2024unmasking};
+Ayoub et al.\ sampled simulated physicians choosing one patient to save under
+resource scarcity \cite{ayoub2024inherent}. Benchmark-scale work followed:
+Poulain et al.\ evaluated eight LLMs on three clinical question-answering
+datasets with red-teaming prompts and examined how architecture and prompting
+shape the biases observed \cite{poulain2024bias}, then proposed a
+preference-optimisation alignment to reduce them \cite{poulain2024aligning};
+FairMedQA built 4,806 counterfactual question pairs from 801 vignettes and found
+accuracy disparities of 3 to 19 percentage points across demographic groups in
+twelve LLMs \cite{xiao2025fairmedqa}; Purkayastha et al.\ found that
+demographic prefixes changed 20.3\% of answers across six models on MedQA items
+\cite{purkayastha2026beyond}; Lee et al.\ identified intersectional sex-by-race
+gaps in LLM emergency triage \cite{lee2026promising}; and Pendse et al.\ altered
+names, pronouns and descriptors across 39 demographic groups in 97 psychiatric
+training cases to probe implicit bias in automated diagnosis
+\cite{pendse2026implicit}. Audits of emergency triage that pair each case with
+a counterfactual have found gender-swap flip rates between 9.9\% and 43.8\% in
+five proprietary models \cite{young2026equitriage}, a dose-response skew toward
+less aggressive management from stigmatising language
+\cite{huang2026artificial}, and, when grounded in patient outcomes, harmful
+reprioritisation from psychiatric history, frequent-visitor status, homelessness,
+age and substance use but not from race, language or insurance
+\cite{jarrett2026outcome}. Two systematic syntheses describe bias as pervasive
+across clinical applications \cite{suenghataiphorn2025systematic,
+xiao2026scoping}, and broader surveys catalogue the evaluation and mitigation
+techniques available \cite{gallegos2024bias, mittermaier2023bias}.
+
+Read critically, this body of work has three recurrent limitations that the
+present study is designed around. Most audits test proprietary models through
+an API, so results are tied to an unversioned endpoint. Nearly all state the
+protected attribute explicitly, which is the cue most likely to trigger
+alignment behaviour. And the common metric, the share of answers that change
+when the attribute changes, is rarely compared with the share that change when
+nothing changes.
+
+\subsection{Open-weight models}
+Open-weight models are now deployed on institutional hardware. Nowak et al.\
+describe an isolation-first, on-premise inference stack for radiology that
+served an open-weights model to 22 residents and radiologists in a prospective
+pilot \cite{nowak2026secure}. Audits of such models are beginning: Aljohani
+et al.\ compared ten open-source LLMs, including Qwen2.5, MedGemma, MedLLaMA2
+and GPT-OSS variants, on paediatric Emergency Severity Index prediction with
+paired counterfactuals that change one demographic, socioeconomic or
+system-context variable \cite{aljohani2026counterfactual}; Ahmed and Sadka
+audited Mistral 7B-Instruct, served locally through Ollama, on 4,659
+counterfactual MedQA items under stochastic and deterministic decoding
+\cite{ahmed2026auditing}; Kitahara and Yamaguchi found that job-posting language
+triggers gender and racial bias in six open-weight models applied to recruitment,
+among them Llama 3.2, Gemma 3 and Qwen 3 \cite{kitahara2026linguistic}; and
+Bhetwal et al.\ measured consistent name bias in 300,000 responses from six local
+LLMs on a fill-in-the-blank task \cite{bhetwal2026name}. The model families
+audited here are documented in their technical reports \cite{gemmateam2025gemma,
+yang2025qwen3, grattafiori2024llama}, and all are instruction-tuned in the
+lineage of reinforcement learning from human feedback \cite{ouyang2022training}.
+None has been audited for pain assessment.
+
+\subsection{Name-based cues and audit instruments}
+Name-based correspondence audits originate in labour economics, where otherwise
+identical r\'esum\'es with White-sounding names received more call-backs than
+those with Black-sounding names \cite{bertrand2004emily}. Applied to LLMs, the
+design shows that advice systematically disadvantages names associated with
+racial minorities and women, with Black women receiving the least advantageous
+outcomes across 42 prompt templates \cite{salinas2024name}; that hiring emails
+favour White over Hispanic applicants, although the pattern is prompt-sensitive
+and idiosyncratic \cite{an2024hiring}; that hiring and salary recommendations
+over 750,000 prompts favour White female-sounding names \cite{nghiem2024gotta};
+and that a method varying demographics across 70 decision scenarios can surface
+discrimination before deployment \cite{tamkin2023evaluating}. Cues beyond the
+name matter too: models make covertly racist decisions from dialect alone
+\cite{hofmann2024dialect}, and demographic identity leaks from unstructured
+prose in de-identified r\'esum\'es across nine open-weight models
+\cite{chen2026beyond}. Two recent results bear directly on how such audits
+should be built. Tonneau et al.\ showed over 14.8 million prompts that different
+cues for the same group induce only partially overlapping changes in model
+responses, so that bias conclusions vary in magnitude and direction with the
+cue chosen \cite{tonneau2026cues}. Vohra and Ravikiran, in a preregistered
+replication across hiring, lending and medical triage with applications that
+differed only by name, found that none of 36 planned contrasts survived
+correction and that the audit instrument (rating versus ranking) produced
+effects rivalling the demographic ones \cite{vohra2026audit}.
+
+\subsection{Instability as a baseline}
+Atil et al.\ documented accuracy variation of up to 15\% across runs of LLMs
+configured to be deterministic \cite{atil2024nondeterminism}, and Song et al.\
+argued that evaluation should not ignore non-determinism \cite{song2025good}.
+For fairness audits specifically, Bellibatlu et al.\ measured how often a
+clinical LLM agent changes its action when the prompt is re-run unchanged: 8.7\%
+of replicate pairs at default sampling for one agent, from 2.2\% for
+intensive-care escalation to 17.9\% for controlled-substance caution, and pooled
+floors of 2.5\% to 23.7\% across six models from five vendors
+\cite{bellibatlu2026instability}. A counterfactual flip rate below that floor
+cannot be attributed to the demographic change, and controlled-substance
+decisions sat at the unstable end of their range, which is directly relevant to
+an opioid audit.
+
+\subsection{Position of the present study}
+To the authors' knowledge this is the first audit of open-weight, locally
+deployable models for racial and sex disparities in pain assessment; the first
+in this task to cue identity by name alone with two names per group, so that a
+name's idiosyncrasy can be separated from a group effect; and the first to pair
+every counterfactual comparison on the sampling seed and to report the
+re-sampling noise floor and the minimum detectable effect alongside the
+estimates. It extends the explicit-label design of Young et al.\
+\cite{young2025racial} to open-weight models, imports the name-based audit
+design from labour economics and general LLM auditing
+\cite{bertrand2004emily, salinas2024name} into pain assessment, and adopts the
+instability baseline of Bellibatlu et al.\ \cite{bellibatlu2026instability}.

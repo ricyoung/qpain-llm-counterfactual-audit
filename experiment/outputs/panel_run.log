@@ -1,0 +1,137 @@
+23:03:47 openai/gpt-4.1-mini [off]: 3119 to run, 1 already on disk
+23:04:25 openai/gpt-4.1-mini [off]: 500 called, $0.08 spent in total
+23:05:07 openai/gpt-4.1-mini [off]: 1000 called, $0.18 spent in total
+23:05:51 openai/gpt-4.1-mini [off]: 1500 called, $0.29 spent in total
+23:06:36 openai/gpt-4.1-mini [off]: 2000 called, $0.41 spent in total
+23:08:36 openai/gpt-4.1-mini [off]: 3120 to run, 0 already on disk
+23:09:14 openai/gpt-4.1-mini [off]: 500 called, $0.58 spent in total
+23:09:57 openai/gpt-4.1-mini [off]: 1000 called, $0.68 spent in total
+23:10:45 openai/gpt-4.1-mini [off]: 1500 called, $0.79 spent in total
+23:11:30 openai/gpt-4.1-mini [off]: 2000 called, $0.91 spent in total
+23:12:15 openai/gpt-4.1-mini [off]: 2500 called, $1.02 spent in total
+23:12:58 openai/gpt-4.1-mini [off]: 3000 called, $1.13 spent in total
+23:13:09 openai/gpt-4.1-mini [off]: {'called': 3120, 'errors': 0, 'skipped_existing': 0}, $1.16 spent in total
+23:13:09 anthropic/claude-haiku-4.5 [off]: 3120 to run, 0 already on disk
+23:14:00 anthropic/claude-haiku-4.5 [off]: 500 called, $1.57 spent in total
+23:14:54 anthropic/claude-haiku-4.5 [off]: 1000 called, $2.03 spent in total
+23:15:49 anthropic/claude-haiku-4.5 [off]: 1500 called, $2.53 spent in total
+23:16:47 anthropic/claude-haiku-4.5 [off]: 2000 called, $3.03 spent in total
+23:17:43 anthropic/claude-haiku-4.5 [off]: 2500 called, $3.53 spent in total
+23:18:40 anthropic/claude-haiku-4.5 [off]: 3000 called, $4.03 spent in total
+23:18:53 anthropic/claude-haiku-4.5 [off]: {'called': 3120, 'errors': 0, 'skipped_existing': 0}, $4.14 spent in total
+23:18:53 google/gemini-2.5-flash [off]: 3120 to run, 0 already on disk
+23:19:28 google/gemini-2.5-flash [off]: 500 called, $4.23 spent in total
+23:19:45 openai/gpt-4.1-mini [off]: 0 to run, 3120 already on disk
+23:19:45 openai/gpt-4.1-mini [off]: {'called': 0, 'errors': 0, 'skipped_existing': 3120}, $4.27 spent in total
+23:19:45 anthropic/claude-haiku-4.5 [off]: 0 to run, 3120 already on disk
+23:19:45 anthropic/claude-haiku-4.5 [off]: {'called': 0, 'errors': 0, 'skipped_existing': 3120}, $4.27 spent in total
+23:19:46 google/gemini-2.5-flash [off]: 2424 to run, 696 already on disk
+23:20:24 google/gemini-2.5-flash [off]: 500 called, $4.38 spent in total
+23:21:03 google/gemini-2.5-flash [off]: 1000 called, $4.50 spent in total
+23:21:43 google/gemini-2.5-flash [off]: 1500 called, $4.62 spent in total
+23:22:22 google/gemini-2.5-flash [off]: 2000 called, $4.74 spent in total
+23:22:55 google/gemini-2.5-flash [off]: {'called': 2424, 'errors': 0, 'skipped_existing': 696}, $4.85 spent in total
+23:22:55 z-ai/glm-4.6 [off]: 3120 to run, 0 already on disk
+23:25:12 z-ai/glm-4.6 [off]: 500 called, $4.91 spent in total
+23:27:27 z-ai/glm-4.6 [off]: 1000 called, $4.98 spent in total
+23:29:37 z-ai/glm-4.6 [off]: 1500 called, $5.07 spent in total
+23:31:39 z-ai/glm-4.6 [off]: 2000 called, $5.15 spent in total
+23:33:56 z-ai/glm-4.6 [off]: 2500 called, $5.24 spent in total
+23:36:08 z-ai/glm-4.6 [off]: 3000 called, $5.32 spent in total
+23:36:36 z-ai/glm-4.6 [off]: {'called': 3120, 'errors': 0, 'skipped_existing': 0}, $5.34 spent in total
+23:36:36 meta-llama/llama-3.3-70b-instruct [off]: 3120 to run, 0 already on disk
+23:41:04 meta-llama/llama-3.3-70b-instruct [off]: 500 called, $5.36 spent in total
+23:45:06 meta-llama/llama-3.3-70b-instruct [off]: 1000 called, $5.38 spent in total
+23:49:33 meta-llama/llama-3.3-70b-instruct [off]: 1500 called, $5.41 spent in total
+23:52:53 meta-llama/llama-3.3-70b-instruct [off]: 2000 called, $5.43 spent in total
+23:55:48 meta-llama/llama-3.3-70b-instruct [off]: 2500 called, $5.46 spent in total
+23:58:21 meta-llama/llama-3.3-70b-instruct [off]: 3000 called, $5.49 spent in total
+23:58:51 meta-llama/llama-3.3-70b-instruct [off]: {'called': 3120, 'errors': 0, 'skipped_existing': 0}, $5.49 spent in total
+23:58:51 deepseek/deepseek-v4.1-flash [off]: 3120 to run, 0 already on disk
+23:59:38 deepseek/deepseek-v4.1-flash [off]: 500 called, $5.51 spent in total
+00:00:32 deepseek/deepseek-v4.1-flash [off]: 1000 called, $5.54 spent in total
+00:01:32 deepseek/deepseek-v4.1-flash [off]: 1500 called, $5.57 spent in total
+00:02:34 deepseek/deepseek-v4.1-flash [off]: 2000 called, $5.60 spent in total
+00:03:31 deepseek/deepseek-v4.1-flash [off]: 2500 called, $5.63 spent in total
+00:04:30 deepseek/deepseek-v4.1-flash [off]: 3000 called, $5.65 spent in total
+00:04:43 deepseek/deepseek-v4.1-flash [off]: {'called': 3120, 'errors': 0, 'skipped_existing': 0}, $5.66 spent in total
+00:04:43 qwen/qwen3-235b-a22b-2507 [off]: 3120 to run, 0 already on disk
+00:07:20 qwen/qwen3-235b-a22b-2507 [off]: 500 called, $5.68 spent in total
+00:09:22 qwen/qwen3-235b-a22b-2507 [off]: 1000 called, $5.71 spent in total
+00:11:28 qwen/qwen3-235b-a22b-2507 [off]: 1500 called, $5.74 spent in total
+00:13:30 qwen/qwen3-235b-a22b-2507 [off]: 2000 called, $5.78 spent in total
+00:15:33 qwen/qwen3-235b-a22b-2507 [off]: 2500 called, $5.81 spent in total
+00:18:17 qwen/qwen3-235b-a22b-2507 [off]: 3000 called, $5.84 spent in total
+00:18:44 qwen/qwen3-235b-a22b-2507 [off]: {'called': 3120, 'errors': 0, 'skipped_existing': 0}, $5.85 spent in total
+00:18:44 openai/gpt-oss-120b [low]: 3120 to run, 0 already on disk
+00:20:33 openai/gpt-oss-120b [low]: 500 called, $5.86 spent in total
+00:22:28 openai/gpt-oss-120b [low]: 1000 called, $5.87 spent in total
+00:24:33 openai/gpt-oss-120b [low]: 1500 called, $5.89 spent in total
+00:26:38 openai/gpt-oss-120b [low]: 2000 called, $5.90 spent in total
+00:28:44 openai/gpt-oss-120b [low]: 2500 called, $5.92 spent in total
+00:30:50 openai/gpt-oss-120b [low]: 3000 called, $5.94 spent in total
+00:31:34 openai/gpt-oss-120b [low]: {'called': 3120, 'errors': 0, 'skipped_existing': 0}, $5.94 spent in total
+00:31:34 openai/gpt-oss-120b [high]: 3120 to run, 0 already on disk
+00:48:24 openai/gpt-oss-120b [high]: 500 called, $6.00 spent in total
+01:14:22 openai/gpt-oss-120b [high]: 1000 called, $6.08 spent in total
+01:32:24 openai/gpt-oss-120b [high]: 1500 called, $6.18 spent in total
+01:52:38 openai/gpt-oss-120b [high]: 2000 called, $6.28 spent in total
+02:09:15 openai/gpt-oss-120b [high]: 2500 called, $6.37 spent in total
+02:26:35 openai/gpt-oss-120b [high]: 3000 called, $6.47 spent in total
+02:30:42 openai/gpt-oss-120b [high]: {'called': 3120, 'errors': 0, 'skipped_existing': 0}, $6.50 spent in total
+02:30:43 google/gemma-3-12b-it [off]: 3119 to run, 1 already on disk
+02:32:41 google/gemma-3-12b-it [off]: 500 called, $6.51 spent in total
+02:34:35 google/gemma-3-12b-it [off]: 1000 called, $6.52 spent in total
+02:37:10 google/gemma-3-12b-it [off]: 1500 called, $6.53 spent in total
+02:40:13 google/gemma-3-12b-it [off]: 2000 called, $6.54 spent in total
+02:43:45 google/gemma-3-12b-it [off]: 2500 called, $6.56 spent in total
+02:47:25 google/gemma-3-12b-it [off]: 3000 called, $6.57 spent in total
+02:48:07 google/gemma-3-12b-it [off]: {'called': 3119, 'errors': 0, 'skipped_existing': 1}, $6.57 spent in total
+02:48:07 deepseek/deepseek-v4.1-flash [on]: 3120 to run, 0 already on disk
+02:54:03 deepseek/deepseek-v4.1-flash [on]: 500 called, $6.76 spent in total
+02:59:49 deepseek/deepseek-v4.1-flash [on]: 1000 called, $6.95 spent in total
+03:13:14 deepseek/deepseek-v4.1-flash [on]: 1500 called, $7.40 spent in total
+03:21:43 deepseek/deepseek-v4.1-flash [on]: 2000 called, $7.69 spent in total
+03:29:40 deepseek/deepseek-v4.1-flash [on]: 2500 called, $7.92 spent in total
+03:43:40 deepseek/deepseek-v4.1-flash [on]: 3000 called, $8.34 spent in total
+03:44:42 deepseek/deepseek-v4.1-flash [on]: {'called': 3120, 'errors': 0, 'skipped_existing': 0}, $8.37 spent in total
+03:44:42 z-ai/glm-4.6 [on]: 3120 to run, 0 already on disk
+04:21:31 z-ai/glm-4.6 [on]: 500 called, $9.58 spent in total
+05:00:15 z-ai/glm-4.6 [on]: 1000 called, $10.80 spent in total
+05:37:09 z-ai/glm-4.6 [on]: 1500 called, $11.81 spent in total
+06:09:49 z-ai/glm-4.6 [on]: 2000 called, $12.82 spent in total
+06:43:54 z-ai/glm-4.6 [on]: 2500 called, $13.89 spent in total
+07:18:26 z-ai/glm-4.6 [on]: spend cap $15.00 reached ($14.95 spent); stopping
+07:18:26 z-ai/glm-4.6 [on]: error 
+07:18:26 z-ai/glm-4.6 [on]: error 
+07:18:26 z-ai/glm-4.6 [on]: error 
+07:18:26 z-ai/glm-4.6 [on]: error 
+07:18:26 z-ai/glm-4.6 [on]: error 
+07:19:04 z-ai/glm-4.6 [on]: {'called': 2998, 'errors': 120, 'skipped_existing': 0}, $14.97 spent in total
+07:19:04 done; $14.97 spent of the $15.00 cap
+07:19:25 continuation: cap raised to $16 by Ric
+07:19:26 openai/gpt-4.1-mini [off]: 0 to run, 3120 already on disk
+07:19:26 openai/gpt-4.1-mini [off]: {'called': 0, 'errors': 0, 'skipped_existing': 3120}, $14.97 spent in total
+07:19:26 anthropic/claude-haiku-4.5 [off]: 0 to run, 3120 already on disk
+07:19:26 anthropic/claude-haiku-4.5 [off]: {'called': 0, 'errors': 0, 'skipped_existing': 3120}, $14.97 spent in total
+07:19:27 google/gemini-2.5-flash [off]: 0 to run, 3120 already on disk
+07:19:27 google/gemini-2.5-flash [off]: {'called': 0, 'errors': 0, 'skipped_existing': 3120}, $14.97 spent in total
+07:19:27 z-ai/glm-4.6 [off]: 0 to run, 3120 already on disk
+07:19:27 z-ai/glm-4.6 [off]: {'called': 0, 'errors': 0, 'skipped_existing': 3120}, $14.97 spent in total
+07:19:27 meta-llama/llama-3.3-70b-instruct [off]: 0 to run, 3120 already on disk
+07:19:27 meta-llama/llama-3.3-70b-instruct [off]: {'called': 0, 'errors': 0, 'skipped_existing': 3120}, $14.97 spent in total
+07:19:28 deepseek/deepseek-v4.1-flash [off]: 0 to run, 3120 already on disk
+07:19:28 deepseek/deepseek-v4.1-flash [off]: {'called': 0, 'errors': 0, 'skipped_existing': 3120}, $14.97 spent in total
+07:19:28 qwen/qwen3-235b-a22b-2507 [off]: 0 to run, 3120 already on disk
+07:19:28 qwen/qwen3-235b-a22b-2507 [off]: {'called': 0, 'errors': 0, 'skipped_existing': 3120}, $14.97 spent in total
+07:19:28 openai/gpt-oss-120b [low]: 0 to run, 3120 already on disk
+07:19:28 openai/gpt-oss-120b [low]: {'called': 0, 'errors': 0, 'skipped_existing': 3120}, $14.97 spent in total
+07:19:29 openai/gpt-oss-120b [high]: 0 to run, 3120 already on disk
+07:19:29 openai/gpt-oss-120b [high]: {'called': 0, 'errors': 0, 'skipped_existing': 3120}, $14.97 spent in total
+07:19:29 google/gemma-3-12b-it [off]: 0 to run, 3120 already on disk
+07:19:29 google/gemma-3-12b-it [off]: {'called': 0, 'errors': 0, 'skipped_existing': 3120}, $14.97 spent in total
+07:19:29 deepseek/deepseek-v4.1-flash [on]: 0 to run, 3120 already on disk
+07:19:29 deepseek/deepseek-v4.1-flash [on]: {'called': 0, 'errors': 0, 'skipped_existing': 3120}, $14.97 spent in total
+07:19:30 z-ai/glm-4.6 [on]: 122 to run, 2998 already on disk
+07:26:03 z-ai/glm-4.6 [on]: {'called': 122, 'errors': 0, 'skipped_existing': 2998}, $15.18 spent in total
+07:26:03 done; $15.18 spent of the $16.00 cap

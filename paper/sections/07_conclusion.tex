@@ -1,0 +1,33 @@
+% ============================================================
+% CONCLUSION AND FUTURE WORK
+% ============================================================
+\section{Conclusion and Future Work}
+\label{sec:conclusion}
+
+Current language models did not reproduce the racial or sex disparities
+documented in human pain assessment. Four open-weight models showed none on six
+authored cases, whether race and sex were stated or implied by a name, and the
+one apparent pattern was an artefact of a single name. A panel of
+\nConfigs{} proprietary and open-weight configurations showed none on 50
+clinician-written cases either: severity ratings were equivalent across
+identities within one point, no difference survived the study-wide false
+discovery rate, and the small differences that survived within a model favoured
+Black patients. What the models were not was interchangeable. They disagreed
+with one another and with the clinical reference on whether to offer an opioid
+and at what dose, and the same weights answered differently with reasoning on or
+off and at a different precision, by margins larger than any identity effect.
+Beyond the substantive null, the study contributes an audit protocol for
+clinical LLMs: paired seeds, several names per group, the case as the unit of
+analysis, a reported noise floor and minimum detectable effect, and a separate
+audit for each deployed configuration.
+
+Three extensions follow directly. The cross-lingual audit, in the four PAINT
+languages \cite{zhang2026paint}, tests whether alignment that holds in English
+holds elsewhere; the request code and draft translations are already in the
+repository. Richer cues, including dialect \cite{hofmann2024dialect},
+stigmatising language \cite{huang2026artificial}, insurance status and
+realistic note length, test whether the null survives the way identity actually
+appears in records. Free-text responses, realistic record context and
+outcome-grounded designs \cite{jarrett2026outcome} test whether the constraint
+of a short JSON answer is what keeps the disparity out, and whether the
+between-model differences in dosing translate into differences in outcome.

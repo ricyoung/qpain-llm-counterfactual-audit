@@ -1,0 +1,105 @@
+% ============================================================
+% INTRODUCTION (4 paragraphs: problem, what is known, the gap, the solution + H1/H2)
+% ============================================================
+\section{Introduction}
+\label{sec:intro}
+
+% --- Paragraph 1: the basic problem ---
+Pain has no objective marker, so its assessment depends on how a clinician
+interprets a patient's report and behaviour, and that interpretation is not
+neutral. Racial and ethnic minority patients are undertreated for pain relative
+to non-Hispanic White patients across experimental, post-operative, cancer and
+chronic pain and in the emergency department \cite{green2003unequal,
+anderson2009racial}, a disparity that a meta-analysis of twenty years of United
+States evidence found across settings and pain types \cite{meghani2012time} and
+that emergency-department data confirmed for opioid prescribing
+\cite{pletcher2008trends}. The disparity has a cognitive substrate: half of a
+sample of White medical students and residents endorsed false beliefs about
+biological differences between Black and White people, and those who did rated a
+Black patient's pain lower \cite{hoffman2016racial}. Large language models
+(LLMs) now encode clinical knowledge at a level that invites deployment
+\cite{singhal2023large, thirunavukarasu2023large}, are being evaluated across a
+widening range of clinical tasks \cite{bedi2025testing}, and are being embedded
+in documentation, triage and decision-support tools. A commercial risk algorithm
+has already been shown to reproduce racial bias at the scale of millions of
+patients \cite{obermeyer2019dissecting}. A language model that learned its
+clinical judgement from text produced by a system with documented disparities
+may carry those disparities into every encounter it touches, at scale and
+without the variability that lets an individual clinician's bias be noticed.
+
+% --- Paragraph 2: what is known ---
+The evidence on whether LLMs do so is mixed and tracks model generation. Q-Pain,
+a question-answering dataset for social bias in pain management, found
+statistically significant differences in treatment between intersectional
+race--gender subgroups for GPT-2 and GPT-3 \cite{loge2021qpain}. Commercial
+models of 2023 reproduced race-based medical misconceptions and answered the same
+question inconsistently on repetition \cite{omiye2023race}; GPT-4 generated
+demographically stereotyped clinical vignettes \cite{zack2024gpt4}; GPT-3.5 and
+GPT-4 projected higher costs and longer hospitalisations for White patients from
+real cases \cite{yang2024unmasking}; and systematic and scoping reviews of 38 and
+92 studies respectively describe bias as pervasive across clinical applications
+\cite{suenghataiphorn2025systematic, xiao2026scoping}. Pain is the exception.
+When Young et al.\ presented GPT-4 and Gemini with 40 real cases from MIMIC-IV
+in every race/ethnicity and sex combination, race/ethnicity and sex did not
+influence pain ratings or opioid recommendations \cite{young2025racial}.
+Counterfactual audits of emergency triage, meanwhile, have found large
+gender-swap flip rates in proprietary models \cite{young2026equitriage},
+sensitivity to stigmatising language in a single sentence
+\cite{huang2026artificial}, and, in an outcome-grounded design, harmful
+reprioritisation from psychiatric history, homelessness and substance use but
+not from race, language or insurance status \cite{jarrett2026outcome}. Two
+methodological results frame all of these: a model changes its own answer when
+the prompt is re-run unchanged, even under nominally deterministic settings
+\cite{atil2024nondeterminism, song2025good}, and that instability floor must be
+measured before a counterfactual difference can be read as bias
+\cite{bellibatlu2026instability}. The multilingual PAINT resource states the
+question that remains open: whether LLMs reproduce known disparities in pain
+assessment \cite{zhang2026paint}.
+
+% --- Paragraph 3: the gap (the hook) ---
+Four gaps limit what that literature can say. First, every pain audit tested
+proprietary models reached through an API, whereas hospitals increasingly run
+open-weight models on their own hardware for privacy and cost
+\cite{nowak2026secure}; open-source models have been audited for triage
+\cite{aljohani2026counterfactual} and diagnosis \cite{ahmed2026auditing}, but
+not for pain. Second, every pain audit announced the patient's race and sex
+explicitly. Instruction-tuned models are trained to respond carefully to
+protected attributes \cite{ouyang2022training}, so an explicit label may trigger
+a guarded response that an indirect cue would not, and different cues for the
+same group have been shown to yield inconsistent conclusions about bias, in both
+magnitude and direction \cite{tonneau2026cues}. In real notes, demographic
+signal often arrives through a name, and name-based audits outside medicine
+consistently find that models disadvantage names associated with racial
+minorities and women \cite{salinas2024name, an2024hiring, nghiem2024gotta,
+bhetwal2026name}, as human employers did in the original correspondence
+audits \cite{bertrand2004emily}. No pain audit has used name cues. Third, where
+names have been used, one name per group leaves a name's idiosyncrasy
+indistinguishable from a group effect, and a recent preregistered audit found
+that the audit instrument itself can produce effects as large as the demographic
+bias under test \cite{vohra2026audit}. Fourth, few audits report how often a
+model changes its own answer when nothing changes, so a measured difference has
+no baseline against which to be judged.
+
+% --- Paragraph 4: how this study addresses it; purposes and hypotheses ---
+This study addresses the first three gaps and supplies the fourth with
+counterfactual vignette audits \cite{kusner2017counterfactual} that vary four
+races and two sexes while holding every other token of the prompt fixed: of
+four open-weight models on six acute-pain cases (Study~1), and of a wider panel
+of local and API-served models on those cases and on the 50 clinician-written
+Q-Pain cases (Study~2). The primary purpose was to
+determine whether open-weight models reproduce the human disparity when race and
+sex are stated explicitly. Hypothesis 1 (H1), following the null result of
+Young et al.\ \cite{young2025racial}, predicted that explicit labels would not
+change pain-severity ratings or strong-opioid recommendations. The secondary
+purpose was to test whether indirect cues reveal a disparity that explicit
+labels mask. Hypothesis 2 (H2) predicted that when identity was cued only by the
+patient's name, models would rate pain lower and recommend strong opioids less
+often for patients with non-White names, and with Black and Hispanic names in
+particular, than for patients with White male names. A third purpose, addressed
+by Study~2 without a directional hypothesis, was to establish whether the answer
+depends on the cases or the models chosen: whether it holds on clinician-written
+cases, for proprietary models and for open-weight models from 3 billion parameters to
+mixture-of-experts models of several hundred billion, with reasoning switched on as well as off, and at 16-bit as well as
+4-bit precision. Every comparison was paired on the same case and sampling seed,
+tested with bootstrap intervals and permutation tests, corrected for multiple
+comparisons, and set against the model's own re-sampling noise floor.

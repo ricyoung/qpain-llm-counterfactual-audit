@@ -1,0 +1,17 @@
+\begin{tabular}{llrrrrrr}
+\toprule
+ & & \multicolumn{2}{c}{Strong-opioid flip rate} & \multicolumn{2}{c}{Severity disagreement rate} & \multicolumn{2}{c}{Minimum detectable $\Delta$} \\
+\cmidrule(lr){3-4}\cmidrule(lr){5-6}\cmidrule(lr){7-8}
+Condition & Model & Floor & Identity & Floor & Identity & Severity & Opioid \\
+\midrule
+Explicit labels & gemma3 12B & 0.179 & 0.057 & 0.083 & 0.105 & 0.17 & 0.120 \\
+ & qwen3 14B & 0.062 & 0.010 & 0.092 & 0.029 & 0.09 & 0.050 \\
+ & ministral-3 14B & 0.171 & 0.076 & 0.354 & 0.052 & 0.12 & 0.141 \\
+ & llama3.2 3B & 0.029 & 0.029 & 0.000 & 0.000 & 0.00 & 0.086 \\
+\addlinespace
+Name cues & gemma3 12B & 0.083 & 0.076 & 0.071 & 0.100 & 0.11 & 0.099 \\
+ & qwen3 14B & 0.017 & 0.014 & 0.079 & 0.048 & 0.08 & 0.043 \\
+ & ministral-3 14B & 0.160 & 0.086 & 0.354 & 0.055 & 0.08 & 0.104 \\
+ & llama3.2 3B & 0.110 & 0.029 & 0.000 & 0.000 & 0.00 & 0.060 \\
+\bottomrule
+\end{tabular}

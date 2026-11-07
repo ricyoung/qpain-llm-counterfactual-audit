@@ -1,0 +1,10 @@
+2026-11-06 16:26:47 beam qpain explicit start
+beam:cloud explicit: 200 called, 18.6 s/call, 0 unparseable
+beam:cloud explicit: 400 called, 17.9 s/call, 0 unparseable
+beam:cloud explicit: 600 called, 18.2 s/call, 0 unparseable
+beam:cloud explicit: 800 called, 18.4 s/call, 0 unparseable
+beam:cloud explicit: 1000 called, 18.6 s/call, 0 unparseable
+beam:cloud explicit: 1200 called, 17.1 s/call, 0 unparseable
+beam:cloud: {'called': 1200, 'cached': 0, 'errors': 0, 'unparseable': 0, 'seconds': 20576.593480825424}
+{"called": 1200, "cached": 0, "errors": 0, "unparseable": 0, "seconds": 20576.593480825424}
+2026-11-06 22:09:45 beam qpain explicit done

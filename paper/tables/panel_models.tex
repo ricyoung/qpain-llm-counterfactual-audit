@@ -1,0 +1,30 @@
+\begin{tabular}{lllllrrrr}
+\toprule
+Configuration & Access & Provider & Precision & Reasoning & Responses & Invalid & Output tokens & Cost (USD) \\
+\midrule
+gemma3 12B & local & Ollama & Q4\_K\_M & off & 3,120 & 0 & 67 & -- \\
+qwen3 14B, reasoning off & local & Ollama & Q4\_K\_M & off & 3,120 & 0 & 74 & -- \\
+qwen3 14B, reasoning on & local & Ollama & Q4\_K\_M & on & 720 & 0 & 620 & -- \\
+ministral-3 14B & local & Ollama & Q4\_K\_M & off & 3,120 & 0 & 90 & -- \\
+llama3.2 3B & local & Ollama & Q4\_K\_M & off & 3,120 & 0 & 72 & -- \\
+qwen3.8 27B, reasoning off & local & Ollama & Q4\_K\_M & off & 720 & 0 & 67 & -- \\
+qwen3.8 27B, reasoning on & local & Ollama & Q4\_K\_M & on & 720 & 0 & 612 & -- \\
+gpt-oss 20B, effort low & local & Ollama & MXFP4 & low & 720 & 0 & 97 & -- \\
+gpt-oss 20B, effort high & local & Ollama & MXFP4 & high & 720 & 0 & 849 & -- \\
+qwen3.6 35B, reasoning off & local & Ollama & Q4\_K\_M & off & 720 & 0 & 70 & -- \\
+qwen3.6 35B, reasoning on & local & Ollama & Q4\_K\_M & on & 720 & 13 & 1339 & -- \\
+GPT-4.1 mini & API & openai & not disclosed & off & 3,120 & 0 & 56 & 0.66 \\
+Claude Haiku 4.5 & API & google-vertex & not disclosed & off & 3,120 & 0 & 87 & 2.98 \\
+Gemini 2.5 Flash & API & google-ai-studio & not disclosed & off & 3,120 & 0 & 61 & 0.70 \\
+GLM-4.6, reasoning off & API & deepinfra & fp4 & off & 3,120 & 0 & 60 & 0.50 \\
+Llama 3.3 70B & API & deepinfra & fp8 & off & 3,120 & 0 & 71 & 0.15 \\
+DeepSeek V4.1 Flash, reasoning off & API & deepinfra & fp8 & off & 3,120 & 0 & 72 & 0.17 \\
+Qwen3 235B-A22B & API & deepinfra & fp8 & off & 3,120 & 0 & 67 & 0.19 \\
+gpt-oss 120B, effort low & API & deepinfra & bf16 & low & 3,120 & 0 & 113 & 0.09 \\
+gpt-oss 120B, effort high & API & deepinfra & bf16 & high & 3,120 & 4 & 990 & 0.56 \\
+Gemma 3 12B (bf16) & API & deepinfra & bf16 & off & 3,120 & 0 & 66 & 0.07 \\
+DeepSeek V4.1 Flash, reasoning on & API & deepinfra & fp8 & on & 3,120 & 46 & 1326 & 1.80 \\
+GLM-4.6, reasoning on & API & deepinfra & fp4 & on & 3,120 & 6 & 1325 & 6.81 \\
+Beam 501B-A23B, reasoning on & API & Ollama Cloud & not disclosed & on & 3,120 & 1 & 1460 & 0.00 \\
+\bottomrule
+\end{tabular}

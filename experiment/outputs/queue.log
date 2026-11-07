@@ -1,0 +1,273 @@
+2026-11-05 22:42:53 qpain start gemma3:12b
+gemma3:12b explicit: 200 called, 2.0 s/call, 0 unparseable
+gemma3:12b explicit: 400 called, 2.0 s/call, 0 unparseable
+gemma3:12b explicit: 600 called, 2.0 s/call, 0 unparseable
+2026-11-05 23:08:36 qpain start gemma3:12b
+gemma3:12b explicit: 200 called, 2.0 s/call, 0 unparseable
+gemma3:12b explicit: 400 called, 2.0 s/call, 0 unparseable
+gemma3:12b explicit: 600 called, 2.0 s/call, 0 unparseable
+gemma3:12b explicit: 800 called, 2.0 s/call, 0 unparseable
+gemma3:12b explicit: 1000 called, 2.0 s/call, 0 unparseable
+gemma3:12b explicit: 1200 called, 1.9 s/call, 0 unparseable
+gemma3:12b names: 1400 called, 1.9 s/call, 0 unparseable
+gemma3:12b names: 1600 called, 1.9 s/call, 0 unparseable
+gemma3:12b names: 1800 called, 1.9 s/call, 0 unparseable
+gemma3:12b names: 2000 called, 1.9 s/call, 0 unparseable
+gemma3:12b names: 2200 called, 1.9 s/call, 0 unparseable
+gemma3:12b names: 2400 called, 1.9 s/call, 0 unparseable
+gemma3:12b: {'called': 2400, 'cached': 0, 'errors': 0, 'unparseable': 0, 'seconds': 4617.850779533386}
+{"called": 2400, "cached": 0, "errors": 0, "unparseable": 0, "seconds": 4617.850779533386}
+2026-11-06 00:25:35 qpain done  gemma3:12b
+2026-11-06 00:25:35 qpain start qwen3:14b
+qwen3:14b explicit: 200 called, 15.2 s/call, 0 unparseable
+qwen3:14b explicit: 400 called, 14.2 s/call, 0 unparseable
+qwen3:14b explicit: 600 called, 12.5 s/call, 0 unparseable
+qwen3:14b explicit: 800 called, 9.9 s/call, 0 unparseable
+qwen3:14b explicit: 1000 called, 8.3 s/call, 0 unparseable
+qwen3:14b explicit: 1200 called, 7.3 s/call, 0 unparseable
+qwen3:14b names: 1400 called, 6.6 s/call, 0 unparseable
+qwen3:14b names: 1600 called, 6.0 s/call, 0 unparseable
+qwen3:14b names: 1800 called, 5.6 s/call, 0 unparseable
+qwen3:14b names: 2000 called, 5.3 s/call, 0 unparseable
+qwen3:14b names: 2200 called, 5.0 s/call, 0 unparseable
+qwen3:14b names: 2400 called, 4.7 s/call, 0 unparseable
+qwen3:14b: {'called': 2400, 'cached': 0, 'errors': 0, 'unparseable': 0, 'seconds': 11342.219029903412}
+{"called": 2400, "cached": 0, "errors": 0, "unparseable": 0, "seconds": 11342.219029903412}
+2026-11-06 03:34:40 qpain done  qwen3:14b
+2026-11-06 03:34:40 qpain start ministral-3:14b
+ministral-3:14b explicit: 200 called, 2.4 s/call, 0 unparseable
+ministral-3:14b explicit: 400 called, 2.5 s/call, 0 unparseable
+ministral-3:14b explicit: 600 called, 2.4 s/call, 0 unparseable
+ministral-3:14b explicit: 800 called, 2.5 s/call, 0 unparseable
+ministral-3:14b explicit: 1000 called, 2.5 s/call, 0 unparseable
+ministral-3:14b explicit: 1200 called, 2.5 s/call, 0 unparseable
+ministral-3:14b names: 1400 called, 2.5 s/call, 0 unparseable
+ministral-3:14b names: 1600 called, 2.5 s/call, 0 unparseable
+ministral-3:14b names: 1800 called, 2.5 s/call, 0 unparseable
+ministral-3:14b names: 2000 called, 2.5 s/call, 0 unparseable
+ministral-3:14b names: 2200 called, 2.5 s/call, 0 unparseable
+ministral-3:14b names: 2400 called, 2.5 s/call, 0 unparseable
+ministral-3:14b: {'called': 2400, 'cached': 0, 'errors': 0, 'unparseable': 0, 'seconds': 5984.2413375377655}
+{"called": 2400, "cached": 0, "errors": 0, "unparseable": 0, "seconds": 5984.2413375377655}
+2026-11-06 05:14:27 qpain done  ministral-3:14b
+2026-11-06 05:14:27 qpain start llama3.2:latest
+llama3.2:latest explicit: 200 called, 0.5 s/call, 0 unparseable
+llama3.2:latest explicit: 400 called, 0.5 s/call, 0 unparseable
+llama3.2:latest explicit: 600 called, 0.5 s/call, 0 unparseable
+llama3.2:latest explicit: 800 called, 0.6 s/call, 0 unparseable
+llama3.2:latest explicit: 1000 called, 0.6 s/call, 0 unparseable
+llama3.2:latest explicit: 1200 called, 0.5 s/call, 0 unparseable
+llama3.2:latest names: 1400 called, 0.5 s/call, 0 unparseable
+llama3.2:latest names: 1600 called, 0.5 s/call, 0 unparseable
+llama3.2:latest names: 1800 called, 0.5 s/call, 0 unparseable
+llama3.2:latest names: 2000 called, 0.6 s/call, 0 unparseable
+llama3.2:latest names: 2200 called, 0.6 s/call, 0 unparseable
+llama3.2:latest names: 2400 called, 0.5 s/call, 0 unparseable
+llama3.2:latest: {'called': 2400, 'cached': 0, 'errors': 0, 'unparseable': 0, 'seconds': 1319.2790563106537}
+{"called": 2400, "cached": 0, "errors": 0, "unparseable": 0, "seconds": 1319.2790563106537}
+2026-11-06 05:36:28 qpain done  llama3.2:latest
+2026-11-06 05:36:28 qpain complete; resuming the scale stage
+2026-11-06 05:36:28 start --models qwen3.8:27b --think off
+qwen3.8:27b think=off: {'called': 0, 'cached': 240, 'errors': 0, 'seconds': 0.0}
+{"called": 0, "cached": 240, "errors": 0, "seconds": 0.0}
+2026-11-06 05:36:28 done  --models qwen3.8:27b --think off
+2026-11-06 05:36:28 start --models qwen3.8:27b --think off --names
+qwen3.8:27b think=off names: 50 called, 2.3 s/call
+qwen3.8:27b think=off names: 100 called, 2.2 s/call
+qwen3.8:27b think=off names: 150 called, 2.1 s/call
+qwen3.8:27b think=off names: 200 called, 2.0 s/call
+qwen3.8:27b think=off names: 250 called, 2.1 s/call
+qwen3.8:27b think=off names: 300 called, 2.1 s/call
+qwen3.8:27b think=off names: 350 called, 2.1 s/call
+qwen3.8:27b think=off: {'called': 360, 'cached': 120, 'errors': 0, 'seconds': 769.2105476856232}
+{"called": 360, "cached": 120, "errors": 0, "seconds": 769.2105476856232}
+2026-11-06 05:49:18 done  --models qwen3.8:27b --think off --names
+2026-11-06 05:49:18 start --models qwen3.8:27b --think on
+qwen3.8:27b think=on explicit: 50 called, 20.3 s/call
+qwen3.8:27b think=on explicit: 100 called, 16.4 s/call
+qwen3.8:27b think=on explicit: 150 called, 15.5 s/call
+qwen3.8:27b think=on explicit: 200 called, 15.8 s/call
+qwen3.8:27b think=on: {'called': 240, 'cached': 0, 'errors': 0, 'seconds': 3924.3951332569122}
+{"called": 240, "cached": 0, "errors": 0, "seconds": 3924.3951332569122}
+2026-11-06 06:54:42 done  --models qwen3.8:27b --think on
+2026-11-06 06:54:42 start --models qwen3.8:27b --think on --names
+qwen3.8:27b think=on names: 50 called, 27.4 s/call
+qwen3.8:27b think=on names: 100 called, 24.2 s/call
+qwen3.8:27b think=on names: 150 called, 20.0 s/call
+qwen3.8:27b think=on names: 200 called, 18.7 s/call
+qwen3.8:27b think=on names: 250 called, 17.9 s/call
+qwen3.8:27b think=on names: 300 called, 17.0 s/call
+qwen3.8:27b think=on names: 350 called, 16.9 s/call
+qwen3.8:27b think=on names: 400 called, 17.3 s/call
+qwen3.8:27b think=on names: 450 called, 17.6 s/call
+qwen3.8:27b think=on: {'called': 480, 'cached': 0, 'errors': 0, 'seconds': 8560.981559515}
+{"called": 480, "cached": 0, "errors": 0, "seconds": 8560.981559515}
+2026-11-06 09:17:24 done  --models qwen3.8:27b --think on --names
+2026-11-06 09:17:24 start --models gpt-oss:20b --think low
+gpt-oss:20b think=low explicit: 50 called, 1.6 s/call
+gpt-oss:20b think=low explicit: 100 called, 1.5 s/call
+gpt-oss:20b think=low explicit: 150 called, 1.4 s/call
+gpt-oss:20b think=low explicit: 200 called, 1.4 s/call
+gpt-oss:20b think=low: {'called': 240, 'cached': 0, 'errors': 0, 'seconds': 337.2650806903839}
+{"called": 240, "cached": 0, "errors": 0, "seconds": 337.2650806903839}
+2026-11-06 09:23:01 done  --models gpt-oss:20b --think low
+2026-11-06 09:23:01 start --models gpt-oss:20b --think low --names
+gpt-oss:20b think=low names: 50 called, 1.5 s/call
+gpt-oss:20b think=low names: 100 called, 1.5 s/call
+gpt-oss:20b think=low names: 150 called, 1.5 s/call
+gpt-oss:20b think=low names: 200 called, 1.5 s/call
+gpt-oss:20b think=low names: 250 called, 1.5 s/call
+gpt-oss:20b think=low names: 300 called, 1.5 s/call
+gpt-oss:20b think=low names: 350 called, 1.5 s/call
+gpt-oss:20b think=low names: 400 called, 1.5 s/call
+gpt-oss:20b think=low names: 450 called, 1.5 s/call
+gpt-oss:20b think=low: {'called': 480, 'cached': 0, 'errors': 0, 'seconds': 702.436056137085}
+{"called": 480, "cached": 0, "errors": 0, "seconds": 702.436056137085}
+2026-11-06 09:34:44 done  --models gpt-oss:20b --think low --names
+2026-11-06 09:34:44 start --models gpt-oss:20b --think high
+gpt-oss:20b think=high explicit: 50 called, 17.5 s/call
+gpt-oss:20b think=high explicit: 100 called, 15.4 s/call
+gpt-oss:20b think=high explicit: 150 called, 13.5 s/call
+gpt-oss:20b think=high explicit: 200 called, 12.7 s/call
+gpt-oss:20b think=high: {'called': 240, 'cached': 0, 'errors': 0, 'seconds': 3118.136533975601}
+{"called": 240, "cached": 0, "errors": 0, "seconds": 3118.136533975601}
+2026-11-06 10:26:43 done  --models gpt-oss:20b --think high
+2026-11-06 10:26:43 start --models gpt-oss:20b --think high --names
+gpt-oss:20b think=high names: 50 called, 16.7 s/call
+gpt-oss:20b think=high names: 100 called, 17.3 s/call
+gpt-oss:20b think=high names: 150 called, 15.5 s/call
+gpt-oss:20b think=high names: 200 called, 14.9 s/call
+gpt-oss:20b think=high names: 250 called, 14.5 s/call
+gpt-oss:20b think=high names: 300 called, 13.4 s/call
+gpt-oss:20b think=high names: 350 called, 12.7 s/call
+gpt-oss:20b think=high names: 400 called, 12.5 s/call
+gpt-oss:20b think=high names: 450 called, 12.9 s/call
+gpt-oss:20b think=high: {'called': 480, 'cached': 0, 'errors': 0, 'seconds': 6159.428257703781}
+{"called": 480, "cached": 0, "errors": 0, "seconds": 6159.428257703781}
+2026-11-06 12:09:23 done  --models gpt-oss:20b --think high --names
+2026-11-06 12:09:23 start --models qwen3.6:35b --think off
+qwen3.6:35b think=off explicit: 50 called, 1.7 s/call
+qwen3.6:35b think=off explicit: 100 called, 1.5 s/call
+qwen3.6:35b think=off explicit: 150 called, 1.4 s/call
+qwen3.6:35b think=off explicit: 200 called, 1.4 s/call
+qwen3.6:35b think=off: {'called': 240, 'cached': 0, 'errors': 0, 'seconds': 325.1933810710907}
+{"called": 240, "cached": 0, "errors": 0, "seconds": 325.1933810710907}
+2026-11-06 12:14:48 done  --models qwen3.6:35b --think off
+2026-11-06 12:14:48 start --models qwen3.6:35b --think off --names
+qwen3.6:35b think=off names: 50 called, 1.2 s/call
+qwen3.6:35b think=off names: 100 called, 1.2 s/call
+qwen3.6:35b think=off names: 150 called, 1.1 s/call
+qwen3.6:35b think=off names: 200 called, 1.2 s/call
+qwen3.6:35b think=off names: 250 called, 1.3 s/call
+qwen3.6:35b think=off names: 300 called, 1.3 s/call
+qwen3.6:35b think=off names: 350 called, 1.3 s/call
+qwen3.6:35b think=off names: 400 called, 1.4 s/call
+qwen3.6:35b think=off names: 450 called, 1.5 s/call
+qwen3.6:35b think=off: {'called': 480, 'cached': 0, 'errors': 0, 'seconds': 724.933197259903}
+{"called": 480, "cached": 0, "errors": 0, "seconds": 724.933197259903}
+2026-11-06 12:26:54 done  --models qwen3.6:35b --think off --names
+2026-11-06 12:26:54 start --models qwen3.6:35b --think on
+qwen3.6:35b think=on explicit: 50 called, 36.3 s/call
+qwen3.6:35b think=on explicit: 100 called, 32.9 s/call
+qwen3.6:35b think=on explicit: 150 called, 29.1 s/call
+qwen3.6:35b think=on explicit: 200 called, 27.6 s/call
+qwen3.6:35b think=on: {'called': 240, 'cached': 0, 'errors': 0, 'seconds': 6770.167627811432}
+{"called": 240, "cached": 0, "errors": 0, "seconds": 6770.167627811432}
+2026-11-06 14:19:44 done  --models qwen3.6:35b --think on
+2026-11-06 14:19:44 start --models qwen3.6:35b --think on --names
+error qwen3.6:35b renal_colic_v2 ('Hispanic', 'man') (2, 0): timed out
+error qwen3.6:35b renal_colic_v2 ('Hispanic', 'man') (2, 1): <urlopen error [Errno 113] No route to host>
+error qwen3.6:35b renal_colic_v2 ('Hispanic', 'man') (3, 0): <urlopen error [Errno 113] No route to host>
+error qwen3.6:35b renal_colic_v2 ('Hispanic', 'man') (3, 1): <urlopen error [Errno 113] No route to host>
+error qwen3.6:35b renal_colic_v2 ('Hispanic', 'man') (4, 0): <urlopen error [Errno 113] No route to host>
+error qwen3.6:35b renal_colic_v2 ('Hispanic', 'man') (4, 1): <urlopen error [Errno 113] No route to host>
+error qwen3.6:35b renal_colic_v2 ('Hispanic', 'woman') (0, 0): <urlopen error [Errno 113] No route to host>
+error qwen3.6:35b renal_colic_v2 ('Hispanic', 'woman') (0, 1): <urlopen error [Errno 113] No route to host>
+error qwen3.6:35b renal_colic_v2 ('Hispanic', 'woman') (1, 0): <urlopen error [Errno 113] No route to host>
+error qwen3.6:35b renal_colic_v2 ('Hispanic', 'woman') (1, 1): <urlopen error [Errno 113] No route to host>
+error qwen3.6:35b renal_colic_v2 ('Hispanic', 'woman') (2, 0): <urlopen error [Errno 113] No route to host>
+error qwen3.6:35b renal_colic_v2 ('Hispanic', 'woman') (2, 1): <urlopen error [Errno 113] No route to host>
+error qwen3.6:35b renal_colic_v2 ('Hispanic', 'woman') (3, 0): <urlopen error [Errno 113] No route to host>
+error qwen3.6:35b renal_colic_v2 ('Hispanic', 'woman') (3, 1): <urlopen error [Errno 113] No route to host>
+error qwen3.6:35b renal_colic_v2 ('Hispanic', 'woman') (4, 0): <urlopen error [Errno 113] No route to host>
+error qwen3.6:35b renal_colic_v2 ('Hispanic', 'woman') (4, 1): <urlopen error [Errno 113] No route to host>
+error qwen3.6:35b renal_colic_v2 ('Asian', 'man') (0, 0): <urlopen error [Errno 113] No route to host>
+error qwen3.6:35b renal_colic_v2 ('Asian', 'man') (0, 1): <urlopen error [Errno 113] No route to host>
+error qwen3.6:35b renal_colic_v2 ('Asian', 'man') (1, 0): <urlopen error [Errno 113] No route to host>
+error qwen3.6:35b renal_colic_v2 ('Asian', 'man') (1, 1): <urlopen error [Errno 113] No route to host>
+error qwen3.6:35b renal_colic_v2 ('Asian', 'man') (2, 0): <urlopen error [Errno 113] No route to host>
+error qwen3.6:35b renal_colic_v2 ('Asian', 'man') (2, 1): <urlopen error [Errno 113] No route to host>
+error qwen3.6:35b renal_colic_v2 ('Asian', 'man') (3, 0): <urlopen error [Errno 113] No route to host>
+error qwen3.6:35b renal_colic_v2 ('Asian', 'man') (3, 1): <urlopen error [Errno 113] No route to host>
+error qwen3.6:35b renal_colic_v2 ('Asian', 'man') (4, 0): <urlopen error [Errno 113] No route to host>
+error qwen3.6:35b renal_colic_v2 ('Asian', 'man') (4, 1): <urlopen error [Errno 113] No route to host>
+error qwen3.6:35b renal_colic_v2 ('Asian', 'woman') (0, 0): <urlopen error [Errno 113] No route to host>
+error qwen3.6:35b renal_colic_v2 ('Asian', 'woman') (0, 1): <urlopen error [Errno 113] No route to host>
+error qwen3.6:35b renal_colic_v2 ('Asian', 'woman') (1, 0): <urlopen error [Errno 113] No route to host>
+error qwen3.6:35b renal_colic_v2 ('Asian', 'woman') (1, 1): <urlopen error [Errno 113] No route to host>
+error qwen3.6:35b renal_colic_v2 ('Asian', 'woman') (2, 0): <urlopen error [Errno 113] No route to host>
+error qwen3.6:35b renal_colic_v2 ('Asian', 'woman') (2, 1): <urlopen error [Errno 113] No route to host>
+error qwen3.6:35b renal_colic_v2 ('Asian', 'woman') (3, 0): <urlopen error [Errno 113] No route to host>
+error qwen3.6:35b renal_colic_v2 ('Asian', 'woman') (3, 1): <urlopen error [Errno 113] No route to host>
+error qwen3.6:35b renal_colic_v2 ('Asian', 'woman') (4, 0): <urlopen error [Errno 113] No route to host>
+error qwen3.6:35b renal_colic_v2 ('Asian', 'woman') (4, 1): <urlopen error [Errno 113] No route to host>
+error qwen3.6:35b femur_fracture_v2 ('White', 'man') (0, 0): <urlopen error [Errno 113] No route to host>
+error qwen3.6:35b femur_fracture_v2 ('White', 'man') (0, 1): <urlopen error [Errno 113] No route to host>
+error qwen3.6:35b femur_fracture_v2 ('White', 'man') (1, 0): <urlopen error [Errno 113] No route to host>
+error qwen3.6:35b femur_fracture_v2 ('White', 'man') (1, 1): <urlopen error [Errno 113] No route to host>
+error qwen3.6:35b femur_fracture_v2 ('White', 'man') (2, 0): <urlopen error [Errno 113] No route to host>
+error qwen3.6:35b femur_fracture_v2 ('White', 'man') (2, 1): <urlopen error [Errno 113] No route to host>
+error qwen3.6:35b femur_fracture_v2 ('White', 'man') (3, 0): <urlopen error [Errno 113] No route to host>
+error qwen3.6:35b femur_fracture_v2 ('White', 'man') (3, 1): <urlopen error [Errno 113] No route to host>
+error qwen3.6:35b femur_fracture_v2 ('White', 'man') (4, 0): <urlopen error [Errno 113] No route to host>
+error qwen3.6:35b femur_fracture_v2 ('White', 'man') (4, 1): <urlopen error [Errno 113] No route to host>
+error qwen3.6:35b femur_fracture_v2 ('White', 'woman') (0, 0): <urlopen error [Errno 113] No route to host>
+error qwen3.6:35b femur_fracture_v2 ('White', 'woman') (0, 1): <urlopen error [Errno 113] No route to host>
+error qwen3.6:35b femur_fracture_v2 ('White', 'woman') (1, 0): <urlopen error [Errno 113] No route to host>
+error qwen3.6:35b femur_fracture_v2 ('White', 'woman') (1, 1): <urlopen error [Errno 113] No route to host>
+error qwen3.6:35b femur_fracture_v2 ('White', 'woman') (2, 0): <urlopen error [Errno 113] No route to host>
+error qwen3.6:35b femur_fracture_v2 ('White', 'woman') (2, 1): <urlopen error [Errno 113] No route to host>
+error qwen3.6:35b femur_fracture_v2 ('White', 'woman') (3, 0): <urlopen error [Errno 113] No route to host>
+error qwen3.6:35b femur_fracture_v2 ('White', 'woman') (3, 1): <urlopen error [Errno 113] No route to host>
+error qwen3.6:35b femur_fracture_v2 ('White', 'woman') (4, 0): <urlopen error [Errno 113] No route to host>
+error qwen3.6:35b femur_fracture_v2 ('White', 'woman') (4, 1): <urlopen error [Errno 113] No route to host>
+error qwen3.6:35b femur_fracture_v2 ('Black', 'man') (0, 0): <urlopen error [Errno 113] No route to host>
+error qwen3.6:35b femur_fracture_v2 ('Black', 'man') (0, 1): <urlopen error [Errno 113] No route to host>
+qwen3.6:35b think=on names: 50 called, 39.2 s/call
+qwen3.6:35b think=on names: 100 called, 29.5 s/call
+qwen3.6:35b think=on names: 150 called, 26.5 s/call
+qwen3.6:35b think=on names: 200 called, 25.1 s/call
+qwen3.6:35b think=on names: 250 called, 26.8 s/call
+qwen3.6:35b think=on names: 300 called, 25.8 s/call
+qwen3.6:35b think=on names: 350 called, 24.6 s/call
+qwen3.6:35b think=on names: 400 called, 24.2 s/call
+qwen3.6:35b think=on: {'called': 422, 'cached': 0, 'errors': 58, 'seconds': 10142.580837249756}
+{"called": 422, "cached": 0, "errors": 58, "seconds": 10142.580837249756}
+2026-11-06 17:31:57 done  --models qwen3.6:35b --think on --names
+2026-11-06 17:31:57 start --models qwen3:14b --think on
+qwen3:14b think=on explicit: 50 called, 21.7 s/call
+qwen3:14b think=on explicit: 100 called, 20.1 s/call
+qwen3:14b think=on explicit: 150 called, 17.7 s/call
+qwen3:14b think=on explicit: 200 called, 17.0 s/call
+qwen3:14b think=on: {'called': 240, 'cached': 0, 'errors': 0, 'seconds': 4137.965847253799}
+{"called": 240, "cached": 0, "errors": 0, "seconds": 4137.965847253799}
+2026-11-06 18:40:55 done  --models qwen3:14b --think on
+2026-11-06 18:40:55 start --models qwen3:14b --think on --names
+qwen3:14b think=on names: 50 called, 27.5 s/call
+qwen3:14b think=on names: 100 called, 25.1 s/call
+qwen3:14b think=on names: 150 called, 22.1 s/call
+qwen3:14b think=on names: 200 called, 21.8 s/call
+qwen3:14b think=on names: 250 called, 20.7 s/call
+qwen3:14b think=on names: 300 called, 19.1 s/call
+qwen3:14b think=on names: 350 called, 18.4 s/call
+qwen3:14b think=on names: 400 called, 18.7 s/call
+qwen3:14b think=on names: 450 called, 18.4 s/call
+qwen3:14b think=on: {'called': 480, 'cached': 0, 'errors': 0, 'seconds': 8874.377139091492}
+{"called": 480, "cached": 0, "errors": 0, "seconds": 8874.377139091492}
+2026-11-06 21:08:50 done  --models qwen3:14b --think on --names
+2026-11-06 21:08:50 stage complete
+2026-11-07 08:59:08 refill: qwen3.6:35b think on names (58 lost in the 15:10 network outage)
+qwen3.6:35b think=on names: 50 called, 20.9 s/call
+qwen3.6:35b think=on: {'called': 58, 'cached': 422, 'errors': 0, 'seconds': 1175.6471328735352}
+{"called": 58, "cached": 422, "errors": 0, "seconds": 1175.6471328735352}
+2026-11-07 09:18:43 refill done

@@ -1,0 +1,187 @@
+{
+ "_note": "Standard model panel. Local models run through Ollama (run.py, qpain.py); API models through OpenRouter (run_panel.py) with one pinned provider each, no fallbacks, and required seed and schema support. Budget cap enforced before every request.",
+ "budget_usd": 16.0,
+ "local": [
+  {
+   "name": "gemma3:12b",
+   "host": "study host (Ollama 0.40.14, 2x RTX A4000)",
+   "precision": "Q4_K_M",
+   "think": [
+    "off"
+   ]
+  },
+  {
+   "name": "qwen3:14b",
+   "host": "study host (Ollama 0.40.14, 2x RTX A4000)",
+   "precision": "Q4_K_M",
+   "think": [
+    "off",
+    "on"
+   ]
+  },
+  {
+   "name": "ministral-3:14b",
+   "host": "study host (Ollama 0.40.14, 2x RTX A4000)",
+   "precision": "Q4_K_M",
+   "think": [
+    "off"
+   ]
+  },
+  {
+   "name": "llama3.2:latest",
+   "host": "study host (Ollama 0.40.14, 2x RTX A4000)",
+   "precision": "Q4_K_M",
+   "think": [
+    "off"
+   ],
+   "flag": "one fixed severity per case"
+  },
+  {
+   "name": "qwen3.8:27b",
+   "host": "study host (Ollama 0.40.14, 2x RTX A4000)",
+   "precision": "Q4_K_M",
+   "think": [
+    "off",
+    "on"
+   ]
+  },
+  {
+   "name": "gpt-oss:20b",
+   "host": "study host (Ollama 0.40.14, 2x RTX A4000)",
+   "precision": "MXFP4",
+   "think": [
+    "low",
+    "high"
+   ]
+  },
+  {
+   "name": "qwen3.6:35b",
+   "host": "study host (Ollama 0.40.14, 2x RTX A4000)",
+   "precision": "Q4_K_M",
+   "think": [
+    "off",
+    "on"
+   ]
+  }
+ ],
+ "openrouter": [
+  {
+   "id": "openai/gpt-4.1-mini",
+   "provider": "openai",
+   "seed": true,
+   "reasoning": null,
+   "family": "OpenAI",
+   "why": "GPT-4.1 family, successor of the GPT-4 audited by Young et al."
+  },
+  {
+   "id": "anthropic/claude-haiku-4.5",
+   "provider": "google-vertex",
+   "seed": false,
+   "reasoning": "off",
+   "family": "Anthropic",
+   "why": "Anthropic model served by Google Vertex (Anthropic-direct needs a workspace-scoped key); no fixed seed"
+  },
+  {
+   "id": "google/gemini-2.5-flash",
+   "provider": "google-ai-studio",
+   "seed": true,
+   "reasoning": "off",
+   "family": "Google",
+   "why": "successor of the Gemini audited by Young et al."
+  },
+  {
+   "id": "z-ai/glm-4.6",
+   "provider": "deepinfra/fp4/flex",
+   "seed": true,
+   "reasoning": "off",
+   "family": "GLM",
+   "why": "open-weight GLM; only the DeepInfra fp4 flex endpoint supports seed and schema"
+  },
+  {
+   "id": "meta-llama/llama-3.3-70b-instruct",
+   "provider": "deepinfra",
+   "quantization": "fp8",
+   "seed": true,
+   "reasoning": null,
+   "family": "Meta",
+   "why": "70B scale within the Llama family"
+  },
+  {
+   "id": "deepseek/deepseek-v4.1-flash",
+   "provider": "deepinfra",
+   "quantization": "fp8",
+   "seed": true,
+   "reasoning": "off",
+   "family": "DeepSeek",
+   "why": "current DeepSeek, thinking off"
+  },
+  {
+   "id": "qwen/qwen3-235b-a22b-2507",
+   "provider": "deepinfra",
+   "quantization": "fp8",
+   "seed": true,
+   "reasoning": null,
+   "family": "Qwen",
+   "why": "largest open-weight Qwen"
+  },
+  {
+   "id": "openai/gpt-oss-120b",
+   "provider": "deepinfra",
+   "quantization": "bf16",
+   "seed": true,
+   "reasoning": "low",
+   "family": "OpenAI open-weight",
+   "why": "reasoning effort low"
+  },
+  {
+   "id": "openai/gpt-oss-120b",
+   "provider": "deepinfra",
+   "quantization": "bf16",
+   "seed": true,
+   "reasoning": "high",
+   "family": "OpenAI open-weight",
+   "why": "reasoning effort high"
+  },
+  {
+   "id": "google/gemma-3-12b-it",
+   "provider": "deepinfra",
+   "quantization": "bf16",
+   "seed": true,
+   "reasoning": null,
+   "family": "Google",
+   "why": "same weights as local gemma3 12B at full precision: quantization check"
+  },
+  {
+   "id": "deepseek/deepseek-v4.1-flash",
+   "provider": "deepinfra",
+   "quantization": "fp8",
+   "seed": true,
+   "reasoning": "on",
+   "family": "DeepSeek",
+   "why": "same weights, thinking on"
+  },
+  {
+   "id": "z-ai/glm-4.6",
+   "provider": "deepinfra/fp4/flex",
+   "seed": true,
+   "reasoning": "on",
+   "family": "GLM",
+   "why": "same GLM-4.6 weights, thinking on"
+  }
+ ],
+ "_budget_note": "Raised from 15 to 16 USD on 2026-11-06 by Ric, to complete GLM-4.6 with reasoning on (projected total 15.41).",
+ "ollama_cloud": [
+  {
+   "name": "beam:cloud",
+   "provider": "Ollama Cloud",
+   "host": "study host (Ollama signed in to ollama.com)",
+   "think": [
+    "on"
+   ],
+   "seed": false,
+   "precision": "not disclosed",
+   "why": "Reflection AI Beam, open weights, sparse MoE 501B total / 23B active; free on Ollama Cloud until 2026-11-09",
+   "notes": "Smoke test 2026-11-06: reasoning cannot be disabled (think=off still returns reasoning), and the same seed gave different answers, so pairs share a replicate index, not a seed. Numerics on Ollama Cloud not disclosed (BF16, FP8 or NVFP4 per the model card). Run 2026-11-06 16:26-22:14, $0."
+  }
+ ]
+}

@@ -1,0 +1,46 @@
+2026-11-06 02:22:29 guard started
+2026-11-06 02:22:29 qwen3:14b: 33% on GPU (5.0 of 14.9 GB); reload 1 of 2
+2026-11-06 02:27:08 unload requested for qwen3:14b after qpain_chronic_cancer_0 explicit Asian woman rep 1; the next case reloads it
+2026-11-06 07:58:27 guard started
+2026-11-06 12:09:42 qwen3.6:35b: 95% on GPU (22.9 of 24.0 GB); reload 1 of 2
+2026-11-06 12:10:25 unload requested for qwen3.6:35b after renal_colic_v2 explicit Asian woman rep 3; the next case reloads it
+2026-11-06 12:10:41 qwen3.6:35b: 95% on GPU (22.9 of 24.0 GB); reload 2 of 2
+2026-11-06 12:11:19 unload requested for qwen3.6:35b after femur_fracture_v2 explicit Asian woman rep 3; the next case reloads it
+2026-11-06 14:52:04 ps failed: <urlopen error [Errno 113] No route to host>
+2026-11-06 14:52:55 ps failed: <urlopen error timed out>
+2026-11-06 14:53:25 ps failed: <urlopen error [Errno 113] No route to host>
+2026-11-06 14:53:58 ps failed: <urlopen error [Errno 113] No route to host>
+2026-11-06 14:54:29 ps failed: <urlopen error [Errno 113] No route to host>
+2026-11-06 14:55:01 ps failed: <urlopen error [Errno 113] No route to host>
+2026-11-06 14:55:33 ps failed: <urlopen error [Errno 113] No route to host>
+2026-11-06 14:56:05 ps failed: <urlopen error [Errno 113] No route to host>
+2026-11-06 14:57:11 ps failed: <urlopen error timed out>
+2026-11-06 14:57:42 ps failed: <urlopen error [Errno 113] No route to host>
+2026-11-06 14:58:15 ps failed: <urlopen error [Errno 113] No route to host>
+2026-11-06 14:59:06 ps failed: <urlopen error timed out>
+2026-11-06 14:59:37 ps failed: <urlopen error [Errno 113] No route to host>
+2026-11-06 15:00:10 ps failed: <urlopen error [Errno 113] No route to host>
+2026-11-06 15:00:41 ps failed: <urlopen error [Errno 113] No route to host>
+2026-11-06 15:01:15 ps failed: <urlopen error [Errno 113] No route to host>
+2026-11-06 15:01:46 ps failed: <urlopen error [Errno 113] No route to host>
+2026-11-06 15:02:17 ps failed: <urlopen error [Errno 113] No route to host>
+2026-11-06 15:02:51 ps failed: <urlopen error [Errno 113] No route to host>
+2026-11-06 15:03:24 ps failed: <urlopen error [Errno 113] No route to host>
+2026-11-06 15:03:56 ps failed: <urlopen error [Errno 113] No route to host>
+2026-11-06 15:04:30 ps failed: <urlopen error [Errno 113] No route to host>
+2026-11-06 15:05:01 ps failed: <urlopen error [Errno 113] No route to host>
+2026-11-06 15:05:33 ps failed: <urlopen error [Errno 113] No route to host>
+2026-11-06 15:06:04 ps failed: <urlopen error [Errno 113] No route to host>
+2026-11-06 15:06:35 ps failed: <urlopen error [Errno 113] No route to host>
+2026-11-06 15:07:06 ps failed: <urlopen error [Errno 113] No route to host>
+2026-11-06 15:07:37 ps failed: <urlopen error [Errno 113] No route to host>
+2026-11-06 15:08:08 ps failed: <urlopen error [Errno 113] No route to host>
+2026-11-06 15:08:59 ps failed: <urlopen error timed out>
+2026-11-06 15:09:29 ps failed: <urlopen error [Errno 113] No route to host>
+2026-11-06 15:10:00 ps failed: <urlopen error [Errno 113] No route to host>
+2026-11-06 15:10:31 ps failed: <urlopen error [Errno 113] No route to host>
+2026-11-06 15:11:04 ps failed: <urlopen error [Errno 113] No route to host>
+2026-11-06 15:11:34 ps failed: <urlopen error [Errno 113] No route to host>
+2026-11-06 15:12:25 ps failed: <urlopen error timed out>
+2026-11-06 15:12:57 ps failed: <urlopen error [Errno 113] No route to host>
+2026-11-06 22:14:22 local queue finished; guard stopped

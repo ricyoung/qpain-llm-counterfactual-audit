@@ -1,0 +1,25 @@
+% ============================================================
+% ABSTRACT (no citations; last sentence = key finding; <= 1,920 characters for arXiv)
+% ============================================================
+Racial and ethnic minority patients receive less treatment for pain than
+non-Hispanic White patients, and large language models (LLMs) could reproduce
+that disparity when asked to assess pain. Prior audits tested a few proprietary
+models, stated the patient's race explicitly and rarely measured the models' own
+response instability. In Study~1, four open-weight models assessed six
+acute-pain vignettes in every combination of four races and two sexes, with
+identity stated or cued only by a name (two names per group), and each identity
+was compared with a White male reference on the same case and sampling seed. In
+Study~2, \nConfigs{} configurations of \nModels{} proprietary and open-weight
+models, with reasoning on and off and at two precisions, answered the same
+vignettes and the 50 clinician-written Q-Pain cases, with the case as the unit
+of analysis. No difference survived correction in Study~1, none of \nTests{}
+comparisons survived the false discovery rate in Study~2, and every severity
+difference was equivalent to zero within one point on a 0--10 scale. The few
+differences that survived correction within a model favoured Black patients.
+Models differed far more from one another, from the clinical reference answer
+and across their own reasoning and precision settings than between patients: the
+reference patient received the high dose in 6\% to 93\% of responses depending
+on the model. Audits should use several names per group, pair comparisons on the
+seed, report the noise floor and test each deployed configuration. Current LLMs
+showed no detectable racial or sex disadvantage in pain assessment, but which
+model and settings a patient meets matters more than who the patient is.

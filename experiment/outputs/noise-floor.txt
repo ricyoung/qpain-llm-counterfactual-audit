@@ -1,0 +1,8 @@
+names (v3) | gemma3:12b          opioid flips: noise 0.083 vs identity 0.076 | severity: noise 0.071 vs identity 0.100 | pairs 960/420
+names (v3) | llama3.2:latest     opioid flips: noise 0.110 vs identity 0.029 | severity: noise 0.000 vs identity 0.000 | pairs 960/420
+names (v3) | ministral-3:14b     opioid flips: noise 0.160 vs identity 0.086 | severity: noise 0.354 vs identity 0.055 | pairs 960/420
+names (v3) | qwen3:14b           opioid flips: noise 0.017 vs identity 0.014 | severity: noise 0.079 vs identity 0.048 | pairs 960/420
+explicit (v2) | gemma3:12b       opioid flips: noise 0.179 vs identity 0.057 | severity: noise 0.083 vs identity 0.105 | pairs 480/210
+explicit (v2) | llama3.2:latest  opioid flips: noise 0.029 vs identity 0.029 | severity: noise 0.000 vs identity 0.000 | pairs 480/210
+explicit (v2) | ministral-3:14b  opioid flips: noise 0.171 vs identity 0.076 | severity: noise 0.354 vs identity 0.052 | pairs 480/210
+explicit (v2) | qwen3:14b        opioid flips: noise 0.062 vs identity 0.010 | severity: noise 0.092 vs identity 0.029 | pairs 480/210

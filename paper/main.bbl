@@ -1,0 +1,390 @@
+\begin{thebibliography}{10}
+
+\bibitem{green2003unequal}
+Carmen~R. Green, Karen~O. Anderson, Tamara~A. Baker, Lisa~C. Campbell, Sheila
+  Decker, Roger~B. Fillingim, Donna~A. Kaloukalani, Kathyrn~E. Lasch, Cynthia
+  Myers, Raymond~C. Tait, Knox~H. Todd, and April~H. Vallerand.
+\newblock The unequal burden of pain: Confronting racial and ethnic disparities
+  in pain.
+\newblock {\em Pain Medicine}, 4(3):277--294, 2003.
+
+\bibitem{anderson2009racial}
+Karen~O. Anderson, Carmen~R. Green, and Richard Payne.
+\newblock Racial and ethnic disparities in pain: Causes and consequences of
+  unequal care.
+\newblock {\em The Journal of Pain}, 10(12):1187--1204, 2009.
+
+\bibitem{meghani2012time}
+Salimah~H. Meghani, Eeeseung Byun, and Rollin~M. Gallagher.
+\newblock Time to take stock: A meta-analysis and systematic review of
+  analgesic treatment disparities for pain in the {United States}.
+\newblock {\em Pain Medicine}, 13(2):150--174, 2012.
+
+\bibitem{pletcher2008trends}
+Mark~J. Pletcher, Stefan~G. Kertesz, Michael~A. Kohn, and Ralph Gonzales.
+\newblock Trends in opioid prescribing by race/ethnicity for patients seeking
+  care in {US} emergency departments.
+\newblock {\em JAMA}, 299(1):70--78, 2008.
+
+\bibitem{hoffman2016racial}
+Kelly~M. Hoffman, Sophie Trawalter, Jordan~R. Axt, and M.~Norman Oliver.
+\newblock Racial bias in pain assessment and treatment recommendations, and
+  false beliefs about biological differences between blacks and whites.
+\newblock {\em Proceedings of the National Academy of Sciences},
+  113(16):4296--4301, 2016.
+
+\bibitem{singhal2023large}
+Karan Singhal, Shekoofeh Azizi, Tao Tu, S.~Sara Mahdavi, Jason Wei, Hyung~Won
+  Chung, et~al.
+\newblock Large language models encode clinical knowledge.
+\newblock {\em Nature}, 620(7972):172--180, 2023.
+
+\bibitem{thirunavukarasu2023large}
+Arun~James Thirunavukarasu, Darren Shu~Jeng Ting, Kabilan Elangovan, Laura
+  Guti{\'e}rrez, Ting~Fang Tan, and Daniel Shu~Wei Ting.
+\newblock Large language models in medicine.
+\newblock {\em Nature Medicine}, 29(8):1930--1940, 2023.
+
+\bibitem{bedi2025testing}
+Suhana Bedi, Yutong Liu, Lucy Orr-Ewing, Dev Dash, Sanmi Koyejo, Alison
+  Callahan, et~al.
+\newblock Testing and evaluation of health care applications of large language
+  models: A systematic review.
+\newblock {\em JAMA}, 333(4):319, 2025.
+
+\bibitem{obermeyer2019dissecting}
+Ziad Obermeyer, Brian Powers, Christine Vogeli, and Sendhil Mullainathan.
+\newblock Dissecting racial bias in an algorithm used to manage the health of
+  populations.
+\newblock {\em Science}, 366(6464):447--453, 2019.
+
+\bibitem{loge2021qpain}
+C{\'e}cile Log{\'e}, Emily Ross, David Y.~A. Dadey, Saahil Jain, Adriel
+  Saporta, Andrew~Y. Ng, and Pranav Rajpurkar.
+\newblock {Q-Pain}: A question answering dataset to measure social bias in pain
+  management.
+\newblock PhysioNet, 2021.
+\newblock PhysioNet, doi:10.13026/61xq-mj56.
+
+\bibitem{omiye2023race}
+Jesutofunmi~A. Omiye, Jenna Lester, Simon Spichak, Veronica~M. Rotemberg, and
+  Roxana Daneshjou.
+\newblock Large language models propagate race-based medicine.
+\newblock {\em npj Digital Medicine}, 6:195, 2023.
+
+\bibitem{zack2024gpt4}
+Travis Zack, Eric Lehman, Mirac Suzgun, Jorge~A. Rodriguez, Leo~Anthony Celi,
+  Judy Gichoya, Dan Jurafsky, Peter Szolovits, David~W. Bates, Raja-Elie~E.
+  Abdulnour, Atul~J. Butte, and Emily Alsentzer.
+\newblock Assessing the potential of {GPT-4} to perpetuate racial and gender
+  biases in health care: a model evaluation study.
+\newblock {\em The Lancet Digital Health}, 6(1):e12--e22, 2024.
+
+\bibitem{yang2024unmasking}
+Yifan Yang, Xiaoyu Liu, Qiao Jin, Furong Huang, and Zhiyong Lu.
+\newblock Unmasking and quantifying racial bias of large language models in
+  medical report generation.
+\newblock {\em Communications Medicine}, 4:176, 2024.
+
+\bibitem{suenghataiphorn2025systematic}
+Thanathip Suenghataiphorn, Narisara Tribuddharat, Pojsakorn Danpanichkul, and
+  Narathorn Kulthamrongsri.
+\newblock Bias in large language models across clinical applications: A
+  systematic review, 2025.
+\newblock arXiv:2504.02917.
+
+\bibitem{xiao2026scoping}
+Ying Xiao, Zhenpeng Chen, Jen-tse Huang, Wenting Chen, Yepang Liu, Kezhi Li,
+  Mohammad~Reza Mousavi, Richard Dobson, and Jie~M. Zhang.
+\newblock A scoping review of bias in large {AI} models for medicine and
+  healthcare.
+\newblock {\em Communications Health}, 1(1), 2026.
+
+\bibitem{young2025racial}
+Cameron~C. Young, Elizabeth~J. Enichen, Arya~S. Rao, and Marc~D. Succi.
+\newblock Racial, ethnic, and sex bias in large language model opioid
+  recommendations for pain management.
+\newblock {\em Pain}, 166(3):511--517, 2025.
+\newblock Published online 6 September 2024.
+
+\bibitem{young2026equitriage}
+Richard~J. Young and Alice~M. Matthews.
+\newblock {EQUITRIAGE}: A fairness audit of gender bias in {LLM}-based
+  emergency department triage, 2026.
+\newblock arXiv:2605.03998.
+
+\bibitem{huang2026artificial}
+Jen-tse Huang, Didi Zhou, Faith Kamau, Amy Oh, Anne~R. Links, Mark~H. Dredze,
+  Mary~Catherine Beach, and Somnath Saha.
+\newblock Artificial intolerance: Stigmatizing language in clinical
+  documentation skews large language model decision-making, 2026.
+\newblock arXiv:2605.17228.
+
+\bibitem{jarrett2026outcome}
+Philip~C. Jarrett, Peter~Sangeyup Yun, Emmanuel~C. Ohuabunwa, Doreen~S. Agboh,
+  Daniel~Mark Courtney, and Andrew Jamieson.
+\newblock Outcome-grounded effect of clinically stigmatizing information on
+  large language model emergency triage prioritization.
+\newblock {\em npj Digital Medicine}, 2026.
+
+\bibitem{atil2024nondeterminism}
+Berk Atil, Sarp Aykent, Alexa Chittams, Lisheng Fu, Rebecca~J. Passonneau, Evan
+  Radcliffe, et~al.
+\newblock Non-determinism of ``deterministic'' {LLM} settings, 2024.
+\newblock arXiv:2408.04667.
+
+\bibitem{song2025good}
+Yifan Song, Guoyin Wang, Sujian Li, and Bill~Yuchen Lin.
+\newblock The good, the bad, and the greedy: Evaluation of {LLMs} should not
+  ignore non-determinism.
+\newblock In {\em Proceedings of the 2025 Conference of the Nations of the
+  Americas Chapter of the Association for Computational Linguistics: Human
+  Language Technologies (NAACL-HLT)}, pages 4195--4206, 2025.
+
+\bibitem{bellibatlu2026instability}
+Rohith~Reddy Bellibatlu, Manpreet Singh, Deepak Parashar, and Rahul Joshi.
+\newblock Instability floors: Separating bias from noise in fairness audits of
+  clinical {LLM} agents with {FairMedAgent}, 2026.
+\newblock arXiv:2609.03221.
+
+\bibitem{zhang2026paint}
+Boya Zhang, Yuanchao Ma, Jiageng Wu, Krittaphas Chaisutyakorn, Rodrigo Gameiro,
+  Ahram Han, Chien-Yu Huang, Nikhil Jaiswal, Marianna Leite, Miriam Mora-Mau,
+  Jaime Pineda-Moreno, Siena Placino, Ryohei Yamamoto, Yugang Jia, Jie Yang,
+  Leo~Anthony Celi, and Douglas Teodoro.
+\newblock {PAINT}: A framework for multilingual pain representation from
+  medical licensing exams to real-world clinical texts, 2026.
+\newblock arXiv:2610.18269.
+
+\bibitem{nowak2026secure}
+Sebastian Nowak, Jann-Frederick La{\ss}, Narine Mesropyan, Babak Salam, Nico
+  Piel, Mohammed Bahaaeldin, Wolfgang Block, Alois~Martin Sprinkart,
+  Julian~Alexander Luetkens, Benjamin Wulff, and Alexander Isaak.
+\newblock Secure on-premise deployment of open-weights large language models in
+  radiology: An isolation-first architecture with prospective pilot evaluation,
+  2026.
+\newblock arXiv:2604.22768.
+
+\bibitem{aljohani2026counterfactual}
+Manar Aljohani, Brandon Ho, Kenneth McKinley, Dennis Ren, and Xuan Wang.
+\newblock Counterfactual auditing of bias in open-source large language models
+  for clinical triage, 2026.
+\newblock arXiv:2610.01963.
+
+\bibitem{ahmed2026auditing}
+Hosameldin Ahmed and Abdul~Hamid Sadka.
+\newblock Auditing demographic bias in {Mistral}: An open-source {LLM}'s
+  diagnostic performance on the {MedQA} benchmark.
+\newblock {\em IEEE Access}, 14:12526--12543, 2026.
+
+\bibitem{ouyang2022training}
+Long Ouyang, Jeff Wu, Xu~Jiang, Diogo Almeida, Carroll~L. Wainwright, Pamela
+  Mishkin, et~al.
+\newblock Training language models to follow instructions with human feedback,
+  2022.
+\newblock arXiv:2203.02155.
+
+\bibitem{tonneau2026cues}
+Manuel Tonneau, Neil K.~R. Sehgal, Niyati Malhotra, Sharif Kazemi, V{\'i}ctor
+  Orozco-Olvera, Ana~Mar{\'i}a Mu{\~n}oz~Boudet, Lakshmi Subramanian,
+  Samuel~Paul Fraiberger, Sharath~Chandra Guntuku, and Valentin Hofmann.
+\newblock Different demographic cues yield inconsistent conclusions about {LLM}
+  personalization and bias.
+\newblock In {\em Proceedings of the 2026 Conference on Empirical Methods in
+  Natural Language Processing (EMNLP)}, pages 48170--48198, 2026.
+
+\bibitem{salinas2024name}
+Alejandro Salinas, Amit Haim, and Julian Nyarko.
+\newblock What's in a name? auditing large language models for race and gender
+  bias, 2024.
+\newblock arXiv:2402.14875.
+
+\bibitem{an2024hiring}
+Haozhe An, Christabel Acquaye, Colin Wang, Zongxia Li, and Rachel Rudinger.
+\newblock Do large language models discriminate in hiring decisions on the
+  basis of race, ethnicity, and gender?
+\newblock In {\em Proceedings of the 62nd Annual Meeting of the Association for
+  Computational Linguistics (Volume 2: Short Papers)}, pages 386--397, 2024.
+
+\bibitem{nghiem2024gotta}
+Huy Nghiem, John Prindle, Jieyu Zhao, and Hal Daum{\'e}~III.
+\newblock ``{You} gotta be a doctor, {Lin}'': An investigation of name-based
+  bias of large language models in employment recommendations.
+\newblock In {\em Proceedings of the 2024 Conference on Empirical Methods in
+  Natural Language Processing (EMNLP)}, pages 7268--7287, 2024.
+
+\bibitem{bhetwal2026name}
+Kalyan Bhetwal, Ceren Mert, and Ian Whitehouse.
+\newblock Name-bias in large language models, 2026.
+\newblock arXiv:2610.22053.
+
+\bibitem{bertrand2004emily}
+Marianne Bertrand and Sendhil Mullainathan.
+\newblock Are {Emily} and {Greg} more employable than {Lakisha} and {Jamal}? a
+  field experiment on labor market discrimination.
+\newblock {\em American Economic Review}, 94(4):991--1013, 2004.
+
+\bibitem{vohra2026audit}
+Siddharth Vohra and Manikandan Ravikiran.
+\newblock The audit decides the verdict: Instrument effects rival demographic
+  bias in {LLM} decision audits.
+\newblock In {\em Proceedings of the Second Workshop for Research on Agent
+  Language Models (REALM)}, pages 893--902, 2026.
+
+\bibitem{kusner2017counterfactual}
+Matt~J. Kusner, Joshua~R. Loftus, Chris Russell, and Ricardo Silva.
+\newblock Counterfactual fairness, 2017.
+\newblock arXiv:1703.06856; Advances in Neural Information Processing Systems
+  30.
+
+\bibitem{liu2025addressing}
+Xiang Liu, Wei Gao, Pengfei Li, Xiaohua Fan, and Chao Wang.
+\newblock Addressing algorithmic bias in {AI}-based pain management: a
+  comparative analysis of inference models and pretrained large language
+  models.
+\newblock {\em Pain}, 166(9):2196--2197, 2025.
+
+\bibitem{akhras2026palliative}
+Naomi Akhras, Fares Antaki, Fannie Mottet, Olivia Nguyen, Shyam Sawhney,
+  Sabrina Bajwah, and Joanna~M. Davies.
+\newblock Large language models perpetuate bias in palliative care: Development
+  and analysis of the {Palliative Care Adversarial Dataset} ({PCAD}).
+\newblock {\em PLOS Digital Health}, 5(6):e0001451, 2026.
+\newblock arXiv:2502.08073.
+
+\bibitem{hanna2023assessing}
+John~J. Hanna, Abdi~D. Wakene, Christoph~U. Lehmann, and Richard~J. Medford.
+\newblock Assessing racial and ethnic bias in text generation for
+  healthcare-related tasks by {ChatGPT}.
+\newblock medRxiv, 2023.
+\newblock medRxiv preprint, doi:10.1101/2023.08.28.23294730.
+
+\bibitem{ayoub2024inherent}
+Noel~F. Ayoub, Karthik Balakrishnan, Marc~S. Ayoub, Thomas~F. Barrett, Abel~P.
+  David, and Stacey~T. Gray.
+\newblock Inherent bias in large language models: A random sampling analysis.
+\newblock {\em Mayo Clinic Proceedings: Digital Health}, 2(2):186--191, 2024.
+
+\bibitem{poulain2024bias}
+Raphael Poulain, Hamed Fayyaz, and Rahmatollah Beheshti.
+\newblock Bias patterns in the application of {LLMs} for clinical decision
+  support: A comprehensive study, 2024.
+\newblock arXiv:2404.15149.
+
+\bibitem{poulain2024aligning}
+Raphael Poulain, Hamed Fayyaz, and Rahmatollah Beheshti.
+\newblock Aligning (medical) {LLMs} for (counterfactual) fairness, 2024.
+\newblock arXiv:2408.12055.
+
+\bibitem{xiao2025fairmedqa}
+Ying Xiao, Jie Huang, Ruijuan He, Jing Xiao, Mohammad~Reza Mousavi, Yepang Liu,
+  Kezhi Li, Zhenpeng Chen, and Jie~M. Zhang.
+\newblock {FairMedQA}: Benchmarking bias in large language models for medical
+  question answering, 2025.
+\newblock arXiv:2505.19562.
+
+\bibitem{purkayastha2026beyond}
+Chaitali~Deb Purkayastha, Bharath~Kumar Bolla, and Vishnu Surya~Reddy Nandi.
+\newblock Beyond accuracy: Counterfactual fragility and demographic bias in
+  clinical evaluation of {LLMs}, 2026.
+\newblock arXiv:2609.32807.
+
+\bibitem{lee2026promising}
+Joseph Lee, Tianqi Shang, Jae~Young Baik, Duy Duong-Tran, Shu Yang, Lingyao Li,
+  and Li~Shen.
+\newblock From promising capabilities to pervasive bias: Assessing large
+  language models for emergency department triage.
+\newblock {\em Journal of Healthcare Informatics Research}, 10(3), 2026.
+\newblock arXiv:2504.16273.
+
+\bibitem{pendse2026implicit}
+Sachin~R. Pendse, Mini Jain, Neha Kumar, and Munmun De~Choudhury.
+\newblock Implicit gender, racial, and ethnic biases in large language models:
+  An audit study of automated psychiatric diagnoses.
+\newblock {\em Mayo Clinic Proceedings: Digital Health}, 4(2):100344, 2026.
+
+\bibitem{gallegos2024bias}
+Isabel~O. Gallegos, Ryan~A. Rossi, Joe Barrow, Md~Mehrab Tanjim, Sungchul Kim,
+  Franck Dernoncourt, et~al.
+\newblock Bias and fairness in large language models: A survey.
+\newblock {\em Computational Linguistics}, 50(3):1097--1179, 2024.
+
+\bibitem{mittermaier2023bias}
+Mirja Mittermaier, Marium~M. Raza, and Joseph~C. Kvedar.
+\newblock Bias in {AI}-based models for medical applications: challenges and
+  mitigation strategies.
+\newblock {\em npj Digital Medicine}, 6:113, 2023.
+
+\bibitem{kitahara2026linguistic}
+Kosuke Kitahara and Nobuhiro Yamaguchi.
+\newblock Linguistic triggers of gender and racial bias in open-weight {LLMs}
+  applied to recruitment.
+\newblock In {\em Proceedings of the AAAI/ACM Conference on AI, Ethics, and
+  Society}, volume~9, pages 1551--1562, 2026.
+
+\bibitem{gemmateam2025gemma}
+{Gemma Team}, Aishwarya Kamath, Johan Ferret, Shreya Pathak, Nino Vieillard,
+  Ramona Merhej, et~al.
+\newblock {Gemma 3} technical report, 2025.
+\newblock arXiv:2503.19786.
+
+\bibitem{yang2025qwen3}
+An~Yang, Anfeng Li, Baosong Yang, Beichen Zhang, Binyuan Hui, Bo~Zheng, et~al.
+\newblock {Qwen3} technical report, 2025.
+\newblock arXiv:2505.09388.
+
+\bibitem{grattafiori2024llama}
+Aaron Grattafiori, Abhimanyu Dubey, Abhinav Jauhri, Abhinav Pandey, Abhishek
+  Kadian, Ahmad Al-Dahle, et~al.
+\newblock The {Llama 3} herd of models, 2024.
+\newblock arXiv:2407.21783.
+
+\bibitem{tamkin2023evaluating}
+Alex Tamkin, Amanda Askell, Liane Lovitt, Esin Durmus, Nicholas Joseph, Shauna
+  Kravec, et~al.
+\newblock Evaluating and mitigating discrimination in language model decisions,
+  2023.
+\newblock arXiv:2312.03689.
+
+\bibitem{hofmann2024dialect}
+Valentin Hofmann, Pratyusha~Ria Kalluri, Dan Jurafsky, and Sharese King.
+\newblock {AI} generates covertly racist decisions about people based on their
+  dialect.
+\newblock {\em Nature}, 633(8028):147--154, 2024.
+
+\bibitem{chen2026beyond}
+Qiangju Chen and Yang Xiao.
+\newblock Beyond the name: Demographic leakage in de-identified r{\'e}sum{\'e}s
+  and evaluation artifacts in {LLM} bias audits, 2026.
+\newblock arXiv:2609.16501.
+
+\bibitem{tzioumis2018demographic}
+Konstantinos Tzioumis.
+\newblock Demographic aspects of first names.
+\newblock {\em Scientific Data}, 5:180025, 2018.
+
+\bibitem{efron1979bootstrap}
+Bradley Efron.
+\newblock Bootstrap methods: Another look at the jackknife.
+\newblock {\em The Annals of Statistics}, 7(1):1--26, 1979.
+
+\bibitem{holm1979simple}
+Sture Holm.
+\newblock A simple sequentially rejective multiple test procedure.
+\newblock {\em Scandinavian Journal of Statistics}, 6(2):65--70, 1979.
+
+\bibitem{farrar2001clinical}
+John~T. Farrar, James~P. Young, Linda LaMoreaux, John~L. Werth, and Michael~R.
+  Poole.
+\newblock Clinical importance of changes in chronic pain intensity measured on
+  an 11-point numerical pain rating scale.
+\newblock {\em Pain}, 94(2):149--158, 2001.
+
+\bibitem{benjamini1995controlling}
+Yoav Benjamini and Yosef Hochberg.
+\newblock Controlling the false discovery rate: A practical and powerful
+  approach to multiple testing.
+\newblock {\em Journal of the Royal Statistical Society: Series B
+  (Methodological)}, 57(1):289--300, 1995.
+
+\end{thebibliography}

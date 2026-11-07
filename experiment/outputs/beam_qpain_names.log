@@ -1,0 +1,10 @@
+2026-11-06 16:26:47 beam qpain names start
+beam:cloud names: 200 called, 17.8 s/call, 0 unparseable
+beam:cloud names: 400 called, 17.9 s/call, 1 unparseable
+beam:cloud names: 600 called, 18.7 s/call, 1 unparseable
+beam:cloud names: 800 called, 19.0 s/call, 1 unparseable
+beam:cloud names: 1000 called, 19.1 s/call, 1 unparseable
+beam:cloud names: 1200 called, 17.4 s/call, 1 unparseable
+beam:cloud: {'called': 1200, 'cached': 0, 'errors': 0, 'unparseable': 1, 'seconds': 20841.30715227127}
+{"called": 1200, "cached": 0, "errors": 0, "unparseable": 1, "seconds": 20841.30715227127}
+2026-11-06 22:14:10 beam qpain names done

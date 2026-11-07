@@ -1,0 +1,19 @@
+2026-11-06 16:26:47 beam authored start
+beam:cloud think=on explicit: 50 called, 17.4 s/call
+beam:cloud think=on explicit: 100 called, 13.0 s/call
+beam:cloud think=on explicit: 150 called, 11.5 s/call
+beam:cloud think=on explicit: 200 called, 10.1 s/call
+beam:cloud think=on: {'called': 240, 'cached': 0, 'errors': 0, 'seconds': 2662.8448503017426}
+{"called": 240, "cached": 0, "errors": 0, "seconds": 2662.8448503017426}
+beam:cloud think=on names: 50 called, 14.4 s/call
+beam:cloud think=on names: 100 called, 13.2 s/call
+beam:cloud think=on names: 150 called, 10.9 s/call
+beam:cloud think=on names: 200 called, 9.3 s/call
+beam:cloud think=on names: 250 called, 8.2 s/call
+beam:cloud think=on names: 300 called, 7.6 s/call
+beam:cloud think=on names: 350 called, 7.2 s/call
+beam:cloud think=on names: 400 called, 7.1 s/call
+beam:cloud think=on names: 450 called, 8.0 s/call
+beam:cloud think=on: {'called': 480, 'cached': 0, 'errors': 0, 'seconds': 4000.5959162712097}
+{"called": 480, "cached": 0, "errors": 0, "seconds": 4000.5959162712097}
+2026-11-06 18:17:51 beam authored done

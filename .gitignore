@@ -1,0 +1,16 @@
+# LaTeX build products (main.bbl is kept: arXiv needs it)
+paper/*.aux
+paper/*.log
+paper/*.blg
+paper/*.out
+paper/*.toc
+paper/build*.log
+paper/bibtex.log
+paper/old_draft/
+paper/arxiv/src/
+# other people's LaTeX sources used as style reference, not ours to publish
+reference/
+# local scratch
+__pycache__/
+*.pyc
+.DS_Store

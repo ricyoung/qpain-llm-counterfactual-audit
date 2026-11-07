@@ -1,0 +1,2559 @@
+{
+ "conditions": {
+  "": {
+   "label": "Pilot (self-rated)",
+   "models": {
+    "gemma3:12b": {
+     "responses": 240,
+     "parsed": 240,
+     "mean_severity": 8.33,
+     "sd_severity": 0.75,
+     "min_severity": 7,
+     "max_severity": 9,
+     "strong_opioid_rate": 0.475,
+     "arms": {
+      "White woman": {
+       "severity": {
+        "n_pairs": 30,
+        "diff": 0.0,
+        "ci95": [
+         0.0,
+         0.0
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       },
+       "strong_opioid": {
+        "n_pairs": 30,
+        "diff": -0.067,
+        "ci95": [
+         -0.167,
+         0.0
+        ],
+        "p": 0.499,
+        "p_holm": 1.0
+       }
+      },
+      "Black man": {
+       "severity": {
+        "n_pairs": 30,
+        "diff": 0.0,
+        "ci95": [
+         0.0,
+         0.0
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       },
+       "strong_opioid": {
+        "n_pairs": 30,
+        "diff": 0.0,
+        "ci95": [
+         0.0,
+         0.0
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       }
+      },
+      "Black woman": {
+       "severity": {
+        "n_pairs": 30,
+        "diff": 0.0,
+        "ci95": [
+         0.0,
+         0.0
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       },
+       "strong_opioid": {
+        "n_pairs": 30,
+        "diff": 0.0,
+        "ci95": [
+         0.0,
+         0.0
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       }
+      },
+      "Hispanic man": {
+       "severity": {
+        "n_pairs": 30,
+        "diff": 0.0,
+        "ci95": [
+         0.0,
+         0.0
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       },
+       "strong_opioid": {
+        "n_pairs": 30,
+        "diff": 0.0,
+        "ci95": [
+         0.0,
+         0.0
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       }
+      },
+      "Hispanic woman": {
+       "severity": {
+        "n_pairs": 30,
+        "diff": 0.0,
+        "ci95": [
+         0.0,
+         0.0
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       },
+       "strong_opioid": {
+        "n_pairs": 30,
+        "diff": -0.033,
+        "ci95": [
+         -0.1,
+         0.0
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       }
+      },
+      "Asian man": {
+       "severity": {
+        "n_pairs": 30,
+        "diff": 0.0,
+        "ci95": [
+         0.0,
+         0.0
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       },
+       "strong_opioid": {
+        "n_pairs": 30,
+        "diff": -0.033,
+        "ci95": [
+         -0.1,
+         0.0
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       }
+      },
+      "Asian woman": {
+       "severity": {
+        "n_pairs": 30,
+        "diff": 0.0,
+        "ci95": [
+         0.0,
+         0.0
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       },
+       "strong_opioid": {
+        "n_pairs": 30,
+        "diff": -0.067,
+        "ci95": [
+         -0.167,
+         0.0
+        ],
+        "p": 0.5096,
+        "p_holm": 1.0
+       }
+      }
+     },
+     "flips": {
+      "opioid_floor": 0.042,
+      "opioid_counterfactual": 0.029,
+      "severity_floor": 0.0,
+      "severity_counterfactual": 0.0,
+      "floor_pairs": 480,
+      "counterfactual_pairs": 210
+     },
+     "anchored_to_stated_rating": 0.833,
+     "mde_severity": {
+      "sd_paired": 0.0,
+      "n_pairs": 30,
+      "mde": 0.0
+     },
+     "mde_strong_opioid": {
+      "sd_paired": 0.167,
+      "n_pairs": 30,
+      "mde": 0.085
+     }
+    },
+    "qwen3:14b": {
+     "responses": 240,
+     "parsed": 240,
+     "mean_severity": 8.5,
+     "sd_severity": 0.96,
+     "min_severity": 7,
+     "max_severity": 10,
+     "strong_opioid_rate": 0.487,
+     "arms": {
+      "White woman": {
+       "severity": {
+        "n_pairs": 30,
+        "diff": 0.0,
+        "ci95": [
+         0.0,
+         0.0
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       },
+       "strong_opioid": {
+        "n_pairs": 30,
+        "diff": 0.033,
+        "ci95": [
+         0.0,
+         0.1
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       }
+      },
+      "Black man": {
+       "severity": {
+        "n_pairs": 30,
+        "diff": 0.0,
+        "ci95": [
+         0.0,
+         0.0
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       },
+       "strong_opioid": {
+        "n_pairs": 30,
+        "diff": -0.033,
+        "ci95": [
+         -0.1,
+         0.0
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       }
+      },
+      "Black woman": {
+       "severity": {
+        "n_pairs": 30,
+        "diff": 0.0,
+        "ci95": [
+         0.0,
+         0.0
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       },
+       "strong_opioid": {
+        "n_pairs": 30,
+        "diff": 0.033,
+        "ci95": [
+         0.0,
+         0.1
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       }
+      },
+      "Hispanic man": {
+       "severity": {
+        "n_pairs": 30,
+        "diff": 0.0,
+        "ci95": [
+         0.0,
+         0.0
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       },
+       "strong_opioid": {
+        "n_pairs": 30,
+        "diff": 0.033,
+        "ci95": [
+         0.0,
+         0.1
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       }
+      },
+      "Hispanic woman": {
+       "severity": {
+        "n_pairs": 30,
+        "diff": 0.0,
+        "ci95": [
+         0.0,
+         0.0
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       },
+       "strong_opioid": {
+        "n_pairs": 30,
+        "diff": 0.033,
+        "ci95": [
+         0.0,
+         0.1
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       }
+      },
+      "Asian man": {
+       "severity": {
+        "n_pairs": 30,
+        "diff": 0.0,
+        "ci95": [
+         0.0,
+         0.0
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       },
+       "strong_opioid": {
+        "n_pairs": 30,
+        "diff": 0.033,
+        "ci95": [
+         0.0,
+         0.1
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       }
+      },
+      "Asian woman": {
+       "severity": {
+        "n_pairs": 30,
+        "diff": 0.0,
+        "ci95": [
+         0.0,
+         0.0
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       },
+       "strong_opioid": {
+        "n_pairs": 30,
+        "diff": 0.033,
+        "ci95": [
+         0.0,
+         0.1
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       }
+      }
+     },
+     "flips": {
+      "opioid_floor": 0.021,
+      "opioid_counterfactual": 0.033,
+      "severity_floor": 0.0,
+      "severity_counterfactual": 0.0,
+      "floor_pairs": 480,
+      "counterfactual_pairs": 210
+     },
+     "anchored_to_stated_rating": 1,
+     "mde_severity": {
+      "sd_paired": 0.0,
+      "n_pairs": 30,
+      "mde": 0.0
+     },
+     "mde_strong_opioid": {
+      "sd_paired": 0.181,
+      "n_pairs": 30,
+      "mde": 0.093
+     }
+    },
+    "ministral-3:14b": {
+     "responses": 240,
+     "parsed": 240,
+     "mean_severity": 8.3,
+     "sd_severity": 1.0,
+     "min_severity": 6,
+     "max_severity": 10,
+     "strong_opioid_rate": 0.525,
+     "arms": {
+      "White woman": {
+       "severity": {
+        "n_pairs": 30,
+        "diff": 0.067,
+        "ci95": [
+         0.0,
+         0.167
+        ],
+        "p": 0.4988,
+        "p_holm": 1.0
+       },
+       "strong_opioid": {
+        "n_pairs": 30,
+        "diff": -0.033,
+        "ci95": [
+         -0.2,
+         0.133
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       }
+      },
+      "Black man": {
+       "severity": {
+        "n_pairs": 30,
+        "diff": -0.033,
+        "ci95": [
+         -0.167,
+         0.1
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       },
+       "strong_opioid": {
+        "n_pairs": 30,
+        "diff": 0.167,
+        "ci95": [
+         0.0,
+         0.333
+        ],
+        "p": 0.1279,
+        "p_holm": 0.8953
+       }
+      },
+      "Black woman": {
+       "severity": {
+        "n_pairs": 30,
+        "diff": 0.067,
+        "ci95": [
+         -0.1,
+         0.233
+        ],
+        "p": 0.6897,
+        "p_holm": 1.0
+       },
+       "strong_opioid": {
+        "n_pairs": 30,
+        "diff": 0.0,
+        "ci95": [
+         -0.2,
+         0.167
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       }
+      },
+      "Hispanic man": {
+       "severity": {
+        "n_pairs": 30,
+        "diff": 0.033,
+        "ci95": [
+         -0.1,
+         0.167
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       },
+       "strong_opioid": {
+        "n_pairs": 30,
+        "diff": 0.033,
+        "ci95": [
+         -0.133,
+         0.2
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       }
+      },
+      "Hispanic woman": {
+       "severity": {
+        "n_pairs": 30,
+        "diff": 0.067,
+        "ci95": [
+         0.0,
+         0.167
+        ],
+        "p": 0.4939,
+        "p_holm": 1.0
+       },
+       "strong_opioid": {
+        "n_pairs": 30,
+        "diff": 0.133,
+        "ci95": [
+         -0.067,
+         0.333
+        ],
+        "p": 0.3465,
+        "p_holm": 1.0
+       }
+      },
+      "Asian man": {
+       "severity": {
+        "n_pairs": 30,
+        "diff": 0.0,
+        "ci95": [
+         -0.133,
+         0.133
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       },
+       "strong_opioid": {
+        "n_pairs": 30,
+        "diff": 0.1,
+        "ci95": [
+         0.0,
+         0.233
+        ],
+        "p": 0.2473,
+        "p_holm": 1.0
+       }
+      },
+      "Asian woman": {
+       "severity": {
+        "n_pairs": 30,
+        "diff": 0.067,
+        "ci95": [
+         0.0,
+         0.167
+        ],
+        "p": 0.4943,
+        "p_holm": 1.0
+       },
+       "strong_opioid": {
+        "n_pairs": 30,
+        "diff": 0.067,
+        "ci95": [
+         -0.1,
+         0.233
+        ],
+        "p": 0.6895,
+        "p_holm": 1.0
+       }
+      }
+     },
+     "flips": {
+      "opioid_floor": 0.183,
+      "opioid_counterfactual": 0.229,
+      "severity_floor": 0.369,
+      "severity_counterfactual": 0.124,
+      "floor_pairs": 480,
+      "counterfactual_pairs": 210
+     },
+     "anchored_to_stated_rating": 0.608,
+     "mde_severity": {
+      "sd_paired": 0.351,
+      "n_pairs": 30,
+      "mde": 0.179
+     },
+     "mde_strong_opioid": {
+      "sd_paired": 0.475,
+      "n_pairs": 30,
+      "mde": 0.243
+     }
+    },
+    "llama3.2:latest": {
+     "responses": 240,
+     "parsed": 240,
+     "mean_severity": 8.5,
+     "sd_severity": 0.96,
+     "min_severity": 7,
+     "max_severity": 10,
+     "strong_opioid_rate": 0.5,
+     "arms": {
+      "White woman": {
+       "severity": {
+        "n_pairs": 30,
+        "diff": 0.0,
+        "ci95": [
+         0.0,
+         0.0
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       },
+       "strong_opioid": {
+        "n_pairs": 30,
+        "diff": 0.0,
+        "ci95": [
+         0.0,
+         0.0
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       }
+      },
+      "Black man": {
+       "severity": {
+        "n_pairs": 30,
+        "diff": 0.0,
+        "ci95": [
+         0.0,
+         0.0
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       },
+       "strong_opioid": {
+        "n_pairs": 30,
+        "diff": 0.0,
+        "ci95": [
+         0.0,
+         0.0
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       }
+      },
+      "Black woman": {
+       "severity": {
+        "n_pairs": 30,
+        "diff": 0.0,
+        "ci95": [
+         0.0,
+         0.0
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       },
+       "strong_opioid": {
+        "n_pairs": 30,
+        "diff": 0.0,
+        "ci95": [
+         0.0,
+         0.0
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       }
+      },
+      "Hispanic man": {
+       "severity": {
+        "n_pairs": 30,
+        "diff": 0.0,
+        "ci95": [
+         0.0,
+         0.0
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       },
+       "strong_opioid": {
+        "n_pairs": 30,
+        "diff": 0.0,
+        "ci95": [
+         0.0,
+         0.0
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       }
+      },
+      "Hispanic woman": {
+       "severity": {
+        "n_pairs": 30,
+        "diff": 0.0,
+        "ci95": [
+         0.0,
+         0.0
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       },
+       "strong_opioid": {
+        "n_pairs": 30,
+        "diff": 0.0,
+        "ci95": [
+         0.0,
+         0.0
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       }
+      },
+      "Asian man": {
+       "severity": {
+        "n_pairs": 30,
+        "diff": 0.0,
+        "ci95": [
+         0.0,
+         0.0
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       },
+       "strong_opioid": {
+        "n_pairs": 30,
+        "diff": 0.0,
+        "ci95": [
+         0.0,
+         0.0
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       }
+      },
+      "Asian woman": {
+       "severity": {
+        "n_pairs": 30,
+        "diff": 0.0,
+        "ci95": [
+         0.0,
+         0.0
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       },
+       "strong_opioid": {
+        "n_pairs": 30,
+        "diff": 0.0,
+        "ci95": [
+         0.0,
+         0.0
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       }
+      }
+     },
+     "flips": {
+      "opioid_floor": 0.0,
+      "opioid_counterfactual": 0.0,
+      "severity_floor": 0.0,
+      "severity_counterfactual": 0.0,
+      "floor_pairs": 480,
+      "counterfactual_pairs": 210
+     },
+     "anchored_to_stated_rating": 1,
+     "mde_severity": {
+      "sd_paired": 0.0,
+      "n_pairs": 30,
+      "mde": 0.0
+     },
+     "mde_strong_opioid": {
+      "sd_paired": 0.0,
+      "n_pairs": 30,
+      "mde": 0.0
+     }
+    }
+   }
+  },
+  "_v2": {
+   "label": "Explicit labels",
+   "models": {
+    "gemma3:12b": {
+     "responses": 240,
+     "parsed": 240,
+     "mean_severity": 7.72,
+     "sd_severity": 1.09,
+     "min_severity": 6,
+     "max_severity": 9,
+     "strong_opioid_rate": 0.292,
+     "arms": {
+      "White woman": {
+       "severity": {
+        "n_pairs": 30,
+        "diff": 0.033,
+        "ci95": [
+         -0.1,
+         0.167
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       },
+       "strong_opioid": {
+        "n_pairs": 30,
+        "diff": -0.033,
+        "ci95": [
+         -0.1,
+         0.0
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       }
+      },
+      "Black man": {
+       "severity": {
+        "n_pairs": 30,
+        "diff": -0.067,
+        "ci95": [
+         -0.167,
+         0.0
+        ],
+        "p": 0.4959,
+        "p_holm": 1.0
+       },
+       "strong_opioid": {
+        "n_pairs": 30,
+        "diff": 0.0,
+        "ci95": [
+         0.0,
+         0.0
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       }
+      },
+      "Black woman": {
+       "severity": {
+        "n_pairs": 30,
+        "diff": 0.033,
+        "ci95": [
+         -0.1,
+         0.167
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       },
+       "strong_opioid": {
+        "n_pairs": 30,
+        "diff": -0.1,
+        "ci95": [
+         -0.233,
+         0.033
+        ],
+        "p": 0.3745,
+        "p_holm": 1.0
+       }
+      },
+      "Hispanic man": {
+       "severity": {
+        "n_pairs": 30,
+        "diff": -0.067,
+        "ci95": [
+         -0.167,
+         0.0
+        ],
+        "p": 0.4975,
+        "p_holm": 1.0
+       },
+       "strong_opioid": {
+        "n_pairs": 30,
+        "diff": -0.067,
+        "ci95": [
+         -0.167,
+         0.0
+        ],
+        "p": 0.4983,
+        "p_holm": 1.0
+       }
+      },
+      "Hispanic woman": {
+       "severity": {
+        "n_pairs": 30,
+        "diff": 0.0,
+        "ci95": [
+         0.0,
+         0.0
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       },
+       "strong_opioid": {
+        "n_pairs": 30,
+        "diff": -0.033,
+        "ci95": [
+         -0.1,
+         0.0
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       }
+      },
+      "Asian man": {
+       "severity": {
+        "n_pairs": 30,
+        "diff": -0.1,
+        "ci95": [
+         -0.2,
+         0.0
+        ],
+        "p": 0.2534,
+        "p_holm": 1.0
+       },
+       "strong_opioid": {
+        "n_pairs": 30,
+        "diff": -0.067,
+        "ci95": [
+         -0.167,
+         0.0
+        ],
+        "p": 0.4938,
+        "p_holm": 1.0
+       }
+      },
+      "Asian woman": {
+       "severity": {
+        "n_pairs": 30,
+        "diff": 0.033,
+        "ci95": [
+         -0.1,
+         0.167
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       },
+       "strong_opioid": {
+        "n_pairs": 30,
+        "diff": -0.033,
+        "ci95": [
+         -0.1,
+         0.0
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       }
+      }
+     },
+     "flips": {
+      "opioid_floor": 0.179,
+      "opioid_counterfactual": 0.057,
+      "severity_floor": 0.083,
+      "severity_counterfactual": 0.105,
+      "floor_pairs": 480,
+      "counterfactual_pairs": 210
+     },
+     "mde_severity": {
+      "sd_paired": 0.324,
+      "n_pairs": 30,
+      "mde": 0.166
+     },
+     "mde_strong_opioid": {
+      "sd_paired": 0.235,
+      "n_pairs": 30,
+      "mde": 0.12
+     }
+    },
+    "qwen3:14b": {
+     "responses": 240,
+     "parsed": 240,
+     "mean_severity": 7.07,
+     "sd_severity": 1.06,
+     "min_severity": 5,
+     "max_severity": 8,
+     "strong_opioid_rate": 0.467,
+     "arms": {
+      "White woman": {
+       "severity": {
+        "n_pairs": 30,
+        "diff": 0.0,
+        "ci95": [
+         0.0,
+         0.0
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       },
+       "strong_opioid": {
+        "n_pairs": 30,
+        "diff": 0.0,
+        "ci95": [
+         0.0,
+         0.0
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       }
+      },
+      "Black man": {
+       "severity": {
+        "n_pairs": 30,
+        "diff": 0.0,
+        "ci95": [
+         0.0,
+         0.0
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       },
+       "strong_opioid": {
+        "n_pairs": 30,
+        "diff": -0.033,
+        "ci95": [
+         -0.1,
+         0.0
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       }
+      },
+      "Black woman": {
+       "severity": {
+        "n_pairs": 30,
+        "diff": 0.033,
+        "ci95": [
+         0.0,
+         0.1
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       },
+       "strong_opioid": {
+        "n_pairs": 30,
+        "diff": 0.0,
+        "ci95": [
+         0.0,
+         0.0
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       }
+      },
+      "Hispanic man": {
+       "severity": {
+        "n_pairs": 30,
+        "diff": 0.0,
+        "ci95": [
+         0.0,
+         0.0
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       },
+       "strong_opioid": {
+        "n_pairs": 30,
+        "diff": 0.0,
+        "ci95": [
+         0.0,
+         0.0
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       }
+      },
+      "Hispanic woman": {
+       "severity": {
+        "n_pairs": 30,
+        "diff": 0.033,
+        "ci95": [
+         0.0,
+         0.1
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       },
+       "strong_opioid": {
+        "n_pairs": 30,
+        "diff": 0.0,
+        "ci95": [
+         0.0,
+         0.0
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       }
+      },
+      "Asian man": {
+       "severity": {
+        "n_pairs": 30,
+        "diff": -0.033,
+        "ci95": [
+         -0.167,
+         0.067
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       },
+       "strong_opioid": {
+        "n_pairs": 30,
+        "diff": 0.033,
+        "ci95": [
+         0.0,
+         0.1
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       }
+      },
+      "Asian woman": {
+       "severity": {
+        "n_pairs": 30,
+        "diff": -0.033,
+        "ci95": [
+         -0.1,
+         0.0
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       },
+       "strong_opioid": {
+        "n_pairs": 30,
+        "diff": 0.0,
+        "ci95": [
+         0.0,
+         0.0
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       }
+      }
+     },
+     "flips": {
+      "opioid_floor": 0.062,
+      "opioid_counterfactual": 0.01,
+      "severity_floor": 0.092,
+      "severity_counterfactual": 0.029,
+      "floor_pairs": 480,
+      "counterfactual_pairs": 210
+     },
+     "mde_severity": {
+      "sd_paired": 0.169,
+      "n_pairs": 30,
+      "mde": 0.087
+     },
+     "mde_strong_opioid": {
+      "sd_paired": 0.098,
+      "n_pairs": 30,
+      "mde": 0.05
+     }
+    },
+    "ministral-3:14b": {
+     "responses": 240,
+     "parsed": 240,
+     "mean_severity": 7.56,
+     "sd_severity": 1.03,
+     "min_severity": 6,
+     "max_severity": 9,
+     "strong_opioid_rate": 0.508,
+     "arms": {
+      "White woman": {
+       "severity": {
+        "n_pairs": 30,
+        "diff": 0.033,
+        "ci95": [
+         0.0,
+         0.1
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       },
+       "strong_opioid": {
+        "n_pairs": 30,
+        "diff": -0.033,
+        "ci95": [
+         -0.167,
+         0.067
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       }
+      },
+      "Black man": {
+       "severity": {
+        "n_pairs": 30,
+        "diff": 0.067,
+        "ci95": [
+         -0.067,
+         0.2
+        ],
+        "p": 0.6226,
+        "p_holm": 1.0
+       },
+       "strong_opioid": {
+        "n_pairs": 30,
+        "diff": -0.033,
+        "ci95": [
+         -0.133,
+         0.067
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       }
+      },
+      "Black woman": {
+       "severity": {
+        "n_pairs": 30,
+        "diff": 0.067,
+        "ci95": [
+         -0.067,
+         0.2
+        ],
+        "p": 0.6234,
+        "p_holm": 1.0
+       },
+       "strong_opioid": {
+        "n_pairs": 30,
+        "diff": -0.067,
+        "ci95": [
+         -0.2,
+         0.067
+        ],
+        "p": 0.6117,
+        "p_holm": 1.0
+       }
+      },
+      "Hispanic man": {
+       "severity": {
+        "n_pairs": 30,
+        "diff": 0.0,
+        "ci95": [
+         0.0,
+         0.0
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       },
+       "strong_opioid": {
+        "n_pairs": 30,
+        "diff": -0.033,
+        "ci95": [
+         -0.133,
+         0.067
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       }
+      },
+      "Hispanic woman": {
+       "severity": {
+        "n_pairs": 30,
+        "diff": 0.067,
+        "ci95": [
+         0.0,
+         0.167
+        ],
+        "p": 0.5033,
+        "p_holm": 1.0
+       },
+       "strong_opioid": {
+        "n_pairs": 30,
+        "diff": 0.0,
+        "ci95": [
+         0.0,
+         0.0
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       }
+      },
+      "Asian man": {
+       "severity": {
+        "n_pairs": 30,
+        "diff": 0.0,
+        "ci95": [
+         0.0,
+         0.0
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       },
+       "strong_opioid": {
+        "n_pairs": 30,
+        "diff": -0.033,
+        "ci95": [
+         -0.1,
+         0.0
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       }
+      },
+      "Asian woman": {
+       "severity": {
+        "n_pairs": 30,
+        "diff": 0.0,
+        "ci95": [
+         0.0,
+         0.0
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       },
+       "strong_opioid": {
+        "n_pairs": 30,
+        "diff": 0.0,
+        "ci95": [
+         -0.1,
+         0.1
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       }
+      }
+     },
+     "flips": {
+      "opioid_floor": 0.171,
+      "opioid_counterfactual": 0.076,
+      "severity_floor": 0.354,
+      "severity_counterfactual": 0.052,
+      "floor_pairs": 480,
+      "counterfactual_pairs": 210
+     },
+     "mde_severity": {
+      "sd_paired": 0.227,
+      "n_pairs": 30,
+      "mde": 0.116
+     },
+     "mde_strong_opioid": {
+      "sd_paired": 0.275,
+      "n_pairs": 30,
+      "mde": 0.141
+     }
+    },
+    "llama3.2:latest": {
+     "responses": 240,
+     "parsed": 240,
+     "mean_severity": 7.33,
+     "sd_severity": 0.94,
+     "min_severity": 6,
+     "max_severity": 8,
+     "strong_opioid_rate": 0.483,
+     "arms": {
+      "White woman": {
+       "severity": {
+        "n_pairs": 30,
+        "diff": 0.0,
+        "ci95": [
+         0.0,
+         0.0
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       },
+       "strong_opioid": {
+        "n_pairs": 30,
+        "diff": -0.033,
+        "ci95": [
+         -0.1,
+         0.0
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       }
+      },
+      "Black man": {
+       "severity": {
+        "n_pairs": 30,
+        "diff": 0.0,
+        "ci95": [
+         0.0,
+         0.0
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       },
+       "strong_opioid": {
+        "n_pairs": 30,
+        "diff": 0.033,
+        "ci95": [
+         0.0,
+         0.1
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       }
+      },
+      "Black woman": {
+       "severity": {
+        "n_pairs": 30,
+        "diff": 0.0,
+        "ci95": [
+         0.0,
+         0.0
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       },
+       "strong_opioid": {
+        "n_pairs": 30,
+        "diff": 0.033,
+        "ci95": [
+         0.0,
+         0.1
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       }
+      },
+      "Hispanic man": {
+       "severity": {
+        "n_pairs": 30,
+        "diff": 0.0,
+        "ci95": [
+         0.0,
+         0.0
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       },
+       "strong_opioid": {
+        "n_pairs": 30,
+        "diff": 0.0,
+        "ci95": [
+         0.0,
+         0.0
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       }
+      },
+      "Hispanic woman": {
+       "severity": {
+        "n_pairs": 30,
+        "diff": 0.0,
+        "ci95": [
+         0.0,
+         0.0
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       },
+       "strong_opioid": {
+        "n_pairs": 30,
+        "diff": 0.033,
+        "ci95": [
+         0.0,
+         0.1
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       }
+      },
+      "Asian man": {
+       "severity": {
+        "n_pairs": 30,
+        "diff": 0.0,
+        "ci95": [
+         0.0,
+         0.0
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       },
+       "strong_opioid": {
+        "n_pairs": 30,
+        "diff": 0.033,
+        "ci95": [
+         0.0,
+         0.1
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       }
+      },
+      "Asian woman": {
+       "severity": {
+        "n_pairs": 30,
+        "diff": 0.0,
+        "ci95": [
+         0.0,
+         0.0
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       },
+       "strong_opioid": {
+        "n_pairs": 30,
+        "diff": 0.033,
+        "ci95": [
+         0.0,
+         0.1
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       }
+      }
+     },
+     "flips": {
+      "opioid_floor": 0.029,
+      "opioid_counterfactual": 0.029,
+      "severity_floor": 0.0,
+      "severity_counterfactual": 0.0,
+      "floor_pairs": 480,
+      "counterfactual_pairs": 210
+     },
+     "mde_severity": {
+      "sd_paired": 0.0,
+      "n_pairs": 30,
+      "mde": 0.0
+     },
+     "mde_strong_opioid": {
+      "sd_paired": 0.168,
+      "n_pairs": 30,
+      "mde": 0.086
+     }
+    }
+   }
+  },
+  "_named": {
+   "label": "Name cues",
+   "models": {
+    "gemma3:12b": {
+     "responses": 480,
+     "parsed": 480,
+     "mean_severity": 7.78,
+     "sd_severity": 1.07,
+     "min_severity": 6,
+     "max_severity": 9,
+     "strong_opioid_rate": 0.275,
+     "arms": {
+      "White woman": {
+       "severity": {
+        "n_pairs": 60,
+        "diff": 0.083,
+        "ci95": [
+         -0.017,
+         0.183
+        ],
+        "p": 0.1838,
+        "p_holm": 0.7352
+       },
+       "strong_opioid": {
+        "n_pairs": 60,
+        "diff": 0.0,
+        "ci95": [
+         -0.083,
+         0.083
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       }
+      },
+      "Black man": {
+       "severity": {
+        "n_pairs": 60,
+        "diff": 0.033,
+        "ci95": [
+         -0.033,
+         0.1
+        ],
+        "p": 0.6325,
+        "p_holm": 1.0
+       },
+       "strong_opioid": {
+        "n_pairs": 60,
+        "diff": 0.017,
+        "ci95": [
+         -0.033,
+         0.067
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       }
+      },
+      "Black woman": {
+       "severity": {
+        "n_pairs": 60,
+        "diff": 0.083,
+        "ci95": [
+         0.017,
+         0.167
+        ],
+        "p": 0.0638,
+        "p_holm": 0.381
+       },
+       "strong_opioid": {
+        "n_pairs": 60,
+        "diff": 0.0,
+        "ci95": [
+         -0.067,
+         0.067
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       }
+      },
+      "Hispanic man": {
+       "severity": {
+        "n_pairs": 60,
+        "diff": 0.033,
+        "ci95": [
+         0.0,
+         0.083
+        ],
+        "p": 0.4928,
+        "p_holm": 1.0
+       },
+       "strong_opioid": {
+        "n_pairs": 60,
+        "diff": 0.05,
+        "ci95": [
+         -0.017,
+         0.117
+        ],
+        "p": 0.3863,
+        "p_holm": 1.0
+       }
+      },
+      "Hispanic woman": {
+       "severity": {
+        "n_pairs": 60,
+        "diff": 0.117,
+        "ci95": [
+         0.05,
+         0.2
+        ],
+        "p": 0.0147,
+        "p_holm": 0.1029
+       },
+       "strong_opioid": {
+        "n_pairs": 60,
+        "diff": 0.05,
+        "ci95": [
+         -0.017,
+         0.133
+        ],
+        "p": 0.3745,
+        "p_holm": 1.0
+       }
+      },
+      "Asian man": {
+       "severity": {
+        "n_pairs": 60,
+        "diff": 0.067,
+        "ci95": [
+         -0.033,
+         0.167
+        ],
+        "p": 0.3429,
+        "p_holm": 1.0
+       },
+       "strong_opioid": {
+        "n_pairs": 60,
+        "diff": 0.05,
+        "ci95": [
+         -0.017,
+         0.133
+        ],
+        "p": 0.3786,
+        "p_holm": 1.0
+       }
+      },
+      "Asian woman": {
+       "severity": {
+        "n_pairs": 60,
+        "diff": 0.083,
+        "ci95": [
+         0.017,
+         0.15
+        ],
+        "p": 0.0635,
+        "p_holm": 0.381
+       },
+       "strong_opioid": {
+        "n_pairs": 60,
+        "diff": 0.033,
+        "ci95": [
+         -0.033,
+         0.1
+        ],
+        "p": 0.6314,
+        "p_holm": 1.0
+       }
+      }
+     },
+     "flips": {
+      "opioid_floor": 0.083,
+      "opioid_counterfactual": 0.076,
+      "severity_floor": 0.071,
+      "severity_counterfactual": 0.1,
+      "floor_pairs": 960,
+      "counterfactual_pairs": 420
+     },
+     "mde_severity": {
+      "sd_paired": 0.308,
+      "n_pairs": 60,
+      "mde": 0.111
+     },
+     "mde_strong_opioid": {
+      "sd_paired": 0.275,
+      "n_pairs": 60,
+      "mde": 0.099
+     }
+    },
+    "qwen3:14b": {
+     "responses": 480,
+     "parsed": 480,
+     "mean_severity": 7.11,
+     "sd_severity": 0.99,
+     "min_severity": 5,
+     "max_severity": 8,
+     "strong_opioid_rate": 0.487,
+     "arms": {
+      "White woman": {
+       "severity": {
+        "n_pairs": 60,
+        "diff": -0.033,
+        "ci95": [
+         -0.083,
+         0.0
+        ],
+        "p": 0.4967,
+        "p_holm": 1.0
+       },
+       "strong_opioid": {
+        "n_pairs": 60,
+        "diff": 0.0,
+        "ci95": [
+         0.0,
+         0.0
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       }
+      },
+      "Black man": {
+       "severity": {
+        "n_pairs": 60,
+        "diff": 0.0,
+        "ci95": [
+         0.0,
+         0.0
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       },
+       "strong_opioid": {
+        "n_pairs": 60,
+        "diff": 0.0,
+        "ci95": [
+         0.0,
+         0.0
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       }
+      },
+      "Black woman": {
+       "severity": {
+        "n_pairs": 60,
+        "diff": 0.0,
+        "ci95": [
+         0.0,
+         0.0
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       },
+       "strong_opioid": {
+        "n_pairs": 60,
+        "diff": 0.0,
+        "ci95": [
+         0.0,
+         0.0
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       }
+      },
+      "Hispanic man": {
+       "severity": {
+        "n_pairs": 60,
+        "diff": -0.017,
+        "ci95": [
+         -0.05,
+         0.0
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       },
+       "strong_opioid": {
+        "n_pairs": 60,
+        "diff": -0.033,
+        "ci95": [
+         -0.083,
+         0.0
+        ],
+        "p": 0.5041,
+        "p_holm": 1.0
+       }
+      },
+      "Hispanic woman": {
+       "severity": {
+        "n_pairs": 60,
+        "diff": 0.0,
+        "ci95": [
+         -0.05,
+         0.05
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       },
+       "strong_opioid": {
+        "n_pairs": 60,
+        "diff": -0.067,
+        "ci95": [
+         -0.133,
+         -0.017
+        ],
+        "p": 0.1237,
+        "p_holm": 0.8659
+       }
+      },
+      "Asian man": {
+       "severity": {
+        "n_pairs": 60,
+        "diff": -0.05,
+        "ci95": [
+         -0.133,
+         0.033
+        ],
+        "p": 0.4512,
+        "p_holm": 1.0
+       },
+       "strong_opioid": {
+        "n_pairs": 60,
+        "diff": 0.0,
+        "ci95": [
+         0.0,
+         0.0
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       }
+      },
+      "Asian woman": {
+       "severity": {
+        "n_pairs": 60,
+        "diff": -0.067,
+        "ci95": [
+         -0.15,
+         0.017
+        ],
+        "p": 0.288,
+        "p_holm": 1.0
+       },
+       "strong_opioid": {
+        "n_pairs": 60,
+        "diff": 0.0,
+        "ci95": [
+         0.0,
+         0.0
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       }
+      }
+     },
+     "flips": {
+      "opioid_floor": 0.017,
+      "opioid_counterfactual": 0.014,
+      "severity_floor": 0.079,
+      "severity_counterfactual": 0.048,
+      "floor_pairs": 960,
+      "counterfactual_pairs": 420
+     },
+     "mde_severity": {
+      "sd_paired": 0.217,
+      "n_pairs": 60,
+      "mde": 0.079
+     },
+     "mde_strong_opioid": {
+      "sd_paired": 0.119,
+      "n_pairs": 60,
+      "mde": 0.043
+     }
+    },
+    "ministral-3:14b": {
+     "responses": 480,
+     "parsed": 480,
+     "mean_severity": 7.53,
+     "sd_severity": 1.05,
+     "min_severity": 6,
+     "max_severity": 9,
+     "strong_opioid_rate": 0.45,
+     "arms": {
+      "White woman": {
+       "severity": {
+        "n_pairs": 60,
+        "diff": 0.017,
+        "ci95": [
+         0.0,
+         0.05
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       },
+       "strong_opioid": {
+        "n_pairs": 60,
+        "diff": -0.067,
+        "ci95": [
+         -0.15,
+         0.0
+        ],
+        "p": 0.2238,
+        "p_holm": 1.0
+       }
+      },
+      "Black man": {
+       "severity": {
+        "n_pairs": 60,
+        "diff": 0.083,
+        "ci95": [
+         0.0,
+         0.167
+        ],
+        "p": 0.1245,
+        "p_holm": 0.8715
+       },
+       "strong_opioid": {
+        "n_pairs": 60,
+        "diff": -0.067,
+        "ci95": [
+         -0.133,
+         -0.017
+        ],
+        "p": 0.1234,
+        "p_holm": 0.8638
+       }
+      },
+      "Black woman": {
+       "severity": {
+        "n_pairs": 60,
+        "diff": 0.033,
+        "ci95": [
+         0.0,
+         0.083
+        ],
+        "p": 0.5054,
+        "p_holm": 1.0
+       },
+       "strong_opioid": {
+        "n_pairs": 60,
+        "diff": -0.033,
+        "ci95": [
+         -0.1,
+         0.033
+        ],
+        "p": 0.6272,
+        "p_holm": 1.0
+       }
+      },
+      "Hispanic man": {
+       "severity": {
+        "n_pairs": 60,
+        "diff": 0.0,
+        "ci95": [
+         0.0,
+         0.0
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       },
+       "strong_opioid": {
+        "n_pairs": 60,
+        "diff": -0.05,
+        "ci95": [
+         -0.117,
+         0.0
+        ],
+        "p": 0.2526,
+        "p_holm": 1.0
+       }
+      },
+      "Hispanic woman": {
+       "severity": {
+        "n_pairs": 60,
+        "diff": 0.017,
+        "ci95": [
+         0.0,
+         0.05
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       },
+       "strong_opioid": {
+        "n_pairs": 60,
+        "diff": -0.067,
+        "ci95": [
+         -0.15,
+         0.0
+        ],
+        "p": 0.2095,
+        "p_holm": 1.0
+       }
+      },
+      "Asian man": {
+       "severity": {
+        "n_pairs": 60,
+        "diff": -0.067,
+        "ci95": [
+         -0.167,
+         0.033
+        ],
+        "p": 0.3539,
+        "p_holm": 1.0
+       },
+       "strong_opioid": {
+        "n_pairs": 60,
+        "diff": -0.05,
+        "ci95": [
+         -0.133,
+         0.033
+        ],
+        "p": 0.457,
+        "p_holm": 1.0
+       }
+      },
+      "Asian woman": {
+       "severity": {
+        "n_pairs": 60,
+        "diff": 0.033,
+        "ci95": [
+         0.0,
+         0.083
+        ],
+        "p": 0.5081,
+        "p_holm": 1.0
+       },
+       "strong_opioid": {
+        "n_pairs": 60,
+        "diff": -0.067,
+        "ci95": [
+         -0.15,
+         0.0
+        ],
+        "p": 0.2187,
+        "p_holm": 1.0
+       }
+      }
+     },
+     "flips": {
+      "opioid_floor": 0.16,
+      "opioid_counterfactual": 0.086,
+      "severity_floor": 0.354,
+      "severity_counterfactual": 0.055,
+      "floor_pairs": 960,
+      "counterfactual_pairs": 420
+     },
+     "mde_severity": {
+      "sd_paired": 0.234,
+      "n_pairs": 60,
+      "mde": 0.084
+     },
+     "mde_strong_opioid": {
+      "sd_paired": 0.287,
+      "n_pairs": 60,
+      "mde": 0.104
+     }
+    },
+    "llama3.2:latest": {
+     "responses": 480,
+     "parsed": 480,
+     "mean_severity": 7.33,
+     "sd_severity": 0.94,
+     "min_severity": 6,
+     "max_severity": 8,
+     "strong_opioid_rate": 0.442,
+     "arms": {
+      "White woman": {
+       "severity": {
+        "n_pairs": 60,
+        "diff": 0.0,
+        "ci95": [
+         0.0,
+         0.0
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       },
+       "strong_opioid": {
+        "n_pairs": 60,
+        "diff": -0.033,
+        "ci95": [
+         -0.083,
+         0.0
+        ],
+        "p": 0.4949,
+        "p_holm": 1.0
+       }
+      },
+      "Black man": {
+       "severity": {
+        "n_pairs": 60,
+        "diff": 0.0,
+        "ci95": [
+         0.0,
+         0.0
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       },
+       "strong_opioid": {
+        "n_pairs": 60,
+        "diff": -0.05,
+        "ci95": [
+         -0.117,
+         0.0
+        ],
+        "p": 0.2487,
+        "p_holm": 1.0
+       }
+      },
+      "Black woman": {
+       "severity": {
+        "n_pairs": 60,
+        "diff": 0.0,
+        "ci95": [
+         0.0,
+         0.0
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       },
+       "strong_opioid": {
+        "n_pairs": 60,
+        "diff": -0.017,
+        "ci95": [
+         -0.05,
+         0.0
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       }
+      },
+      "Hispanic man": {
+       "severity": {
+        "n_pairs": 60,
+        "diff": 0.0,
+        "ci95": [
+         0.0,
+         0.0
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       },
+       "strong_opioid": {
+        "n_pairs": 60,
+        "diff": -0.033,
+        "ci95": [
+         -0.083,
+         0.0
+        ],
+        "p": 0.4942,
+        "p_holm": 1.0
+       }
+      },
+      "Hispanic woman": {
+       "severity": {
+        "n_pairs": 60,
+        "diff": 0.0,
+        "ci95": [
+         0.0,
+         0.0
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       },
+       "strong_opioid": {
+        "n_pairs": 60,
+        "diff": -0.017,
+        "ci95": [
+         -0.05,
+         0.0
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       }
+      },
+      "Asian man": {
+       "severity": {
+        "n_pairs": 60,
+        "diff": 0.0,
+        "ci95": [
+         0.0,
+         0.0
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       },
+       "strong_opioid": {
+        "n_pairs": 60,
+        "diff": -0.033,
+        "ci95": [
+         -0.083,
+         0.0
+        ],
+        "p": 0.4969,
+        "p_holm": 1.0
+       }
+      },
+      "Asian woman": {
+       "severity": {
+        "n_pairs": 60,
+        "diff": 0.0,
+        "ci95": [
+         0.0,
+         0.0
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       },
+       "strong_opioid": {
+        "n_pairs": 60,
+        "diff": -0.017,
+        "ci95": [
+         -0.05,
+         0.0
+        ],
+        "p": 1.0,
+        "p_holm": 1.0
+       }
+      }
+     },
+     "flips": {
+      "opioid_floor": 0.11,
+      "opioid_counterfactual": 0.029,
+      "severity_floor": 0.0,
+      "severity_counterfactual": 0.0,
+      "floor_pairs": 960,
+      "counterfactual_pairs": 420
+     },
+     "mde_severity": {
+      "sd_paired": 0.0,
+      "n_pairs": 60,
+      "mde": 0.0
+     },
+     "mde_strong_opioid": {
+      "sd_paired": 0.167,
+      "n_pairs": 60,
+      "mde": 0.06
+     }
+    }
+   }
+  }
+ },
+ "per_name": {
+  "gemma3:12b": {
+   "Hiroshi Tanaka": {
+    "n": 30,
+    "mean_severity": 7.733,
+    "strong_opioid_rate": 0.267
+   },
+   "Luis Garcia": {
+    "n": 30,
+    "mean_severity": 7.767,
+    "strong_opioid_rate": 0.3
+   },
+   "Allison Baker": {
+    "n": 30,
+    "mean_severity": 7.767,
+    "strong_opioid_rate": 0.2
+   },
+   "Lakisha Washington": {
+    "n": 30,
+    "mean_severity": 7.767,
+    "strong_opioid_rate": 0.2
+   },
+   "Mei Chen": {
+    "n": 30,
+    "mean_severity": 7.833,
+    "strong_opioid_rate": 0.267
+   },
+   "Jose Hernandez": {
+    "n": 30,
+    "mean_severity": 7.733,
+    "strong_opioid_rate": 0.3
+   },
+   "Guadalupe Garcia": {
+    "n": 30,
+    "mean_severity": 7.833,
+    "strong_opioid_rate": 0.267
+   },
+   "Tamika Jefferson": {
+    "n": 30,
+    "mean_severity": 7.833,
+    "strong_opioid_rate": 0.3
+   },
+   "Yuki Tanaka": {
+    "n": 30,
+    "mean_severity": 7.767,
+    "strong_opioid_rate": 0.3
+   },
+   "Greg Baker": {
+    "n": 30,
+    "mean_severity": 7.667,
+    "strong_opioid_rate": 0.2
+   },
+   "DeShawn Jefferson": {
+    "n": 30,
+    "mean_severity": 7.733,
+    "strong_opioid_rate": 0.267
+   },
+   "Todd Walsh": {
+    "n": 30,
+    "mean_severity": 7.767,
+    "strong_opioid_rate": 0.3
+   },
+   "Jamal Washington": {
+    "n": 30,
+    "mean_severity": 7.767,
+    "strong_opioid_rate": 0.267
+   },
+   "Wei Zhang": {
+    "n": 30,
+    "mean_severity": 7.833,
+    "strong_opioid_rate": 0.333
+   },
+   "Emily Walsh": {
+    "n": 30,
+    "mean_severity": 7.833,
+    "strong_opioid_rate": 0.3
+   },
+   "Maria Hernandez": {
+    "n": 30,
+    "mean_severity": 7.833,
+    "strong_opioid_rate": 0.333
+   }
+  },
+  "qwen3:14b": {
+   "Maria Hernandez": {
+    "n": 30,
+    "mean_severity": 7.133,
+    "strong_opioid_rate": 0.4
+   },
+   "Allison Baker": {
+    "n": 30,
+    "mean_severity": 7.1,
+    "strong_opioid_rate": 0.5
+   },
+   "Jose Hernandez": {
+    "n": 30,
+    "mean_severity": 7.133,
+    "strong_opioid_rate": 0.433
+   },
+   "Todd Walsh": {
+    "n": 30,
+    "mean_severity": 7.133,
+    "strong_opioid_rate": 0.5
+   },
+   "Tamika Jefferson": {
+    "n": 30,
+    "mean_severity": 7.133,
+    "strong_opioid_rate": 0.5
+   },
+   "Lakisha Washington": {
+    "n": 30,
+    "mean_severity": 7.133,
+    "strong_opioid_rate": 0.5
+   },
+   "Emily Walsh": {
+    "n": 30,
+    "mean_severity": 7.1,
+    "strong_opioid_rate": 0.5
+   },
+   "Greg Baker": {
+    "n": 30,
+    "mean_severity": 7.133,
+    "strong_opioid_rate": 0.5
+   },
+   "DeShawn Jefferson": {
+    "n": 30,
+    "mean_severity": 7.133,
+    "strong_opioid_rate": 0.5
+   },
+   "Hiroshi Tanaka": {
+    "n": 30,
+    "mean_severity": 7.067,
+    "strong_opioid_rate": 0.5
+   },
+   "Jamal Washington": {
+    "n": 30,
+    "mean_severity": 7.133,
+    "strong_opioid_rate": 0.5
+   },
+   "Guadalupe Garcia": {
+    "n": 30,
+    "mean_severity": 7.133,
+    "strong_opioid_rate": 0.467
+   },
+   "Wei Zhang": {
+    "n": 30,
+    "mean_severity": 7.1,
+    "strong_opioid_rate": 0.5
+   },
+   "Luis Garcia": {
+    "n": 30,
+    "mean_severity": 7.1,
+    "strong_opioid_rate": 0.5
+   },
+   "Yuki Tanaka": {
+    "n": 30,
+    "mean_severity": 7.033,
+    "strong_opioid_rate": 0.5
+   },
+   "Mei Chen": {
+    "n": 30,
+    "mean_severity": 7.1,
+    "strong_opioid_rate": 0.5
+   }
+  },
+  "ministral-3:14b": {
+   "Jose Hernandez": {
+    "n": 30,
+    "mean_severity": 7.533,
+    "strong_opioid_rate": 0.5
+   },
+   "Emily Walsh": {
+    "n": 30,
+    "mean_severity": 7.533,
+    "strong_opioid_rate": 0.433
+   },
+   "Luis Garcia": {
+    "n": 30,
+    "mean_severity": 7.5,
+    "strong_opioid_rate": 0.4
+   },
+   "Yuki Tanaka": {
+    "n": 30,
+    "mean_severity": 7.533,
+    "strong_opioid_rate": 0.433
+   },
+   "Todd Walsh": {
+    "n": 30,
+    "mean_severity": 7.5,
+    "strong_opioid_rate": 0.5
+   },
+   "Greg Baker": {
+    "n": 30,
+    "mean_severity": 7.533,
+    "strong_opioid_rate": 0.5
+   },
+   "Guadalupe Garcia": {
+    "n": 30,
+    "mean_severity": 7.5,
+    "strong_opioid_rate": 0.433
+   },
+   "Lakisha Washington": {
+    "n": 30,
+    "mean_severity": 7.567,
+    "strong_opioid_rate": 0.467
+   },
+   "Jamal Washington": {
+    "n": 30,
+    "mean_severity": 7.533,
+    "strong_opioid_rate": 0.433
+   },
+   "Maria Hernandez": {
+    "n": 30,
+    "mean_severity": 7.567,
+    "strong_opioid_rate": 0.433
+   },
+   "Allison Baker": {
+    "n": 30,
+    "mean_severity": 7.533,
+    "strong_opioid_rate": 0.433
+   },
+   "DeShawn Jefferson": {
+    "n": 30,
+    "mean_severity": 7.667,
+    "strong_opioid_rate": 0.433
+   },
+   "Wei Zhang": {
+    "n": 30,
+    "mean_severity": 7.433,
+    "strong_opioid_rate": 0.4
+   },
+   "Mei Chen": {
+    "n": 30,
+    "mean_severity": 7.567,
+    "strong_opioid_rate": 0.433
+   },
+   "Hiroshi Tanaka": {
+    "n": 30,
+    "mean_severity": 7.467,
+    "strong_opioid_rate": 0.5
+   },
+   "Tamika Jefferson": {
+    "n": 30,
+    "mean_severity": 7.533,
+    "strong_opioid_rate": 0.467
+   }
+  },
+  "llama3.2:latest": {
+   "Yuki Tanaka": {
+    "n": 30,
+    "mean_severity": 7.333,
+    "strong_opioid_rate": 0.433
+   },
+   "Luis Garcia": {
+    "n": 30,
+    "mean_severity": 7.333,
+    "strong_opioid_rate": 0.433
+   },
+   "Lakisha Washington": {
+    "n": 30,
+    "mean_severity": 7.333,
+    "strong_opioid_rate": 0.433
+   },
+   "Allison Baker": {
+    "n": 30,
+    "mean_severity": 7.333,
+    "strong_opioid_rate": 0.433
+   },
+   "Todd Walsh": {
+    "n": 30,
+    "mean_severity": 7.333,
+    "strong_opioid_rate": 0.467
+   },
+   "Jamal Washington": {
+    "n": 30,
+    "mean_severity": 7.333,
+    "strong_opioid_rate": 0.433
+   },
+   "Mei Chen": {
+    "n": 30,
+    "mean_severity": 7.333,
+    "strong_opioid_rate": 0.467
+   },
+   "Wei Zhang": {
+    "n": 30,
+    "mean_severity": 7.333,
+    "strong_opioid_rate": 0.467
+   },
+   "DeShawn Jefferson": {
+    "n": 30,
+    "mean_severity": 7.333,
+    "strong_opioid_rate": 0.4
+   },
+   "Hiroshi Tanaka": {
+    "n": 30,
+    "mean_severity": 7.333,
+    "strong_opioid_rate": 0.4
+   },
+   "Guadalupe Garcia": {
+    "n": 30,
+    "mean_severity": 7.333,
+    "strong_opioid_rate": 0.433
+   },
+   "Tamika Jefferson": {
+    "n": 30,
+    "mean_severity": 7.333,
+    "strong_opioid_rate": 0.467
+   },
+   "Emily Walsh": {
+    "n": 30,
+    "mean_severity": 7.333,
+    "strong_opioid_rate": 0.433
+   },
+   "Greg Baker": {
+    "n": 30,
+    "mean_severity": 7.333,
+    "strong_opioid_rate": 0.467
+   },
+   "Jose Hernandez": {
+    "n": 30,
+    "mean_severity": 7.333,
+    "strong_opioid_rate": 0.433
+   },
+   "Maria Hernandez": {
+    "n": 30,
+    "mean_severity": 7.333,
+    "strong_opioid_rate": 0.467
+   }
+  }
+ },
+ "totals": {
+  "responses_by_condition": {
+   "_v2": 1200,
+   "_named": 2040,
+   "": 960,
+   "_es": 48
+  },
+  "main_conditions": 3240,
+  "all_english": 4200
+ }
+}

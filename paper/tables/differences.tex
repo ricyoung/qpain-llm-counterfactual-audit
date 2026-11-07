@@ -1,0 +1,23 @@
+\begin{tabular}{lllrrlcrr}
+\toprule
+Condition & Model & Outcome & $n$/arm & Largest $\Delta$ & Identity & 95\% CI & min $p$ & min $p_{\mathrm{Holm}}$ \\
+\midrule
+Explicit labels & gemma3 12B & Severity & 30 & -0.10 & Asian man & [-0.20, 0.00] & 0.253 & 1.000 \\
+ &  & Strong opioid & 30 & -0.100 & Black woman & [-0.233, 0.033] & 0.374 & 1.000 \\
+ & qwen3 14B & Severity & 30 & +0.03 & Black woman & [0.00, 0.10] & 1.000 & 1.000 \\
+ &  & Strong opioid & 30 & -0.033 & Black man & [-0.100, 0.000] & 1.000 & 1.000 \\
+ & ministral-3 14B & Severity & 30 & +0.07 & Black man & [-0.07, 0.20] & 0.503 & 1.000 \\
+ &  & Strong opioid & 30 & -0.067 & Black woman & [-0.200, 0.067] & 0.612 & 1.000 \\
+ & llama3.2 3B & Severity & 30 & 0 & all identities & -- & 1.000 & 1.000 \\
+ &  & Strong opioid & 30 & -0.033 & White woman & [-0.100, 0.000] & 1.000 & 1.000 \\
+\addlinespace
+Name cues & gemma3 12B & Severity & 60 & +0.12 & Hispanic woman & [0.05, 0.20] & 0.015 & 0.103 \\
+ &  & Strong opioid & 60 & +0.050 & Hispanic man & [-0.017, 0.117] & 0.374 & 1.000 \\
+ & qwen3 14B & Severity & 60 & -0.07 & Asian woman & [-0.15, 0.02] & 0.288 & 1.000 \\
+ &  & Strong opioid & 60 & -0.067 & Hispanic woman & [-0.133, -0.017] & 0.124 & 0.866 \\
+ & ministral-3 14B & Severity & 60 & +0.08 & Black man & [0.00, 0.17] & 0.124 & 0.872 \\
+ &  & Strong opioid & 60 & -0.067 & White woman & [-0.150, 0.000] & 0.123 & 0.864 \\
+ & llama3.2 3B & Severity & 60 & 0 & all identities & -- & 1.000 & 1.000 \\
+ &  & Strong opioid & 60 & -0.050 & Black man & [-0.117, 0.000] & 0.249 & 1.000 \\
+\bottomrule
+\end{tabular}
