@@ -30,6 +30,7 @@ SHORT = {
     'meta-llama/llama-3.3-70b-instruct': 'Llama 3.3 70B', 'deepseek/deepseek-v4.1-flash': 'DeepSeek V4.1 Flash',
     'qwen/qwen3-235b-a22b-2507': 'Qwen3 235B-A22B', 'openai/gpt-oss-120b': 'gpt-oss 120B',
     'google/gemma-3-12b-it': 'Gemma 3 12B', 'beam:cloud': 'Beam 501B-A23B'}
+SAME_WEIGHTS = {'google/gemma-3-12b-it': 'gemma3:12b'}      # one set of weights served two ways
 MODE = {'on': 'reasoning on', 'off': 'reasoning off', 'low': 'effort low', 'medium': 'effort medium', 'high': 'effort high'}
 SET_LABEL = {'authored': 'Authored cases', 'qpain': 'Q-Pain'}
 FIELD_LABEL = {'severity': 'severity', 'strong_opioid': 'strong opioid', 'offer': 'opioid offered', 'high_dose': 'high dose'}
@@ -223,6 +224,9 @@ def numbers(stats: dict) -> str:
         'nConfigs': len(configs), 'nConfigsLocal': len(configs) - len(api), 'nConfigsAPI': len(api),
         'nConfigsQpain': sum('qpain' in e['sets'] for e in configs.values()),
         'nModels': len({e['model'] for e in configs.values()}),
+        # a model is one served model identifier; the 4-bit local and 16-bit API copies of Gemma 3 12B share weights
+        'nWeights': len({SAME_WEIGHTS.get(e['model'], e['model']) for e in configs.values()}),
+        'nModelsQpain': len({e['model'] for e in configs.values() if 'qpain' in e['sets']}),
         'nResponses': f"{sum(c['records'] for c in cells):,}", 'nInvalid': f"{sum(c['invalid'] for c in cells):,}",
         'nResponsesAPI': f"{sum(c['records'] for e in api for cues in e['sets'].values() for c in cues.values()):,}",
         'costAPI': f"{sum(e['usage'].get('cost_usd', 0.0) for e in api):.2f}", 'costLedger': f'{spent:.2f}',

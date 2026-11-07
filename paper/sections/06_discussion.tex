@@ -73,15 +73,20 @@ every difference that survived correction within a model rated a Black patient's
 pain higher, or offered an opioid more often, than the White male reference. The
 shift was weaker under name cues (Figure~\ref{fig:panel}, orange diamonds), as would be
 expected if models respond to the explicit word rather than to anything a name
-conveys, and it is consistent with alignment training that teaches models to
-respond with care to a stated protected attribute \cite{ouyang2022training}. A
+conveys, and it is consistent with a conjecture, which we did not test, that
+alignment training teaches models to respond with care to a stated protected
+attribute \cite{ouyang2022training}. These sign counts are descriptive, not
+independent confirmations: the contrasts share a reference, and models trained on
+similar data are not independent draws. On Q-Pain the name condition also keeps
+the template's pronouns, so sex stays explicit there. A
 shift of a few hundredths of a point is clinically negligible, but it shows that
 an explicit label does not leave the output untouched. Two other results carry
 more practical weight than any identity effect. First, the models disagreed with
 one another, and with the Q-Pain reference answer, far more than they
 distinguished between patients: the same cases drew the high dose from llama3.2
 in nearly every response and from gemma3 in almost none, and full agreement with
-the clinical reference ranged from \rangeFullMatch{}. Second, the same weights
+the Q-Pain reference answer (the same in all 50 cases, and not a standard of care)
+ranged from \rangeFullMatch{}. Second, the same weights
 behaved differently under different settings: reasoning moved severity by up to
 half a point, upward in some models and downward in others, and where it changed
 opioid decisions it made opioids or high doses less frequent, and a 16-bit copy
@@ -125,8 +130,8 @@ These findings fit a pattern across model generations. Early generative models
 showed intersectional treatment gaps in pain management \cite{loge2021qpain},
 2023 commercial models reproduced race-based misconceptions and stereotyped
 vignettes \cite{omiye2023race, zack2024gpt4}, and the most recent proprietary
-and now open-weight models show no measurable disparity in direct pain
-assessment \cite{young2025racial}. The most economical reading is that
+models showed no measurable disparity in direct pain assessment
+\cite{young2025racial}, as the open-weight models audited here also did. The most economical reading is that
 instruction tuning and alignment \cite{ouyang2022training} have removed the most
 direct expression of this bias, at least when the task is short, the cues are
 clean and the output is constrained. The same open-weight families are not bias
@@ -170,7 +175,9 @@ identity effect on severity; llama3.2's severity null in particular is
 uninformative, since it returned one rating per case. Each case had a single
 age, so age was not tested.
 
-\paragraph{Identity cues.} Explicit labels and first names are only two of the
+\paragraph{Identity cues.} The explicit-label condition is an audit probe, not a
+model of routine documentation, where identity seldom opens a case as ``a
+38-year-old Black woman.'' Explicit labels and first names are only two of the
 ways identity enters a clinical note; dialect, address, insurance and social
 history were not tested. The authored Hispanic and Asian names were not
 validated for perceived race, and Q-Pain's names, although drawn from

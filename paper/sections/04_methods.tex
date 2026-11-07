@@ -146,7 +146,10 @@ in the panel. \emph{Reasoning}: the same weights were run with reasoning disable
 qwen3.6 35B locally) or at low and high reasoning effort (gpt-oss 120B through
 the API; gpt-oss 20B locally). \emph{Precision}: Gemma~3 12B was run at bf16
 through the API, against the 4-bit local copy of the same weights used in
-Study~1. A configuration is one model at one reasoning setting. The local
+Study~1. A configuration is one model at one reasoning setting, and a model is one
+served model identifier: the \nConfigs{} configurations comprise \nModels{} models,
+of which \nWeights{} have distinct weights (the 4-bit local and 16-bit API copies of
+Gemma~3 12B share them) and \nModelsQpain{} have Q-Pain responses. The local
 reasoning configurations were run on the authored cases only, to keep the
 run time of long reasoning outputs on local hardware feasible.
 
@@ -392,7 +395,10 @@ been drawn from 10,000 sign patterns in a single random stream shared by all
 comparisons, so adding a configuration re-drew the $p$-values of others, and
 one Holm-adjusted value moved from $0.064$ to $0.044$ between two interim runs
 without any change in its data. The final analysis therefore seeds each
-comparison separately and uses 200,000 patterns, as described above.
+comparison separately and uses 200,000 patterns, as described above. The change
+was made on 6 November 2026 in the analysis script's inference function and is
+recorded in the working repository's history; the public repository holds the
+final code.
 
 \subsection{Reproducibility}
 The repository accompanying this paper

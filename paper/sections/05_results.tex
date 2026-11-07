@@ -54,11 +54,13 @@ removed and the pilot is not used to test H1 or H2.
 With race and sex stated (Figure~\ref{fig:differences}, left column, blue), no
 identity differed from the White male reference in severity or strong-opioid
 recommendation. The largest severity difference was $-0.10$ points for Asian men
-under gemma3 (95\% CI $[-0.20, 0.00]$, $p = 0.253$); all other severity
+under gemma3 (95\% CI $[-0.20, 0.00]$, pair-level $p = 0.253$); all other severity
 differences lay within $\pm0.07$, and llama3.2 returned identical severity for
 every identity on every seed. The largest strong-opioid difference was $-0.100$
-for Black women under gemma3 ($p = 0.374$). Every Holm-adjusted $p$-value in this
-condition was 1.000 (Table~\ref{tab:differences}).
+for Black women under gemma3 (pair-level $p = 0.374$). Every Holm-adjusted $p$-value
+in this condition was 1.000 (Table~\ref{tab:differences}). Study~1's $p$-values are
+pair-level: the 30 or 60 pairs per identity come from six cases, so they are
+conditional on those cases (the case-level analysis follows below).
 
 \begin{figure}[p]
 \centering
@@ -80,7 +82,8 @@ severity margin lies far outside the plotted range.}
 \caption{Largest paired difference per model, condition and outcome, with its
 identity and bootstrap 95\% CI, and the smallest uncorrected and Holm-adjusted
 $p$-values across the seven identity comparisons. $n$/arm is the number of pairs
-per identity.}
+per identity. The $p$-values are pair-level: the pairs come from six cases, so they
+are conditional on those cases.}
 \label{tab:differences}
 \setlength{\tabcolsep}{4pt}
 \resizebox{\textwidth}{!}{\input{tables/differences}}
@@ -150,14 +153,16 @@ strong-opioid decision. Right: severity rating.}
 \setlength{\tabcolsep}{5pt}
 \caption{Noise floor, counterfactual change and minimum detectable paired
 difference (80\% power, two-sided $\alpha = 0.05$). A minimum detectable
-difference of 0.00 indicates no variation in the paired differences.}
+difference of 0.00 indicates no variation in the paired differences. The minimum
+detectable differences are pair-level and conditional on the six cases.}
 \label{tab:noise}
 \input{tables/noise}
 \end{table}
 
 \subsubsection{Case-level robustness}
 \label{sec:robust}
-With the vignette as the unit of analysis, every severity difference, for every model, identity and cue type, was equivalent to zero within $\pm1$ point: the largest mean was $+0.117$ (gemma3, Hispanic women, name cues; cluster-bootstrap 95\% CI $[0.000, 0.283]$). The strong-opioid differences were not shown to be equivalent within $\pm0.10$ for any model: with six clusters the 95\% intervals extended to $-0.25$ and $+0.20$. The clinical case explained 86\% to 100\% of the variance in severity ratings, the models used only two to four distinct severity values across all responses, and llama3.2 assigned one fixed rating to each case regardless of identity or seed. Excluding the sickle cell case left every conclusion unchanged (largest severity mean $+0.140$). Across the 112 identity comparisons in the two main conditions, one uncorrected $p$-value fell below 0.05, fewer than the 5.6 expected by chance.
+With the vignette as the unit of analysis, every severity difference, for every model, identity and cue type, was equivalent to zero within $\pm1$ point: the largest mean was $+0.117$ (gemma3, Hispanic women, name cues; cluster-bootstrap 95\% CI $[0.000, 0.283]$). The strong-opioid differences were not shown to be equivalent within $\pm0.10$ for any model: with six clusters the 95\% intervals extended to $-0.25$ and $+0.20$. The clinical case explained 86\% to 100\% of the variance in severity ratings, the models used only two to four distinct severity values across all responses, and llama3.2 assigned one fixed rating to each case regardless of identity or seed. Excluding the sickle cell case left every conclusion unchanged (largest severity mean $+0.140$). Across the 112 identity comparisons in the two main conditions, one uncorrected $p$-value fell below 0.05; because the comparisons share reference
+responses and the tests are discrete, this count is reported without a chance benchmark.
 
 \subsection{Study 2: the model panel on authored and Q-Pain cases}
 \label{sec:results-study2}
@@ -188,7 +193,9 @@ matching that answer in full, averaged over the two cue types, ranged from
 in 98\% of responses but chose the high dose in 93--95\%; Gemini 2.5 Flash chose
 the high dose in about half of its offers and ministral-3 in about two-thirds; gemma3 matched
 the reference dose in 91--93\% of its offers but offered an opioid in only 74\%
-of responses.
+of responses. Agreement with this reference is not a measure of quality or safety:
+it is the same answer in all 50 cases, a higher dose may be appropriate for some
+presentations, and a response that departs from it is not thereby worse care.
 
 \subsubsection{Identity differences}
 Figures~\ref{fig:panel} (pain severity) and~\ref{fig:paneloffer} (opioid offered) show the
@@ -197,7 +204,8 @@ cue types in each, and
 Table~\ref{tab:panelqpain} (Q-Pain) and Appendix
 Table~\ref{tab:panelauthored} (authored cases) the largest identity difference
 in each. Of the \nTests{} identity comparisons in the study, \nTestsBelow{} had a
-case-level $p < 0.05$, against \nTestsExpected{} expected by chance, and
+case-level $p < 0.05$ (a count reported without a chance benchmark, since the
+comparisons share reference responses and the tests are discrete), and
 \nBHhits{} survived the study-wide false discovery rate. Within configurations,
 \nHolmHits{} comparisons survived Holm correction, all on the Q-Pain cases with
 explicit labels and all in the same direction, a higher rating or more opioid
@@ -368,8 +376,7 @@ not exclude differences of up to about 20 percentage points.
 
 In Study~2, across \nConfigs{} configurations of \nModels{} models and
 \nResponses{} responses, no identity difference survived the study-wide false
-discovery rate, and fewer comparisons reached $p < 0.05$ than chance alone would
-produce. Every severity difference was equivalent to zero within one point, and
+discovery rate. Every severity difference was equivalent to zero within one point, and
 on the 50 Q-Pain cases most opioid differences were equivalent within ten
 percentage points. The differences that survived correction within a model all
 favoured Black patients, and the Black minus White severity contrast was
