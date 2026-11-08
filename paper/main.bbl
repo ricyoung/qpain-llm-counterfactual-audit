@@ -107,6 +107,14 @@ Cameron~C. Young, Elizabeth~J. Enichen, Arya~S. Rao, and Marc~D. Succi.
 \newblock {\em Pain}, 166(3):511--517, 2025.
 \newblock Published online 6 September 2024.
 
+\bibitem{akhras2026palliative}
+Naomi Akhras, Fares Antaki, Fannie Mottet, Olivia Nguyen, Shyam Sawhney,
+  Sabrina Bajwah, and Joanna~M. Davies.
+\newblock Large language models perpetuate bias in palliative care: Development
+  and analysis of the {Palliative Care Adversarial Dataset} ({PCAD}).
+\newblock {\em PLOS Digital Health}, 5(6):e0001451, 2026.
+\newblock arXiv:2502.08073.
+
 \bibitem{young2026equitriage}
 Richard~J. Young and Alice~M. Matthews.
 \newblock {EQUITRIAGE}: A fairness audit of gender bias in {LLM}-based
@@ -271,14 +279,6 @@ Xiang Liu, Wei Gao, Pengfei Li, Xiaohua Fan, and Chao Wang.
   comparative analysis of inference models and pretrained large language
   models.
 \newblock {\em Pain}, 166(9):2196--2197, 2025.
-
-\bibitem{akhras2026palliative}
-Naomi Akhras, Fares Antaki, Fannie Mottet, Olivia Nguyen, Shyam Sawhney,
-  Sabrina Bajwah, and Joanna~M. Davies.
-\newblock Large language models perpetuate bias in palliative care: Development
-  and analysis of the {Palliative Care Adversarial Dataset} ({PCAD}).
-\newblock {\em PLOS Digital Health}, 5(6):e0001451, 2026.
-\newblock arXiv:2502.08073.
 
 \bibitem{hanna2023assessing}
 John~J. Hanna, Abdi~D. Wakene, Christoph~U. Lehmann, and Richard~J. Medford.

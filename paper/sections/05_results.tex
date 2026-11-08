@@ -178,7 +178,14 @@ ended with no answer, one at the token limit), 13 from qwen3.6 35B with
 reasoning on, which reasoned to completion and then returned an empty answer
 object (12 of them under name cues), and one from Beam, whose answer used field
 values outside the schema. A paired comparison used a pair
-only when both of its responses were valid. On the Q-Pain cases the share of severity variance explained by the clinical
+only when both of its responses were valid. Invalid answers did not depend on
+identity: in each of the \nFailCells{} configuration, case-set and cue cells with at
+least one, the failures were spread across the eight identities no more unevenly than
+chance would produce (a permutation test within case-and-seed blocks; smallest
+$p = \minFailP{}$ among the \nFailTested{} cells with three or more failures, every
+Holm-adjusted $p = \minFailHolm{}$; Appendix Table~\ref{tab:failures}), although
+with so few failures in any cell only a large imbalance would have been detected.
+On the Q-Pain cases the share of severity variance explained by the clinical
 case ranged from \rangeEtaQpain{}. For the
 White male reference under explicit labels, mean severity ranged from
 \rangeSevBase{}, the proportion of responses offering an opioid from
@@ -260,6 +267,18 @@ answer exceeded the same-prompt floor, on a different seed, by a median of
 \medFlipGap{} (largest \maxFlipGap{}), and by more than $0.03$ in \nFlipGapAbove{}
 rows. The two unseeded models, Claude Haiku 4.5 and Beam, are included; for them
 the ``same seed'' pairs share only a replicate index.
+
+Pairing on the seed helped unevenly (Appendix Table~\ref{tab:seed}). Across the
+\nSeedRows{} rows of seeded configurations with room for pairing to matter, the
+identity flip rate on the same seed was a median \medSeedRatio{} of that on a different
+seed, and lower in \nSeedLower{} of them. The benefit was substantial for most
+non-reasoning configurations, above all the local ones, and absent, with ratios near
+one, for \nSeedNoBenefit{} of the \nSeedConfigs{} seeded configurations, among them all
+the seeded reasoning-on and high-effort configurations and GPT-4.1 mini; the \nControlRows{} rows of the two unseeded models,
+which should show no benefit, had a median ratio of \medControlRatio{}. Where the
+seed gives no benefit, pairing on it removes no variance, and the case-level analysis
+does not rely on it. The check is indirect: an identical prompt and seed were not sent
+twice to test determinism directly.
 
 \subsubsection{Reasoning and precision}
 Turning reasoning on, or raising its effort, changed the baseline more than it

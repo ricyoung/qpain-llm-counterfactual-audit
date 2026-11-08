@@ -212,6 +212,58 @@ def table_noise(stats: dict, vset: str) -> str:
 
 
 
+def table_failures(stats: dict) -> str:
+    """Invalid answers by identity, with the within-block permutation test (failure_by_identity.py)."""
+    path = HERE / 'outputs' / 'failure_stats.json'
+    data = json.loads(path.read_text())
+    rank = {l: i for i, l in enumerate(order(stats))}
+    cells = sorted(data['cells'], key=lambda c: (rank.get(c['label'], 99), c['vset'], c['cue']))
+    lines = [r'\begin{tabular}{lllrrlrr}', r'\toprule',
+             r'Configuration & Cases & Cue & Invalid & Records & By identity & $p$ & $p_{\mathrm{Holm}}$ \\', r'\midrule']
+    first = None
+    for c in cells:
+        name = tex(display(stats, c['label'])) if c['label'] != first else ''
+        first = c['label']
+        lines.append(f"{name} & {SET_LABEL[c['vset']]} & {c['cue']} & {c['invalid']} & {c['records']:,} & "
+                     f"{'/'.join(str(x) for x in c['by_arm'])} & {fmt_p(c['p'])} & {fmt_p(c['p_holm'])} \\\\")
+    lines += [r'\bottomrule', r'\end{tabular}']
+    return '\n'.join(lines)
+
+
+
+def _seed_rows(stats: dict) -> list:
+    """(label, unseeded, same-seed flip rate / different-seed flip rate) for every row whose same-prompt
+    floor is at least 0.05, so that pairing has room to matter."""
+    unseeded = _unseeded()
+    rows = []
+    for label, e in stats['configurations'].items():
+        for cues in e['sets'].values():
+            for cell in cues.values():
+                for v in cell['flips'].values():
+                    a, b, floor = v['identity_same_seed'], v['identity_cross_seed'], v['floor']
+                    if None not in (a, b, floor) and floor >= 0.05 and b > 0:
+                        rows.append((label, e['model'] in unseeded, a / b, a, b))
+    return rows
+
+
+def table_seed(stats: dict) -> str:
+    """Per configuration: how much pairing on the seed lowers the identity flip rate. A seed that is
+    honoured makes same-seed pairs flip less than different-seed pairs; for the unseeded models the two
+    rates should coincide (a ratio near 1)."""
+    rows = _seed_rows(stats)
+    lines = [r'\begin{tabular}{lcrr}', r'\toprule',
+             r'Configuration & Seeded & Rows & Median ratio \\', r'\midrule']
+    for label in order(stats):
+        mine = [r for r in rows if r[0] == label]
+        if not mine:
+            continue
+        seeded = 'no' if mine[0][1] else 'yes'
+        lines.append(f"{tex(display(stats, label))} & {seeded} & {len(mine)} & {np.median([r[2] for r in mine]):.2f} \\\\")
+    lines += [r'\bottomrule', r'\end{tabular}']
+    return '\n'.join(lines)
+
+
+
 def numbers(stats: dict) -> str:
     """LaTeX macros for every count the text quotes, so no number is typed by hand."""
     configs = stats['configurations']
@@ -233,6 +285,13 @@ def numbers(stats: dict) -> str:
         'nTests': f"{sw['tests']:,}", 'nTestsBelow': sw['p_below_05'], 'nTestsExpected': sw['expected_under_null'],
         'nBHhits': len(sw['bh_q_below_05'])}
     values.update(finding_numbers(stats))
+    failures = HERE / 'outputs' / 'failure_stats.json'
+    if failures.exists():
+        f = json.loads(failures.read_text())
+        values.update({'nFailCells': len(f['cells']), 'nFailInvalid': f['total_invalid'],
+                       'minFailP': f"{min(c['p'] for c in f['cells'] if c['invalid'] >= 3):.2f}",
+                       'minFailHolm': f"{min(c['p_holm'] for c in f['cells']):.2f}",
+                       'nFailTested': sum(c['invalid'] >= 3 for c in f['cells'])})
     return '\n'.join(f'\\newcommand{{\\{k}}}{{{v}}}' for k, v in values.items())
 
 
@@ -280,6 +339,17 @@ def finding_numbers(stats: dict) -> dict:
             if cell['flips'][f]['floor'] is not None and cell['flips'][f]['identity_cross_seed'] is not None]
     out.update({'nFlipRows': len(gaps), 'maxFlipGap': f"{max(gaps):+.3f}", 'medFlipGap': f"{np.median(gaps):+.3f}",
                 'nFlipGapAbove': sum(g > 0.03 for g in gaps)})
+    # ---- does pairing on the seed lower the identity flip rate? (ratio of same-seed to different-seed rates)
+    sr = _seed_rows(stats)
+    seeded_r, control_r = [r for r in sr if not r[1]], [r for r in sr if r[1]]
+    per_config = {}
+    for r in seeded_r:
+        per_config.setdefault(r[0], []).append(r[2])
+    meds = {l: float(np.median(v)) for l, v in per_config.items()}
+    out.update({'nSeedRows': len(seeded_r), 'medSeedRatio': f"{np.median([r[2] for r in seeded_r]):.2f}",
+                'nSeedLower': sum(r[3] < r[4] - 0.005 for r in seeded_r),
+                'nControlRows': len(control_r), 'medControlRatio': f"{np.median([r[2] for r in control_r]):.2f}",
+                'nSeedConfigs': len(meds), 'nSeedNoBenefit': sum(0.9 <= m <= 1.1 for m in meds.values())})
     # ---- equivalence at tighter margins: a difference is equivalent within m exactly when bound90 < m
     bound = lambda field, rows_=qrows: [r['bound90'] for _, _, _, f, r in rows_ if f == field]
     out.update({'nSevEqHalf': sum(b < 0.5 for b in bound('severity')), 'nSevEqQuarter': sum(b < 0.25 for b in bound('severity')),
@@ -311,7 +381,8 @@ def main() -> None:
     written = {'panel_models.tex': table_models(stats), 'panel_authored.tex': table_set(stats, 'authored'),
                'panel_qpain.tex': table_set(stats, 'qpain'), 'panel_thinking.tex': table_contrasts(stats, 'thinking'),
                'panel_precision.tex': table_contrasts(stats, 'precision'), 'panel_numbers.tex': numbers(stats),
-               'panel_noise_qpain.tex': table_noise(stats, 'qpain'), 'panel_noise_authored.tex': table_noise(stats, 'authored')}
+               'panel_noise_qpain.tex': table_noise(stats, 'qpain'), 'panel_noise_authored.tex': table_noise(stats, 'authored'),
+               'panel_failures.tex': table_failures(stats), 'panel_seed.tex': table_seed(stats)}
     for name, body in written.items():
         (TABLES / name).write_text(body + '\n')
         print(TABLES / name)

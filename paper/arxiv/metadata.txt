@@ -11,9 +11,9 @@ Racial and ethnic minority patients receive less treatment for pain than non-His
 
 Primary category: cs.CL (Computation and Language)
 Cross-lists:      cs.CY (Computers and Society); cs.AI; q-bio.QM (optional, suggested by preprint-check)
-Comments:         30 pages, 5 figures, 12 tables. Code, vignettes, panel definition, spend ledger and all 58,080 raw model responses: https://github.com/ricyoung/qpain-llm-counterfactual-audit
+Comments:         31 pages, 5 figures, 14 tables. Code, vignettes, panel definition, spend ledger and all 58,080 raw model responses: https://github.com/ricyoung/qpain-llm-counterfactual-audit
 License:          CC BY 4.0 (recommended; choose on the form). Q-Pain material is CC BY-SA 4.0 (PhysioNet).
 
 Upload: arxiv-submission.zip (main.tex, sections/, tables/, figures/ [5 PDFs], PRIMEarxiv.sty,
 references.bib, main.bbl, 00README.json), the house-template layout. arXiv runs pdflatex only; the .bbl is included.
-Clean-room build verified on 2026-11-07 (v5.5): 30 pages, text identical to paper/main.pdf.
+Clean-room build verified on 2026-11-07 (v5.6): 31 pages, text identical to paper/main.pdf.

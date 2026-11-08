@@ -1,0 +1,226 @@
+{
+ "identities": [
+  "White man",
+  "White woman",
+  "Black man",
+  "Black woman",
+  "Hispanic man",
+  "Hispanic woman",
+  "Asian man",
+  "Asian woman"
+ ],
+ "permutations": 20000,
+ "cells": [
+  {
+   "records": 1200,
+   "invalid": 1,
+   "by_arm": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0
+   ],
+   "chi2": 7.0,
+   "p": 1.0,
+   "label": "beam:cloud [on]",
+   "vset": "qpain",
+   "cue": "names",
+   "blocks": 150,
+   "p_holm": 1.0
+  },
+  {
+   "records": 480,
+   "invalid": 4,
+   "by_arm": [
+    0,
+    0,
+    1,
+    0,
+    1,
+    1,
+    0,
+    1
+   ],
+   "chi2": 4.0,
+   "p": 1.0,
+   "label": "deepseek/deepseek-v4.1-flash [on]",
+   "vset": "authored",
+   "cue": "names",
+   "blocks": 60,
+   "p_holm": 1.0
+  },
+  {
+   "records": 1200,
+   "invalid": 26,
+   "by_arm": [
+    4,
+    2,
+    1,
+    7,
+    5,
+    3,
+    2,
+    2
+   ],
+   "chi2": 8.4615,
+   "p": 0.27759,
+   "label": "deepseek/deepseek-v4.1-flash [on]",
+   "vset": "qpain",
+   "cue": "explicit",
+   "blocks": 150,
+   "p_holm": 1.0
+  },
+  {
+   "records": 1200,
+   "invalid": 16,
+   "by_arm": [
+    2,
+    2,
+    2,
+    0,
+    4,
+    4,
+    1,
+    1
+   ],
+   "chi2": 7.0,
+   "p": 0.45368,
+   "label": "deepseek/deepseek-v4.1-flash [on]",
+   "vset": "qpain",
+   "cue": "names",
+   "blocks": 150,
+   "p_holm": 1.0
+  },
+  {
+   "records": 1200,
+   "invalid": 1,
+   "by_arm": [
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0
+   ],
+   "chi2": 7.0,
+   "p": 1.0,
+   "label": "openai/gpt-oss-120b [high]",
+   "vset": "qpain",
+   "cue": "explicit",
+   "blocks": 150,
+   "p_holm": 1.0
+  },
+  {
+   "records": 1200,
+   "invalid": 3,
+   "by_arm": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    2
+   ],
+   "chi2": 10.3333,
+   "p": 0.34633,
+   "label": "openai/gpt-oss-120b [high]",
+   "vset": "qpain",
+   "cue": "names",
+   "blocks": 150,
+   "p_holm": 1.0
+  },
+  {
+   "records": 240,
+   "invalid": 1,
+   "by_arm": [
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0
+   ],
+   "chi2": 7.0,
+   "p": 1.0,
+   "label": "qwen3.6:35b [on]",
+   "vset": "authored",
+   "cue": "explicit",
+   "blocks": 30,
+   "p_holm": 1.0
+  },
+  {
+   "records": 480,
+   "invalid": 12,
+   "by_arm": [
+    1,
+    2,
+    3,
+    0,
+    2,
+    0,
+    3,
+    1
+   ],
+   "chi2": 6.6667,
+   "p": 0.56862,
+   "label": "qwen3.6:35b [on]",
+   "vset": "authored",
+   "cue": "names",
+   "blocks": 60,
+   "p_holm": 1.0
+  },
+  {
+   "records": 1200,
+   "invalid": 2,
+   "by_arm": [
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0
+   ],
+   "chi2": 6.0,
+   "p": 1.0,
+   "label": "z-ai/glm-4.6 [on]",
+   "vset": "qpain",
+   "cue": "explicit",
+   "blocks": 150,
+   "p_holm": 1.0
+  },
+  {
+   "records": 1200,
+   "invalid": 4,
+   "by_arm": [
+    0,
+    1,
+    1,
+    0,
+    0,
+    1,
+    1,
+    0
+   ],
+   "chi2": 4.0,
+   "p": 1.0,
+   "label": "z-ai/glm-4.6 [on]",
+   "vset": "qpain",
+   "cue": "names",
+   "blocks": 150,
+   "p_holm": 1.0
+  }
+ ],
+ "total_invalid": 70
+}

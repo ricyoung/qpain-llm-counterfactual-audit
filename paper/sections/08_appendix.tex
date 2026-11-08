@@ -81,3 +81,29 @@ authored cases, where the case-level minimum detectable difference is large.}
 \setlength{\tabcolsep}{2.5pt}
 \resizebox{\textwidth}{!}{\input{tables/panel_noise_authored}}
 \end{table}
+
+\section{Study 2 invalid answers and seed pairing}
+\label{app:panelchecks}
+\begin{table}[htbp]
+\centering\footnotesize
+\caption{Study 2: invalid answers by identity, for every configuration, case set and cue
+with at least one. ``By identity'' lists the failures for White man, White woman, Black man,
+Black woman, Hispanic man, Hispanic woman, Asian man and Asian woman, in that order. The $p$-value
+is from a permutation test of the failure flags across the eight identities within each case-and-seed
+block (20,000 permutations); with few failures the test can detect only a large imbalance.}
+\label{tab:failures}
+\setlength{\tabcolsep}{3pt}
+\resizebox{\textwidth}{!}{\input{tables/panel_failures}}
+\end{table}
+
+\begin{table}[htbp]
+\centering\footnotesize
+\caption{Study 2: does pairing on the seed lower the identity flip rate? For each configuration,
+the median over rows (case set, cue and outcome) with a same-prompt floor of at least $0.05$ of the
+identity flip rate on the same seed divided by the rate on a different seed. A ratio below one means the
+seed is honoured and pairing removes variance; near one, it does not. The two unseeded models are the
+control and should show a ratio near one. The check is indirect: an identical prompt and seed were not sent twice.}
+\label{tab:seed}
+\setlength{\tabcolsep}{4pt}
+\input{tables/panel_seed}
+\end{table}

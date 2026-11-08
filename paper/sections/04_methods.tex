@@ -348,8 +348,19 @@ within sex, averaged over sex, and women minus men within race, averaged over
 race. The noise floor and identity flip rates were computed as in Study~1, and
 are reported for every configuration with the minimum detectable difference
 ($2.80$ times the standard error of the mean of the case means, so that the case,
-not the pair, is the unit) in Appendix Tables~\ref{tab:noiseqpain} and~\ref{tab:noiseauthored};
-the share of severity variance explained by the case ($\eta^2$) indexed whether
+not the pair, is the unit) in Appendix Tables~\ref{tab:noiseqpain} and~\ref{tab:noiseauthored}.
+Whether pairing on the seed helps was checked by comparing, for each configuration,
+the identity flip rate on the same seed with that on a different seed, in the rows
+whose same-prompt floor was at least $0.05$ so that pairing had room to matter
+(Appendix Table~\ref{tab:seed}): a seed that is honoured lowers the same-seed rate,
+and for the two unseeded models the rates should coincide. This is an indirect check; sending
+an identical prompt and seed twice was not done. Because invalid answers are dropped
+from paired comparisons, whether they depend on identity was tested separately by
+permuting the failure flags across the eight identities within each case-and-seed
+block (20,000 permutations, chi-square statistic), so that a case that fails for every
+identity cannot look like an identity effect, with Holm correction over the cells
+tested (Appendix Table~\ref{tab:failures}). The share of severity variance explained
+by the case ($\eta^2$) indexed whether
 a model's ratings responded to the clinical content at all. \emph{Reasoning
 and precision contrasts} compared two configurations of the same weights: for
 each case and identity, the identity difference under one setting was
