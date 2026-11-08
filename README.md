@@ -134,3 +134,7 @@ and the cross-lingual comparison, which neither tests.
 - `related_work.bib`: the source paper and the papers naming the same gap
 - `experiment/`: harness stub
 - `paper/main.tex`: preprint skeleton; cite only what you have read
+
+## Licences
+
+This repository uses several licences: OpenRAIL-S for the code, CC BY 4.0 for the paper and authored data, and CC BY-SA 4.0 for the Q-Pain material and everything adapted from it. See [LICENSE](LICENSE) for what covers what.

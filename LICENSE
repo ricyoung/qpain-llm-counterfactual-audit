@@ -1,0 +1,38 @@
+Licences in this repository
+===========================
+
+Different parts of this repository carry different licences. Where a file
+or folder has its own licence file, that one governs.
+
+  What                                         Licence
+  -------------------------------------------  -------------------------------
+  Source code: experiment/*.py, *.sh           AI Pubs OpenRAIL-S v0.1
+                                               (LICENSE-CODE-OpenRAIL-S.txt)
+
+  Paper, figures and tables: paper/            CC BY 4.0
+  Authored vignettes, name table, language     (LICENSE-CC-BY-4.0.txt)
+  files, and the responses to the authored
+  vignettes: experiment/vignettes*.json,
+  experiment/languages.json,
+  experiment/outputs/raw/
+
+  Q-Pain cases and everything adapted from     CC BY-SA 4.0
+  them, including the model responses whose    (experiment/data/qpain/LICENSE.txt)
+  prompts contain Q-Pain text:
+  experiment/data/qpain/,
+  experiment/outputs/raw_qpain/
+
+Copyright (c) 2026 Richard J. Young and Alice M. Matthews.
+
+Q-Pain: Loge C, Ross E, Dadey DYA, Jain S, Agarwal A, Ng AY, Rajpurkar P.
+Q-Pain: A Question Answering Dataset to Measure Social Bias in Pain
+Management. PhysioNet, 2021. https://doi.org/10.13026/2tdv-hj07
+Released under CC BY-SA 4.0. The adaptations here keep that licence.
+
+Model responses were produced by third-party models and remain subject to
+those providers' terms.
+
+Intended use (a request, not a licence term): this work audits language models
+for bias in pain care. Please do not use it to discriminate against patients
+or to justify withholding treatment. The binding use restrictions for the code
+are in Attachment A of LICENSE-CODE-OpenRAIL-S.txt.
