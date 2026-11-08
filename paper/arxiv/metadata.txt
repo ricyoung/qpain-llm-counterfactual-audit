@@ -16,4 +16,4 @@ License:          CC BY 4.0 (recommended; choose on the form). Q-Pain material i
 
 Upload: arxiv-submission.zip (main.tex, sections/, tables/, figures/ [5 PDFs], PRIMEarxiv.sty,
 references.bib, main.bbl, 00README.json), the house-template layout. arXiv runs pdflatex only; the .bbl is included.
-Clean-room build verified on 2026-11-07 (v5.7): 31 pages, text identical to paper/main.pdf.
+Clean-room build verified on 2026-11-07 (v5.8): 31 pages, text identical to paper/main.pdf.
