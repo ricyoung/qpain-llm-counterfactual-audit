@@ -1,7 +1,7 @@
 # Q-Pain LLM counterfactual audit
 
-Code, data and paper for *Do Open-Weight Language Models Reproduce Racial and Sex Disparities in Pain
-Assessment? A Counterfactual Audit with Explicit and Name-Based Cues* (Richard J. Young, Alice M.
+Code, data and paper for *Do Large Language Models Show Racial and Sex Bias in Pain Management?
+A Counterfactual Audit of GPT, Claude, Gemini, Llama, DeepSeek and Qwen* (Richard J. Young, Alice M.
 Matthews). Paper: `paper/main.pdf`; arXiv source: `paper/arxiv/`. Analysis: `experiment/`
 (`analyze_panel.py`, `failure_by_identity.py`, `make_panel_assets.py`, `figures.py`; tests in `experiment/test_*.py`).
 
