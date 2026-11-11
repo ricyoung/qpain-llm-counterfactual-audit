@@ -2,7 +2,8 @@
 
 Code, data and paper for *Do Large Language Models Show Racial and Sex Bias in Pain Management?
 A Counterfactual Audit of GPT, Claude, Gemini, Llama, DeepSeek and Qwen* (Richard J. Young, Alice M.
-Matthews). Paper: `paper/main.pdf`; arXiv source: `paper/arxiv/`. Analysis: `experiment/`
+Matthews). Submitted to arXiv on 2026-11-10 (cs.CL; cross-listed to cs.AI and cs.CY); the arXiv
+identifier will be added here once the paper is announced. Paper: `paper/main.pdf`; arXiv source: `paper/arxiv/`. Analysis: `experiment/`
 (`analyze_panel.py`, `failure_by_identity.py`, `make_panel_assets.py`, `figures.py`; tests in `experiment/test_*.py`).
 
 **About this copy.** Every request and response is saved under `experiment/outputs/raw*/`. In this
